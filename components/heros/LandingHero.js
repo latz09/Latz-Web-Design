@@ -30,7 +30,7 @@ const generateLines = (numLines) => {
 };
 
 // Constants for repeated class names
-const CONTAINER_CLASSES = 'relative h-[100vh] overflow-hidden bg-dark ';
+const CONTAINER_CLASSES = 'relative h-[90vh] xl:h-[100vh] overflow-hidden bg-dark ';
 const INNER_CONTAINER_CLASSES =
 	'relative z-10 text-light flex flex-col justify-center items-center h-full max-w-7xl mx-auto ';
 const CONTENT_CLASSES =
