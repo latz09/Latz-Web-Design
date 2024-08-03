@@ -8,9 +8,9 @@ const RecentClientsContainer = async () => {
 	const data = await fetchData(query);
 
 	return (
-		<div className=' bg-dark pb-24'>
+		<div className=' bg-dark pb-12 lg:pb-24'>
 			
-				<div className='bg-gradient-to-b from-dark via-primary/20 to-primary/30 pt-24 pb-12'>
+				<div className='bg-gradient-to-b from-dark via-primary/20 to-primary/30 pt-12 lg:pt-24 pb-6 lg:pb-12'>
 					<RecentClientsIntro />
 				</div>
 			
