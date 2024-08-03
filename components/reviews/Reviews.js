@@ -33,7 +33,7 @@ const Reviews = ({ data }) => {
 								{/* Review Text */}
 								<div className='flex-1 flex items-center justify-center'>
 									<p className='lg:font-semibold text-dark/80 leading-7'>
-										"{review.reviewText}"
+										{`"${review.reviewText}"`}
 									</p>
 								</div>
 
