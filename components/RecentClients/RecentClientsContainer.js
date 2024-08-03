@@ -24,3 +24,5 @@ const RecentClientsContainer = async () => {
 };
 
 export default RecentClientsContainer;
+
+export const revalidate = 10;
