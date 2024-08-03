@@ -6,9 +6,9 @@ const SlideIn = ({ children, className, ...rest }) => {
 		<>
 			<motion.div
 				className={className}
-				initial={{ x: 0, opacity: 0, }}
-				whileInView={{ x: 0, opacity: 1,  }}
-				transition={{ duration: 1, delay: 0 }}
+				initial={{ scale: .5, opacity: 0, }}
+				whileInView={{ scale: 1, opacity: 1,  }}
+				transition={{ duration: 1.1, delay: 0 }}
 				viewport={{ once: true }}
 				{...rest}
 			>
