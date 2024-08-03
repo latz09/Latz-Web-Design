@@ -10,7 +10,7 @@ const RecentClientsIntro = () => {
 					theme='text-light'
 				/>
 			</div>
-			<div className='w-5/6 lg:w-1/3 mx-auto text-center'>
+			<div className='w-full px-2 lg:w-1/3 mx-auto text-center'>
 				<Description
 					description='Delivering personalized web designs that elevate your brand and boost your online presence.'
 					theme='text-light'

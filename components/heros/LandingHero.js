@@ -34,7 +34,7 @@ const CONTAINER_CLASSES = 'relative h-[90vh] xl:h-[100vh] overflow-hidden bg-dar
 const INNER_CONTAINER_CLASSES =
 	'relative z-10 text-light flex flex-col justify-center items-center h-full max-w-7xl mx-auto ';
 const CONTENT_CLASSES =
-	'lg:w-5/6 mx-auto grid gap-4 bg-dark px-6 lg:px-8 py-8 lg:py-16 ';
+	'lg:w-5/6 mx-auto grid gap-4 bg-dark/70 px-6 lg:px-8 py-2 lg:py-16 ';
 const HEADING_CLASSES = 'grid gap-2';
 const TOP_HEADING_CLASSES = 'text-lg lg:text-2xl  text-tertiary';
 const MAIN_HEADING_CLASSES = 'text-4xl lg:text-7xl font-bold';
