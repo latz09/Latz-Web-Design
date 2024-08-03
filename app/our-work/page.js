@@ -1,6 +1,7 @@
 import { fetchData } from '@/lib/sanity/sanityFetch';
 
 import { FETCH_RECENT_CLIENTS_DATA_QUERY as query } from '@/data/queries/recent-clients/FETCH_RECENT_CLIENTS_DATA_QUERY';
+import PageContainer from '@/components/utils/animations/PageContainer';
 
 export const metadata = {
 	title: 'Our Work',
@@ -9,11 +10,19 @@ export const metadata = {
 
 const OurWorkPage = async () => {
 	const data = await fetchData(query);
-	console.log(data)
+
 	return (
-		<div>
-			<div>Recent Clients</div>
-		</div>
+		<PageContainer>
+			<div className=''>Recent Clis</div>
+			<div className=''>Recent Clients</div>
+			<div className=''>Recent Clients</div>
+			<div className=''>Recent Clients</div>
+			<div className=''>Recent Clients</div>
+			<div className=''>Recent Clients</div>
+			<div className=''>Recent Clients</div>
+			<div className=''>Recent Clients</div>
+			<div className=''>Recent Clients</div>
+		</PageContainer>
 	);
 };
 

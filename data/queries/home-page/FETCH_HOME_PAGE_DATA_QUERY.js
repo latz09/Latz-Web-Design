@@ -5,6 +5,14 @@ export const FETCH_HOME_PAGE_DATA_QUERY = `
     landingHeading,
     topHeading,
     landingSubHeading,
+    creativeWebDesign {
+      heading,
+      "creativeWebDesignImageUrl": creativeWebDesignImage.asset->url,
+      sections[] {
+        title,
+        description
+      }
+    },
     intro {
       title,
       linkTitle,
@@ -44,4 +52,4 @@ export const FETCH_HOME_PAGE_DATA_QUERY = `
       }
     }
   }
-`
+`;

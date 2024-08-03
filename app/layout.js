@@ -1,14 +1,16 @@
+import NavigationContainer from '@/components/navigation/NavigationContainer';
+
 import './globals.css';
 
 // import Footer from '@/components/layout/Footer';
-// import Navigation from '@/components/layout/Navigation';
-import { Josefin_Slab } from 'next/font/google';
 
-const josefinSlab = Josefin_Slab({
-	// style: 'normal',
-	// weight: '800, 700', // Specify the weights and styles you need
-	// display: 'swap',
+import { Roboto } from 'next/font/google';
+
+const roboto = Roboto({
+	weight: ['100', '300', '400', '500', '700', '900'],
+	style: ['normal', 'italic'],
 	subsets: ['latin'],
+	display: 'swap',
 });
 
 export const metadata = {
@@ -26,9 +28,9 @@ export const metadata = {
 const RootLayout = ({ children }) => {
 	return (
 		<html lang='en'>
-			<body className={`${josefinSlab.className}  text-dark`}>
-				{/* <Navigation /> */}
-				<div className='max-w-7l mx-auto '>
+			<body className={`${roboto.className}  text-dark `}>
+				<NavigationContainer />
+				<div className='max-w-7l mx-auto   '>
 					<div>{children}</div>
 					{/* <Footer /> */}
 				</div>
