@@ -18,12 +18,7 @@ export const FETCH_HOME_PAGE_DATA_QUERY = `
       linkTitle,
       paragraphs
     },
-    reviews[] {
-      reviewText,
-      reviewerName,
-      websiteName,
-      websiteUrl
-    },
+    
     services[] {
       title,
       "imageUrl": image.asset->url,
