@@ -7,7 +7,9 @@ const Reviews = ({ data }) => {
 			{data.map((review, index) => {
 				return (
 					
-						<article className='bg-prmary/5 grid gap-4 p-6 h-full '>
+						<article 
+						key={index}
+						className='bg-prmary/5 grid gap-4 p-6 h-full '>
 						
 							<div className='flex flex-col justify-between h-full'>
 								{/* Logo and Website Name */}
