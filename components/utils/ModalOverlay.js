@@ -20,7 +20,7 @@ const ModalOverlay = ({ onClose }) => {
             >
 				<LogoGuy /></div>
 				<div className='flex items-center space-x-8'>
-					<div className='text-white text-xl'>Let's Talk</div>
+					<div className='text-white text-xl'>{`Let's Talk`}</div>
 					<button
 						onClick={onClose}
 						className='text-xl text-gray-500 hover:text-gray-700'
