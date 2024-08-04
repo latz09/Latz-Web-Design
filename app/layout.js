@@ -29,6 +29,7 @@ const RootLayout = ({ children }) => {
 	return (
 		<html lang='en'>
 			<body className={`${roboto.className}  text-dark `}>
+				
 				<NavigationContainer />
 				<div className='max-w-7l mx-auto   '>
 					<div>{children}</div>

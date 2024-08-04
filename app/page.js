@@ -12,7 +12,7 @@ export default async function Home() {
 	const [data] = await fetchData(query);
 
 	return (
-		<main className='grid gap-24 pb-32'>
+		<main className='grid gap-24 pb-32 bg-light'>
 			<LandingHero
 				image={data.landingImage}
 				heading={data.landingHeading}
@@ -25,7 +25,7 @@ export default async function Home() {
 					<RecentClientsContainer />
 				</AnimateUp>
 				<ReviewContainer />
-				<div className="bg-dark pt-12">
+				<div className=" pt-12">
 					<ProcessAndPricingContainer />
 				</div>
 			</div>

@@ -16,11 +16,12 @@ const NavigationContainer = () => {
 
   return (
     <div className="">
-      {isHome ? (
+      {/* {isHome ? (
         <HomeNavigation scrolled={scrolled} />
       ) : (
         <DefaultNavigation scrolled={scrolled} />
-      )}
+      )} */}
+      <HomeNavigation scrolled={scrolled} />
     </div>
   );
 };

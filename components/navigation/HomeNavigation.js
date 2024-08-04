@@ -3,8 +3,9 @@ import NavigationLogo from './NavigationLogo';
 import { AiOutlineMenu } from 'react-icons/ai';
 const HomeNavigation = ({ scrolled }) => {
 	return (
+		
 		<div
-			className={`fixed top-0 left-0 w-full  px-4 md:px-6 lg:px-8 z-[9999] transition-all duration-1000 ${
+			className={`fixed top-0 left-0 w-full bg-dark px-4 md:px-6 lg:px-8 z-[9999] transition-all duration-1000 ${
 				scrolled
 					? 'text-dark ext-light z-[1] bg-dark/80 backdrop-blur-sm py-4 '
 					: 'text-light py-8'
@@ -30,7 +31,7 @@ const HomeNavigation = ({ scrolled }) => {
 							scrolled ? 'text-dark bg-light' : 'text-light bg-dark'
 						}`}
 					>
-						<AiOutlineMenu className='text-3xl cursor-pointer ' />
+						<AiOutlineMenu className='text-xl lg:text-3xl cursor-pointer ' />
 					</div>
 				</div>
 			</div>

@@ -36,7 +36,7 @@ const ContactForm = ({ toggleModal }) => {
 	return (
 		<form
 			onSubmit={handleSubmit}
-			className='space-y-6 p-2 lg:p-8 bg-primary/10 rounded-md shadow-lg border border-tertiary/10 shadow-primary/10'
+			className='space-y-6 px-2 py-8 lg:px-8 bg-primary/10 rounded-md shadow-lg border border-tertiary/10 shadow-primary/10'
 		>
 			<div className='flex flex-col'>
 				<label htmlFor='name' className='form-label'>
