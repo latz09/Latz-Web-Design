@@ -18,7 +18,7 @@ const NavigationContacts = () => {
 					</a>
 				</div>
 
-				<div className="hidden lg:block">
+				<div className="hidden lg:block text-light/80">
 					<SocialMediaLinks />
 				</div>
 			</div>
@@ -30,7 +30,7 @@ export default NavigationContacts;
 
 export const SocialMediaLinks = () => {
 	return (
-		<div className='flex  text-light/80 text-3xl justify-between mt-4'>
+		<div className='flex   text-3xl justify-between mt-4'>
 			<a
 				href='https://www.linkedin.com/in/jordan-latz-0b6b0b1b5/'
 				target='_blank'

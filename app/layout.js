@@ -2,9 +2,10 @@ import NavigationContainer from '@/components/navigation/NavigationContainer';
 
 import './globals.css';
 
-// import Footer from '@/components/layout/Footer';
+
 
 import { Roboto } from 'next/font/google';
+import Footer from '@/components/navigation/Footer';
 
 const roboto = Roboto({
 	weight: ['100', '300', '400', '500', '700', '900'],
@@ -33,7 +34,7 @@ const RootLayout = ({ children }) => {
 				<NavigationContainer />
 				<div className='max-w-7l mx-auto   '>
 					<div>{children}</div>
-					{/* <Footer /> */}
+					<Footer />
 				</div>
 			</body>
 		</html>
