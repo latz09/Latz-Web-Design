@@ -41,7 +41,7 @@ const ModalOverlay = ({ onClose }) => {
 						<div className='text-dark  text-lg lg:space-y-16'>
 							<div className='lg:space-y-4 text-tertiary'>
 								<p>jordan@latzwebdesign.com</p>
-								<p>(715) 630-5689</p>
+								<p>{`(715) 630-5689`}</p>
 							</div>
 							<div className='text-dark/70'>
 								<p>West Saint Paul, MN</p>
