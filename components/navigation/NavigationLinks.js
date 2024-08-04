@@ -1,3 +1,5 @@
+"use client"
+
 import Link from 'next/link';
 import { navigationLinks } from '@/data/navigationLinks';
 import NavigationLinkEntry from '../utils/animations/NavigationLinkEntry';

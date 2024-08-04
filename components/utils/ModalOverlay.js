@@ -1,3 +1,5 @@
+"use client"
+
 import { motion } from 'framer-motion';
 import NavigationLinks from '../navigation/NavigationLinks'; // Ensure you have this component
 import NavigationLogo, { LogoGuy } from '../navigation/NavigationLogo';
