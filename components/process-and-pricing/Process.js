@@ -12,7 +12,7 @@ const Process = ({ data }) => {
 			</div>
 			<div className='max-w-6xl mx-auto px-4 lg:px-0 space-y-12 flex flex-col lg:flex-row  '>
 				{/* Left Column: Headings */}
-				<div className='flex-1 lg:pr-8 lg:h-[85vh] lg:flex lg:items-center lg:justify-center lg:sticky lg:top-0 text-center lg:text-start mb-4 lg:mb-0'>
+				<div className='flex-1 lg:pr-8 lg:h-[85vh] lg:flex lg:items-center lg:justify-center lg:sticky lg:top-8  text-center lg:text-start mb-4 lg:mb-0'>
 					<AnimateUp>
 						<div className='space-y-4'>
 							<MainHeading title={data.heading} theme='text-light' />
@@ -24,7 +24,7 @@ const Process = ({ data }) => {
 				</div>
 
 				{/* Right Column: Steps */}
-				<div className='flex-1 space-y-20 '>
+				<div className='flex-1 space-y-20 z-[1]'>
 					<StepsAnimation>
 						{data.steps.map((step, index) => {
 							// Dynamically get the icon component from react-icons

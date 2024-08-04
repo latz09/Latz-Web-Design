@@ -6,7 +6,7 @@ import Process from "./Process";
 const ProcessAndPricingContainer = async () => {
     const [data] = await fetchData(query);
     
-    return ( <div>
+    return ( <div className="z-20">
         <Process data={data} />
     </div> );
 }
