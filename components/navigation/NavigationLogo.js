@@ -12,13 +12,7 @@ const NavigationLogo = ({ scrolled }) => {
 						whileInView={{ opacity: 1, rotate: 360 }} // Full opacity and one full rotation
 						transition={{ duration: 1.25, ease: 'easeInOut' }} // Smooth transition
 					>
-						<Image
-							src={logoIcon}
-							alt='Web design in Saint Paul'
-							className=''
-							width={35}
-							height={35}
-						/>
+					<LogoGuy />
 					</motion.div>
 				) : (
 					<div>
@@ -33,3 +27,18 @@ const NavigationLogo = ({ scrolled }) => {
 };
 
 export default NavigationLogo;
+
+
+export const LogoGuy = () => {
+	return (
+		<Link href={'/'}>
+		<Image
+		src={logoIcon}
+		alt='Web design in Saint Paul'
+		className=''
+		width={35}
+		height={35}
+	/>
+	</Link>
+	)
+}
