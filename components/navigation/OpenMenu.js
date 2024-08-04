@@ -2,7 +2,7 @@
 
 import { AiOutlineMenu } from 'react-icons/ai';
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+// import { motion, AnimatePresence } from 'framer-motion';
 import ModalOverlay from '../utils/ModalOverlay';
 
 const OpenMenu = ({ scrolled }) => {
@@ -32,9 +32,9 @@ const OpenMenu = ({ scrolled }) => {
         >
           <AiOutlineMenu className="text-xl lg:text-3xl cursor-pointer" />
         </div>
-        <AnimatePresence>
-          {isModalOpen && <ModalOverlay onClose={handleToggle} />}
-        </AnimatePresence>
+        {/* <AnimatePresence> */}
+          {isModalOpen && (<ModalOverlay onClose={handleToggle} />)}
+        {/* </AnimatePresence> */}
       </>
     );
   };
