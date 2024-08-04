@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import NavigationLogo from './NavigationLogo';
-import { AiOutlineMenu } from 'react-icons/ai';
+import OpenMenu from './OpenMenu';
+
 const HomeNavigation = ({ scrolled }) => {
 	return (
 		
@@ -26,13 +27,7 @@ const HomeNavigation = ({ scrolled }) => {
 						</div>
 					</Link>
 
-					<div
-						className={`p-3  rounded-full transition duration-1000 ${
-							scrolled ? 'text-dark bg-light' : 'text-light bg-dark'
-						}`}
-					>
-						<AiOutlineMenu className='text-xl lg:text-3xl cursor-pointer ' />
-					</div>
+					<OpenMenu scrolled={scrolled} />
 				</div>
 			</div>
 		</div>

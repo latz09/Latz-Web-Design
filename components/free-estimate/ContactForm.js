@@ -49,7 +49,7 @@ const ContactForm = ({ toggleModal }) => {
 					placeholder='e.g., John Doe'
 					value={formData.name}
 					onChange={handleChange}
-					className='form-input'
+					className='form-input font-black tracking-wider'
 					required
 				/>
 			</div>
