@@ -13,6 +13,7 @@ const Footer = () => {
 					alt='Web Design in Saint Paul'
 					width={200}
 					height={100}
+                    className="opacity-70"
 				/>
 			</Link>
             <div className=" max-w-5xl w-2/3 lg:w-1/4 opacity-60 mb-8">
