@@ -6,7 +6,7 @@ import  { SocialMediaLinks } from './NavigationContacts';
 
 const Footer = () => {
 	return (
-		<div className='bg-light grid place-items-center gap-12 pb-32'>
+		<div className='bg-light grid place-items-center gap-12 py-24'>
 			<Link href='/'>
 				<Image
 					src={logo}

@@ -12,7 +12,7 @@ export default async function Home() {
 	const [data] = await fetchData(query);
 
 	return (
-		<main className='grid gap-24 pb-32 bg-light'>
+		<main className='grid gap-24 bg-light'>
 			<LandingHero
 				image={data.landingImage}
 				heading={data.landingHeading}
