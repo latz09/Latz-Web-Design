@@ -1,3 +1,4 @@
+
 export const FETCH_PRICING_PAGE_DATA_QUERY = `
   *[_type == 'processAndPricingPage' && isActive == true] {
     isActive,
@@ -5,12 +6,15 @@ export const FETCH_PRICING_PAGE_DATA_QUERY = `
     subheading,
     steps[] {
       stepHeading,
-      stepSubheading,
+      icon, // Added icon field here
       description
     },
-    sellingPoints[] {
-      title,
-      description
-    }
+ 
   }
-`
+`;
+
+
+// sellingPoints[] {
+//   title,
+//   description
+// }

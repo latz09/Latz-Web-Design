@@ -7,5 +7,5 @@ export const TopHeading = ({ title, theme }) => {
 };
 
 export const Description = ({ description, theme }) => {
-	return <p className={`text-lg lg:text-xl ${theme}`}>{description}</p>;
+	return <p className={`text-lg lg:text-xl leading-8 lg:leading-9 ${theme}`}>{description}</p>;
 };

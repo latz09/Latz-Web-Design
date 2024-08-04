@@ -1,6 +1,5 @@
-import { fetchData } from "@/lib/sanity/sanityFetch";
-
-import { FETCH_PRICING_PAGE_DATA_QUERY as query } from "@/data/queries/pricing-and-budget/FETCH_PRICING_PAGE_DATA_QUERY";
+import ProcessAndPricingContainer from '@/components/process-and-pricing/ProcessAndPricingContainer';
+import PageContainer from '@/components/utils/animations/PageContainer';
 
 export const metadata = {
 	title: 'Pricing and Budget',
@@ -8,12 +7,12 @@ export const metadata = {
 };
 
 const PricingAndBudgetPage = async () => {
-	const [data] = await fetchData(query);
-	
 	return (
-		<div>
-			<div>Pricing and Budget</div>
-		</div>
+		<PageContainer>
+			<div className=''>
+				<ProcessAndPricingContainer />
+			</div>
+		</PageContainer>
 	);
 };
 

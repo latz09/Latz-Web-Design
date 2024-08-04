@@ -6,6 +6,7 @@ import RecentClientsContainer from '@/components/RecentClients/RecentClientsCont
 
 import AnimateUp from '@/components/utils/animations/AnimateUp';
 import ReviewContainer from '@/components/reviews/ReviewContainer';
+import ProcessAndPricingContainer from '@/components/process-and-pricing/ProcessAndPricingContainer';
 
 export default async function Home() {
 	const [data] = await fetchData(query);
@@ -24,10 +25,12 @@ export default async function Home() {
 					<RecentClientsContainer />
 				</AnimateUp>
 				<ReviewContainer />
+				<div className="bg-dark pt-12">
+					<ProcessAndPricingContainer />
+				</div>
 			</div>
 		</main>
 	);
 }
 
 export const revalidate = 10;
-

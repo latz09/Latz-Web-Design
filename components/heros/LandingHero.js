@@ -1,7 +1,8 @@
 import React from 'react';
 import LandingBackground from '../utils/animations/LandingBackground';
-import { FaLongArrowAltRight } from 'react-icons/fa';
+
 import ScrollIndicator from '../utils/animations/ScrollIndicator';
+import FreeEstimate from '../utils/FreeEstimate';
 
 // Function to generate random line properties
 const generateRandomLineProperties = () => ({
@@ -30,7 +31,8 @@ const generateLines = (numLines) => {
 };
 
 // Constants for repeated class names
-const CONTAINER_CLASSES = 'relative h-[90vh] xl:h-[100vh] overflow-hidden bg-dark ';
+const CONTAINER_CLASSES =
+	'relative h-[90vh] xl:h-[100vh] overflow-hidden bg-dark ';
 const INNER_CONTAINER_CLASSES =
 	'relative z-10 text-light flex flex-col justify-center items-center h-full max-w-7xl mx-auto ';
 const CONTENT_CLASSES =
@@ -41,8 +43,6 @@ const MAIN_HEADING_CLASSES = 'text-4xl lg:text-7xl font-bold';
 const SUB_HEADING_CLASSES = 'text-lg lg:text-3xl';
 const BUTTON_CONTAINER_CLASSES =
 	'lg:text-xl mt-2 lg:mt-8 uppercase font-semibold flex justify-between items-center w-2/3';
-const BUTTON_CLASSES = 'flex items-center gap-4';
-const ARROW_ICON_CLASSES = 'text-dark text-lg lg:text-2xl';
 
 const LandingHero = ({ image, heading, subHeading, topHeading }) => {
 	return (
@@ -60,12 +60,7 @@ const LandingHero = ({ image, heading, subHeading, topHeading }) => {
 					</div>
 					<h2 className={SUB_HEADING_CLASSES}>{subHeading}</h2>
 					<div className={BUTTON_CONTAINER_CLASSES}>
-						<div className={BUTTON_CLASSES}>
-							<span>Free Estimate</span>
-							<span className='bg-tertiary p-2 rounded-full'>
-								<FaLongArrowAltRight className={ARROW_ICON_CLASSES} />
-							</span>
-						</div>
+						<FreeEstimate />
 					</div>
 				</div>
 				<ScrollIndicator />
