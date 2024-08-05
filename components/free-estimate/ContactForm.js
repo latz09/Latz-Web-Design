@@ -36,7 +36,7 @@ const ContactForm = ({ toggleModal }) => {
 	return (
 		<form
 			onSubmit={handleSubmit}
-			className='space-y-6 px-2 py-8 lg:px-8 bg-primary/10 rounded-md shadow-lg border border-tertiary/10 shadow-primary/10'
+			className='space-y-6 px-4 pb-10 lg:pb-12 pt-14 lg:pt-16 lg:px-8 bg-light rounded-b-xl shadow-lg border border-tertiary/10 shadow-tertiary/30'
 		>
 			<div className='flex flex-col'>
 				<label htmlFor='name' className='form-label'>
@@ -49,7 +49,7 @@ const ContactForm = ({ toggleModal }) => {
 					placeholder='e.g., John Doe'
 					value={formData.name}
 					onChange={handleChange}
-					className='form-input font-black tracking-wider'
+					className='form-input  tracking-wider'
 					required
 				/>
 			</div>
@@ -70,7 +70,7 @@ const ContactForm = ({ toggleModal }) => {
 				/>
 			</div>
 
-			<div className='flex flex-col'>
+			<div className='flex flex-col pt-4'>
 				<label htmlFor='description' className='form-label'>
 					Describe Your Vision
 				</label>

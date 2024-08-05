@@ -25,17 +25,17 @@ body {
 
 /* Reusable Utility Classes */
 .form-label {
-  @apply text-lg lg:text-xl font-bold text-light mb-2;
+  @apply text-lg lg:text-xl font-bold text-dark/80 mb-2;
 }
 
 .form-input {
-  @apply p-3 rounded-sm border border-light/50 text-light bg-dark focus:outline-none focus:border-primary transition-colors duration-300;
+  @apply p-3 rounded-sm border border-light/50 text-light bg-primary/10 focus:outline-none focus:border-primary focus:bg-primary transition-colors duration-300;
 }
 
 .form-textarea {
-  @apply p-3 rounded-sm bg-dark border text-light border-light/50 focus:outline-none focus:border-primary transition-colors duration-300 h-32 resize-none;
+  @apply p-3 rounded-sm  bg-primary/10 border text-light border-light/50 focus:outline-none focus:border-primary focus:bg-primary transition-colors duration-300 h-32 resize-none;
 }
 
 .form-button {
-  @apply  text-lg lg:text-xl font-bold w-full bg-tertiary  hover:scale-95 transition duration-700 text-dark py-3 rounded-sm ;
+  @apply  text-lg lg:text-xl font-bold w-full bg-primary  hover:scale-95 transition duration-700 text-light py-3 rounded-sm ;
 }
