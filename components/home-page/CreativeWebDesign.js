@@ -31,7 +31,7 @@ const CreativeWebDesign = ({ data }) => {
 					))}
 				</div>
 			</div>
-			<div className='w-3/4 lg:w-full'>
+			<div className='w-[89.6%] lg:w-full'>
 				<Image
 					src={data.creativeWebDesignImageUrl}
 					alt='Web design in saint paul'
