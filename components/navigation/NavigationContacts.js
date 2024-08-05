@@ -13,7 +13,7 @@ const NavigationContacts = () => {
 						jordan@latzwebdesign.com
 					</a>
 
-					<a href='tel:7156305689' className='underline underline-offset-8 decoration-tertiary/60'>
+					<a href='tel:7156305689' className='underline underline-offset-8'>
 						(715) 630-5689
 					</a>
 				</div>
