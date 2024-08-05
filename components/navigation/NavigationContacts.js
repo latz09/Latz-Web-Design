@@ -5,7 +5,7 @@ const NavigationContacts = () => {
 	return (
 		<div className='grid place-items-start lg:place-items-end'>
 			<div className='text-dark text-lg lg:space-y-16'>
-				<div className='text-tertiary/80  grid gap-1'>
+				<div className='text-primary  grid gap-1'>
 					<a
 						href='mailto:jordan@latzwebdesign.com'
 						className='underline underline-offset-8 mb-4'
@@ -30,7 +30,7 @@ export default NavigationContacts;
 
 export const SocialMediaLinks = () => {
 	return (
-		<div className='flex   text-3xl justify-between mt-4'>
+		<div className='flex   text-3xl justify-between mt-4 text-dark'>
 			<a
 				href='https://www.linkedin.com/in/jordan-latz-0b6b0b1b5/'
 				target='_blank'
