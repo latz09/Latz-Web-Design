@@ -7,9 +7,12 @@ import {
 	MainHeading,
 	TopHeading,
 } from '@/components/utils/Typography';
-import OverviewContainer from '@/components/cms/overview/OverviewContainer';
+import OverviewContainer, {
+	LearnMoreNowButtonLink,
+} from '@/components/cms/overview/OverviewContainer';
 import CmsIntro from '@/components/cms/cms-page/CmsIntro';
 import KeyBenefits from '@/components/cms/cms-page/KeyBenefits';
+import AnimateUp from '@/components/utils/animations/AnimateUp';
 
 const CustomCMSPage = async () => {
 	const data = await fetchData(query);
@@ -34,21 +37,30 @@ const CustomCMSPage = async () => {
 						<OverviewContainer includeLink={false} />
 					</div>
 					{/* Introduction Section */}
-					<div className='max-w-5xl mx-auto grid gap-12 lg:gap-16 '>
-						<section className='mx-8  lg:w-full lg:mx-auto text-center'>
-							<MainHeading title={title} theme='text-dark mb-4' />
-							<Description description={introText} theme='text-dark/80 mb-6' />
-						</section>
-
-						{/* Key Benefits Section */}
-						<section className='lg:space-y-12 mx-2'>
-							<MainHeading
-								title='Key Benefits'
-								theme='text-primary mb-4 text-center lg:text-start'
-							/>
+					<div className=' grid gap-12 lg:gap-16 bg-dark py-24'>
+						<section className='  lg:w-full  '>
+							<div className="max-w-5xl mx-4 lg:mx-auto">
+								<AnimateUp>
+									<MainHeading title={title} theme='text-light mb-4' />
+									<Description
+										description={introText}
+										theme='text-light/80 mb-6'
+									/>
+								</AnimateUp>
+							</div>
 							<KeyBenefits data={keyBenefits} />
 						</section>
 
+						<div className='lg:mt-8 px-8  lg:px-2   grid place-items-center gap-4 '>
+							<MainHeading
+								title='Take Control of Your Content Today'
+								theme='text-tertiary mb-4 text-center'
+							/>
+							<LearnMoreNowButtonLink
+								title='Get Started Now'
+								href='/contact-latz-web-design'
+							/>
+						</div>
 						{/* Images Section */}
 						{images && images.length > 0 && (
 							<section className=''>

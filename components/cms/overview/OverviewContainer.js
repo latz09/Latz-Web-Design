@@ -13,7 +13,7 @@ const OverviewContainer = async ({includeLink}) => {
 
 	return (
 		<div className='max-w-6xl mx-auto  grid '>
-			<div className='grid gap-16 '>
+			<div className='grid gap-12 lg:gap-16 '>
 				<SlideIn>
 					<div className='space-y-2 mx-4 lg:mx-0 lg:w-3/5 '>
 						<MainHeading title={data.heading} />
@@ -74,7 +74,7 @@ export const LearnMoreNowButtonLink = ({ title, href }) => {
     return (
         <Link href={href}>
           <div
-				className='flex items-center gap-4 text-light font-bold lg:text-xl uppercase group cursor-pointer  bg-dark px-8 py-2 rounded-full shadow-lg shadow-primary/40'
+				className='flex items-center gap-4 text-light font-bold lg:text-xl uppercase group cursor-pointer  bg-dark px-8 py-2 rounded-full  shadow-primary/40'
 				
 			>
 				<span>{title}</span>

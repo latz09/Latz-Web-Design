@@ -55,9 +55,9 @@ const Process = ({ data }) => {
 							);
 						})}
 					</StepsAnimation>
-                    <div className='lg:hidden grid place-items-center'>
-								<FreeEstimate />
-							</div>
+					<div className='lg:hidden grid place-items-center'>
+						<FreeEstimate />
+					</div>
 				</div>
 			</div>
 		</div>
