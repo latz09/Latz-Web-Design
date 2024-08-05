@@ -14,7 +14,7 @@ const ModalOverlay = ({ onClose }) => {
 			animate={{ opacity: 1, scale: 1, originX: 1, originY: 0 }}
 			exit={{ opacity: 0, scale: 0 }}
 			transition={{ duration: 1, ease: 'easeOut' }}
-			className='fixed inset-0 bg-light/95 backdrop-blur-md grid place-items-center h-screen text-dark '
+			className='fixed inset-0 bg-light backdrop-blur-md grid place-items-center h-screen text-dark '
 		>
 			{/* Top Bar with Logo and Close Button */}
 			<div className='absolute top-0 left-0 right-0 flex justify-between items-center px-6 pt-4 lg:py-12 max-w-5xl mx-auto w-full'>
