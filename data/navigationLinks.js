@@ -9,7 +9,7 @@ export const navigationLinks = [
 	},
 	{
 		title: 'Custom CMS',
-		href: '/',
+		href: '/custom-cms',
 	},
 	{
 		title: 'Our Work',

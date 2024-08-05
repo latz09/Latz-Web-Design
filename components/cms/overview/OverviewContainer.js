@@ -8,7 +8,7 @@ import { FaArrowTrendUp } from 'react-icons/fa6';
 import Link from 'next/link';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 
-const OverviewContainer = async () => {
+const OverviewContainer = async ({includeLink}) => {
 	const data = await fetchData(query);
 
 	return (
@@ -57,7 +57,7 @@ const OverviewContainer = async () => {
 						</div>
 					</div>
 				</div>
-                <div className="grid place-items-center mt-8">
+                <div className={` ${!includeLink ? 'hidden' : 'grid place-items-center mt-8'}`}>
                     <LearnMoreNowButtonLink title='Learn More Now' href='/custom-cms' />
                 </div>
 			</div>
@@ -70,7 +70,7 @@ export default OverviewContainer;
 export const revalidate = 10;
 
 
-const LearnMoreNowButtonLink = ({ title, href }) => {
+export const LearnMoreNowButtonLink = ({ title, href }) => {
     return (
         <Link href={href}>
           <div
