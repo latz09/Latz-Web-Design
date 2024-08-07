@@ -11,7 +11,7 @@ import FreeEstimate from '@/components/utils/FreeEstimate';
 
 const KeyBenefits = ({ data }) => {
 	return (
-		<section className='bg-dark py-12 lg:py-4'>
+		<section className='bg-dark py-12 lg:py-4 '>
 			<div className='max-w-7xl mx-auto px-2 lg:px-0 space-y-4 lg:space-y-12 flex flex-col lg:flex-row'>
 				{/* Left Column: Main Heading */}
 				<div className='flex-1 lg:pr-8 lg:h-[85vh] lg:flex lg:items-center lg:justify-center lg:sticky lg:top-8 text-center lg:text-start mb-4 lg:mb-0'>

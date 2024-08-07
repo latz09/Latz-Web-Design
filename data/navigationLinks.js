@@ -12,9 +12,14 @@ export const navigationLinks = [
 		href: '/custom-cms',
 	},
 	{
+		title: 'SEO',
+		href: '/seo-services',
+	},
+	{
 		title: 'Our Work',
 		href: '/our-work',
 	},
+
 	{
 		title: 'Contact',
 		href: '/contact-latz-web-design',

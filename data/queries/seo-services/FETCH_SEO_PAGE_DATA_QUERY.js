@@ -1,24 +1,23 @@
 export const FETCH_SEO_PAGE_DATA_QUERY = `
-  *[_type == 'seoServicesPage' && isActive == true] {
-    isActive,
+  *[_type == "seoServices"] {
+  title,
+  onPageSeoSection {
     heading,
     subheading,
-    intro,
-    onPageSEO {
-      heading,
-      subheading,
-      included[] {
-        title,
-        description
-      }
-    },
-    offPageSEO {
-      heading,
-      subheading,
-      included[] {
-        title,
-        description
-      }
+    introDescription,
+    features[] {
+      feature,
+      description
+    }
+  },
+  offPageSeoSection {
+    heading,
+    subheading,
+    introDescription,
+    features[] {
+      feature,
+      description
     }
   }
+}
 `
