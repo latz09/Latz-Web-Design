@@ -7,7 +7,7 @@ const SeoServiceContainer = ({ section }) => {
 	return (
 		<div>
 			<div className='bg-gradient-to-b from-light via-primary/10 to-light'>
-				<div className='text-center max-w-5xl mx-auto py-16 lg:py-24  '>
+				<div className='text-center max-w-5xl mx-auto py-12 lg:py-24  '>
 					<AnimateUp>
 						<MainHeading title={section.heading} theme='text-dark/80 m-4' />
 						<Description
