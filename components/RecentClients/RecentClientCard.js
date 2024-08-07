@@ -28,7 +28,7 @@ const RecentClientCard = ({ data }) => {
 						objectPosition='center'
 						className='rounded-sm'
 					/>
-					<div className='absolute inset-0 bg-dark/70 transition-colors duration-500 ease-in-out md:group-hover:bg-dark/30 flex flex-col justify-end text-light '>
+					<div className='absolute inset-0 bg-primary/70 transition-colors duration-500 ease-in-out md:group-hover:bg-primary/30 flex flex-col justify-end text-light '>
 						<div className='flex flex-col bg-dark/5 px-6 pt-4 transition-colors duration-500 ease-in-out md:group-hover:bg-dark/100'>
 							<h3 className='text-lg lg:text-2xl font-bold'>{companyName}</h3>
 							<div className='text-sm lg:text-base'>{websiteDescription}</div>
