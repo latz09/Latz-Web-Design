@@ -7,7 +7,7 @@ import SeoFeatures from './SeoFeatures';
 const SeoServiceContainer = ({ section }) => {
 	return (
 		<div>
-			<div className='bg-gradient-to-b from-light via-primary/50 to-light'>
+			<div className='bg-light'>
 				<div className='text-center max-w-5xl mx-auto py-12 lg:py-24  '>
 					<AnimateUp>
 						<MainHeading title={section.heading} theme='text-dark/80 m-4' />
