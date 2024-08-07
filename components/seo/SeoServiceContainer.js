@@ -9,13 +9,13 @@ const SeoServiceContainer = ({ section }) => {
 		<div>
 			<div className='bg-light'>
 				<div className='text-center max-w-5xl mx-auto py-12 lg:py-24  '>
-					<AnimateUp>
+					
 						<MainHeading title={section.heading} theme='text-dark/80 m-4' />
 						<Description
 							description={section.introDescription}
 							theme='text-dark lg:font-semibold mx-4 lg:w-3/4 lg:mx-auto'
 						/>
-					</AnimateUp>
+					
 				</div>
 			</div>
 			<DelayAnimateUp>
