@@ -16,9 +16,9 @@ const SeoServicesPage = async () => {
 	return (
 		<PageContainer>
 			<div className='grid  bg-light'>
-				<div className='grid gap-16 lg:gap-24  py-8 lg:py-12 bg-dark'>
+				<div className='grid gap-16 lg:gap-24  py-8 lg:py-12 bg-light'>
 					<section className=' text-light text-center w-2/3 lg:w-1/2 mx-auto'>
-						<TopHeading title={data.title} theme='text-tertiary' />
+						<TopHeading title={data.title} theme='text-primary' />
 					</section>
 				</div>
 				<div>
