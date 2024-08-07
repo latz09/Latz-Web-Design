@@ -6,9 +6,9 @@ const DelayAnimateUp = ({ children, className, ...rest }) => {
 		<>
 			<motion.div
 				className={className}
-				initial={{ y: 70,   }}
-				whileInView={{ y: 0,  }}
-				transition={{ duration: 0.8, delay: .4 }}
+				initial={{ y: 100, opacity: 0   }}
+				whileInView={{ y: 0, opacity: 1  }}
+				transition={{ duration: 0.8, delay: .55 }}
 				viewport={{ once: true }}
 				{...rest}
 			>
