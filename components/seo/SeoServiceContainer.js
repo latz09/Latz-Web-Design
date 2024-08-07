@@ -1,12 +1,13 @@
 import KeyBenefits from '../cms/cms-page/KeyBenefits';
 import AnimateUp from '../utils/animations/AnimateUp';
+import DelayAnimateUp from '../utils/animations/DelayAnimateUp';
 import { Description, MainHeading } from '../utils/Typography';
 import SeoFeatures from './SeoFeatures';
 
 const SeoServiceContainer = ({ section }) => {
 	return (
 		<div>
-			<div className='bg-gradient-to-b from-light via-primary/10 to-light'>
+			<div className='bg-gradient-to-b from-light via-primary/50 to-light'>
 				<div className='text-center max-w-5xl mx-auto py-12 lg:py-24  '>
 					<AnimateUp>
 						<MainHeading title={section.heading} theme='text-dark/80 m-4' />
@@ -17,9 +18,14 @@ const SeoServiceContainer = ({ section }) => {
 					</AnimateUp>
 				</div>
 			</div>
-			<div className='bg-dark pb-12 pt-16 lg:pb-16 lg:pt-20 '>
-				<SeoFeatures features={section.features} heading={section.subheading} />
-			</div>
+			<DelayAnimateUp>
+				<div className='bg-dark pb-12 pt-16 lg:pb-16 lg:pt-20 '>
+					<SeoFeatures
+						features={section.features}
+						heading={section.subheading}
+					/>
+				</div>
+			</DelayAnimateUp>
 		</div>
 	);
 };
