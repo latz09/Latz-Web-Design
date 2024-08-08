@@ -33,7 +33,7 @@ const RecentClientCard = ({ data }) => {
 								{companyName}
 							</h3>
 							<div className='text-sm lg:text-base lg:font-semibold  flex items-center'>
-								<span className=' text-dark '>Visit Site</span>
+								<span className=' text-dark font-bold'>Visit Site</span>
 								<FaLongArrowAltRight className='inline-block text-primary ml-2 transform transition-transform duration-500 ease-in-out group-hover:translate-x-2 text-lg lg:text-2xl ' />
 							</div>
 						</div>
