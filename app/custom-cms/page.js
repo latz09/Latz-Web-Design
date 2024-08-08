@@ -14,6 +14,13 @@ import CmsIntro from '@/components/cms/cms-page/CmsIntro';
 import KeyBenefits from '@/components/cms/cms-page/KeyBenefits';
 import AnimateUp from '@/components/utils/animations/AnimateUp';
 
+
+export const metadata = {
+	title: 'Custom CMS Development Services',
+	description: 'Take control of your website with our Custom Content Management System. Designed for your business needs. Get started today!',
+	keywords: ['Custom CMS development services', 'Custom CMS development'],
+};
+
 const CustomCMSPage = async () => {
 	const data = await fetchData(query);
 

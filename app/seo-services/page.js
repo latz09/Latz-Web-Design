@@ -6,8 +6,9 @@ import SeoServiceContainer from '@/components/seo/SeoServiceContainer';
 import ReviewContainer from '@/components/reviews/ReviewContainer';
 
 export const metadata = {
-	title: 'SEO Services',
-	description: 'SEO Services',
+	title: 'SEO in Saint Paul',
+	description: 'Every website we create comes with a comprehensive on-page SEO strategy, ensuring your site is optimized for search engines and provides an excellent user experience.',
+	keywords: ['SEO in Saint Paul', 'SEO services'],
 };
 
 const SeoServicesPage = async () => {
