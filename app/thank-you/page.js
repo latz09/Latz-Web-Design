@@ -2,7 +2,7 @@ import OverviewContainer from '@/components/cms/overview/OverviewContainer';
 import ProcessAndPricingContainer from '@/components/process-and-pricing/ProcessAndPricingContainer';
 import ReviewContainer from '@/components/reviews/ReviewContainer';
 
-import DynamicHello from '@/components/thank-you/DynamicHello';
+import DynamicHello from '@/components/thank-you-components/DynamicHello';
 import PageContainer from '@/components/utils/animations/PageContainer';
 
 export const metadata = {
