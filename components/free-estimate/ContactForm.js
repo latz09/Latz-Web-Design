@@ -8,29 +8,55 @@ const ContactForm = ({ toggleModal }) => {
 	const [formData, setFormData] = useState({
 		name: '',
 		email: '',
-		description: '',
+		phoneNumber: '',
+		description: '', // Initialize description field
 	});
+
+	const [isLoading, setIsLoading] = useState(false);
+	const [isErrorMessage, setIsErrorMessage] = useState('');
+	const [successMessage, setSuccessMessage] = useState('');
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;
-		setFormData({ ...formData, [name]: value });
+		setFormData((prevData) => ({
+			...prevData,
+			[name]: value,
+		}));
 	};
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
+		setIsLoading(true);
+		setIsErrorMessage('');
+		setSuccessMessage('');
 
-		// Form submission logic
-		// You'll handle Sanity form submission here
+		try {
+			const response = await fetch('/api/submitContactForm', {
+				method: 'POST',
+				body: JSON.stringify(formData),
+				headers: {
+					'Content-Type': 'application/json',
+				},
+			});
 
-		// Reset the form
-		setFormData({
-			name: '',
-			email: '',
-			description: '',
-		});
-
-		// Close the modal
-		toggleModal(false);
+			const result = await response.json();
+			if (result.success) {
+				setFormData({
+					name: '',
+					email: '',
+					phoneNumber: '',
+					description: '', // Reset description field
+				});
+				setSuccessMessage('Form submitted successfully!');
+				toggleModal(false); // Close the modal after successful submission
+			} else {
+				setIsErrorMessage(result.message || 'Submission failed');
+			}
+		} catch (error) {
+			setIsErrorMessage('Failed to submit form');
+		} finally {
+			setIsLoading(false);
+		}
 	};
 
 	return (
@@ -49,7 +75,7 @@ const ContactForm = ({ toggleModal }) => {
 					placeholder='e.g., John Doe'
 					value={formData.name}
 					onChange={handleChange}
-					className='form-input  tracking-wider'
+					className='form-input tracking-wider'
 					required
 				/>
 			</div>
@@ -70,6 +96,22 @@ const ContactForm = ({ toggleModal }) => {
 				/>
 			</div>
 
+			<div className='flex flex-col'>
+				<label htmlFor='phoneNumber' className='form-label'>
+					Your Phone Number
+				</label>
+				<input
+					type='tel'
+					id='phoneNumber'
+					name='phoneNumber'
+					placeholder='e.g., +1234567890'
+					value={formData.phoneNumber}
+					onChange={handleChange}
+					className='form-input'
+					required
+				/>
+			</div>
+
 			<div className='flex flex-col pt-4'>
 				<label htmlFor='description' className='form-label'>
 					Describe Your Vision
@@ -84,9 +126,11 @@ const ContactForm = ({ toggleModal }) => {
 					required
 				/>
 			</div>
+			{isErrorMessage && <p className='text-red-500'>{isErrorMessage}</p>}
+			{successMessage && <p className='text-green-500'>{successMessage}</p>}
 			<div className='pt-2'>
-				<button type='submit' className='form-button '>
-					Send Your Ideas
+				<button type='submit' className='form-button' disabled={isLoading}>
+					{isLoading ? 'Submitting...' : 'Send Your Ideas'}
 				</button>
 			</div>
 		</form>
