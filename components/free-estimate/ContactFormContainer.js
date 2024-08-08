@@ -1,4 +1,5 @@
 import AnimateUp from '../utils/animations/AnimateUp';
+import DelayAnimateUp from '../utils/animations/DelayAnimateUp';
 import SlideIn from '../utils/animations/SlideIn';
 import ContactForm from './ContactForm';
 import ContactFormIntro from './ContactFormIntro';
@@ -7,16 +8,16 @@ const ContactFormContainer = ({ toggleModal }) => {
 	return (
 		<div className='bg-gradient-to-b from-dark via-dark/90 to-dark pt-8 pb-32'>
 			<div className=' max-w-7xl mx-auto grid  lg:grid-cols-2 gap-8 lg:gap-2 place-items-center '>
-				<div className='p-6 grid gap-8'>
+				<div className='p-6 space-y-8 grid place-items-start'>
 					<ContactFormIntro />
-					<div className='hidden lg:block'>
+					<div className='hidden lg:grid '>
 						<Contacts />
 					</div>
 				</div>
 
-				<AnimateUp className='lg:w-5/6 w-full px-4 lg:px-0'>
+				<DelayAnimateUp className='lg:w-5/6 w-full px-4 lg:px-0'>
 					<ContactForm toggleModal={toggleModal} />
-				</AnimateUp>
+				</DelayAnimateUp>
 				<div className="lg:hidden mt-8 text-center">
 					<Contacts />
 				</div>
@@ -29,7 +30,7 @@ export default ContactFormContainer;
 
 const Contacts = () => {
 	return (
-		<div className='text-tertiary  grid gap-1'>
+		<div className='text-tertiary  grid gap-3  '>
 			<a
 				href='mailto:jordan@latzwebdesign.com'
 				className='underline underline-offset-8 mb-4'
