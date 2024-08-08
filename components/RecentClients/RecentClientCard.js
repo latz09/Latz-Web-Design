@@ -29,7 +29,7 @@ const RecentClientCard = ({ data }) => {
 					/>
 					<div className='absolute inset-0 bg-dark/40 transition-colors duration-500 ease-in-out md:group-hover:bg-dark/30 flex flex-col justify-between text-light '>
 						<div className='flex flex-col bg-dark/5 transition-colors duration-500 ease-in-out md:group-hover:bg-dark/100'>
-							<h3 className='text-xl lg:text-2xl font-bold px-6 py-2 bg-light/80 text-dark/80 md:group-hover:bg-dark md:group-hover:text-light  shadow-lg  '>{companyName}</h3>
+							<h3 className='text-xl lg:text-2xl font-bold px-6 py-2 bg-dark/80 text-light   shadow-lg  '>{companyName}</h3>
 						</div>
 						<div className='flex flex-col bg-dark/40 px-6 pt-4  transition-colors duration-500 ease-in-out md:group-hover:bg-light/80 md:group-hover:text-dark'>
 							<div className='text-sm lg:text-base md:group-hover:font-bold'>{websiteDescription}</div>
