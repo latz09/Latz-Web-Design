@@ -1,6 +1,7 @@
+'use client';
+import { motion } from 'framer-motion';
 import React from 'react';
 import LandingBackground from '../utils/animations/LandingBackground';
-
 import ScrollIndicator from '../utils/animations/ScrollIndicator';
 import FreeEstimate from '../utils/FreeEstimate';
 
@@ -38,7 +39,7 @@ const INNER_CONTAINER_CLASSES =
 const CONTENT_CLASSES =
 	'lg:w-5/6 mx-auto grid gap-4 bg-dark/70 px-6 lg:px-8 py-2 lg:py-16 ';
 const HEADING_CLASSES = 'grid gap-2';
-const TOP_HEADING_CLASSES = 'text-lg lg:text-2xl  text-tertiary';
+const TOP_HEADING_CLASSES = 'text-lg lg:text-2xl text-tertiary';
 const MAIN_HEADING_CLASSES = 'text-4xl lg:text-7xl font-bold';
 const SUB_HEADING_CLASSES = 'text-lg lg:text-3xl';
 const BUTTON_CONTAINER_CLASSES =

@@ -20,8 +20,8 @@ const Footer = () => {
                 <SocialMediaLinks   />
             </div>
 			<div className='grid place-items-center lg:flex gap-8 lg:gap-4 max-w-5xl w-full justify-evenly text-lg lg:text-2xl font-bold tracking-wider'>
-				{navigationLinks.map((link) => (
-					<Link key={link.id} href={link.href}>
+				{navigationLinks.map((link, index) => (
+					<Link key={index} href={link.href}>
 						<span>{link.title}</span>
 					</Link>
 				))}
