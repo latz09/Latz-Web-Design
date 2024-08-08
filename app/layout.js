@@ -16,14 +16,16 @@ const roboto = Roboto({
 
 export const metadata = {
 	metadataBase: new URL('https://www.latzwebdesign.com/' || 'http://localhost:3000/'),
+	applicationName: 'St Paul Web design and Website Development',
 	title: {
-		default: 'Latz Web Design',
+		default: 'St. Paul Web Design and Website Development - 2024',
 		template: `%s | Latz Web Design`,
 	},
 	description: `Your business deserves a website that truly delivers! Experience the difference with personalized web design focused on turning clicks into customers. Discover the power of SEO-integrated, results-driven web design. Ready to outshine the competition? Get a free estimate today!`,
 	twitter: {
 		card: 'summary_large_image',
 	},
+	keywords: ['web design in saint paul, web design services'],
 };
 
 const RootLayout = ({ children }) => {

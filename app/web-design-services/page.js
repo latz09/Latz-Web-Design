@@ -11,8 +11,8 @@ const WebDesignServicesPage = async () => {
 	const [data] = await fetchData(query);
 	
 	return (
-		<div>
-			<div>Web Design Services</div>
+		<div className="h-screen">
+			{/* <div>Web Design Services</div> */}
 		</div>
 	);
 };
