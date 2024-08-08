@@ -9,7 +9,7 @@ const DynamicHello = () => {
 	const name = searchParams.get('name') || 'there';
 
 	return (
-		<div className='text-center text-light'>
+		<div className='text-center text-light px-4'>
 			<h1 className='text-4xl font-bold mb-4 text-tertiary'>
 				Thank You, {name}!
 			</h1>

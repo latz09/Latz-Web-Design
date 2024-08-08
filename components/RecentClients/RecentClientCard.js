@@ -45,3 +45,4 @@ const RecentClientCard = ({ data }) => {
 };
 
 export default RecentClientCard;
+export const revalidate = 10;
