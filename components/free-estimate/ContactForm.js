@@ -4,12 +4,11 @@
 
 import { useState } from 'react';
 
-const ContactForm = ({ toggleModal }) => {
+const ContactForm = () => {
 	const [formData, setFormData] = useState({
 		name: '',
 		email: '',
-		phoneNumber: '',
-		description: '', // Initialize description field
+		description: '',
 	});
 
 	const [isLoading, setIsLoading] = useState(false);
@@ -18,10 +17,7 @@ const ContactForm = ({ toggleModal }) => {
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;
-		setFormData((prevData) => ({
-			...prevData,
-			[name]: value,
-		}));
+		setFormData({ ...formData, [name]: value });
 	};
 
 	const handleSubmit = async (e) => {
@@ -29,6 +25,7 @@ const ContactForm = ({ toggleModal }) => {
 		setIsLoading(true);
 		setIsErrorMessage('');
 		setSuccessMessage('');
+		// Form submission logic
 
 		try {
 			const response = await fetch('/api/submitContactForm', {
@@ -44,11 +41,11 @@ const ContactForm = ({ toggleModal }) => {
 				setFormData({
 					name: '',
 					email: '',
-					phoneNumber: '',
+					
 					description: '', // Reset description field
 				});
 				setSuccessMessage('Form submitted successfully!');
-				toggleModal(false); // Close the modal after successful submission
+				// router.push(`/thank-you?name=${encodeURIComponent(formData.name)}`);
 			} else {
 				setIsErrorMessage(result.message || 'Submission failed');
 			}
@@ -57,6 +54,8 @@ const ContactForm = ({ toggleModal }) => {
 		} finally {
 			setIsLoading(false);
 		}
+
+		
 	};
 
 	return (
@@ -75,7 +74,7 @@ const ContactForm = ({ toggleModal }) => {
 					placeholder='e.g., John Doe'
 					value={formData.name}
 					onChange={handleChange}
-					className='form-input tracking-wider'
+					className='form-input  tracking-wider'
 					required
 				/>
 			</div>
@@ -96,22 +95,6 @@ const ContactForm = ({ toggleModal }) => {
 				/>
 			</div>
 
-			<div className='flex flex-col'>
-				<label htmlFor='phoneNumber' className='form-label'>
-					Your Phone Number
-				</label>
-				<input
-					type='tel'
-					id='phoneNumber'
-					name='phoneNumber'
-					placeholder='e.g., +1234567890'
-					value={formData.phoneNumber}
-					onChange={handleChange}
-					className='form-input'
-					required
-				/>
-			</div>
-
 			<div className='flex flex-col pt-4'>
 				<label htmlFor='description' className='form-label'>
 					Describe Your Vision
@@ -126,11 +109,9 @@ const ContactForm = ({ toggleModal }) => {
 					required
 				/>
 			</div>
-			{isErrorMessage && <p className='text-red-500'>{isErrorMessage}</p>}
-			{successMessage && <p className='text-green-500'>{successMessage}</p>}
 			<div className='pt-2'>
-				<button type='submit' className='form-button' disabled={isLoading}>
-					{isLoading ? 'Submitting...' : 'Send Your Ideas'}
+				<button type='submit' className='form-button '>
+					Send Your Ideas
 				</button>
 			</div>
 		</form>

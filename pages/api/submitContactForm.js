@@ -1,5 +1,5 @@
-import { sanityClient } from "@/lib/sanity/sanityConnection";
-import transporter from "@/lib/nodemailer/transporter";
+import { sanityClient } from '@/lib/sanity/sanityConnection';
+import transporter from '@/lib/nodemailer/transporter';
 
 export default async function handler(req, res) {
 	if (req.method !== 'POST') {
@@ -9,14 +9,14 @@ export default async function handler(req, res) {
 	}
 
 	try {
-		const { name, email, phoneNumber, description } = req.body; // Include description
+		const { name, email, description } = req.body;
 
 		// Store in Sanity
 		const result = await sanityClient.create({
 			_type: 'contactForm',
 			name,
 			email,
-			phoneNumber,
+
 			description, // Add description to the Sanity document
 			sentAt: new Date().toISOString(),
 		});
@@ -37,7 +37,7 @@ export default async function handler(req, res) {
         <ul>
             <li><strong>Name:</strong> ${name}</li>
             <li><strong>Email:</strong> ${email}</li>
-            <li><strong>Phone Number:</strong> <a href="tel:${phoneNumber}">${phoneNumber}</a></li>
+           
             <li><strong>Description:</strong> ${description}</li> // Add description to email
             <li><strong>Sent At:</strong> ${new Date().toISOString()}</li>
         </ul>
@@ -55,3 +55,5 @@ export default async function handler(req, res) {
 		res.status(500).json({ success: false, message: error.message });
 	}
 }
+
+{/* <li><strong>Phone Number:</strong> <a href="tel:${phoneNumber}">${phoneNumber}</a></li> */}
