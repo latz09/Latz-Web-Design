@@ -28,13 +28,13 @@ const RecentClientCard = ({ data }) => {
 						className='rounded-sm'
 					/>
 					<div className='absolute inset-0 bg-gradient-to-b from-dark/0 via-primary/20 to-dark transition-colors duration-500 ease-in-out md:group-hover:bg-dark/30 flex flex-col justify-between text-light'>
-						<div className='flex justify-between items-center px-6 py-2 bg-dark/90'>
-							<h3 className='text-xl font-bold text-light shadow-lg'>
+						<div className='flex justify-between items-center px-6 py-3 bg-light'>
+							<h3 className='text-xl font-bold text-dark '>
 								{companyName}
 							</h3>
-							<div className='text-sm lg:text-base lg:font-semibold tracking-wider flex items-center'>
-								<span className='md:group-hover:text-tertiary'>Visit Site</span>
-								<FaLongArrowAltRight className='inline-block text-tertiary ml-2 transform transition-transform duration-500 ease-in-out group-hover:translate-x-2 text-lg lg:text-2xl ' />
+							<div className='text-sm lg:text-base lg:font-semibold  flex items-center'>
+								<span className=' text-dark '>Visit Site</span>
+								<FaLongArrowAltRight className='inline-block text-primary ml-2 transform transition-transform duration-500 ease-in-out group-hover:translate-x-2 text-lg lg:text-2xl ' />
 							</div>
 						</div>
 						<div className='flex flex-col bg-dark/30 px-6 py-4 transition-colors duration-500 ease-in-out md:group-hover:bg-light/80 md:group-hover:text-dark '>
