@@ -9,12 +9,9 @@ export const metadata = {
 
 const OurWorkPage = async () => {
 	return (
-		<PageContainer
-		className="bg-light"
-		>
-			
+		<PageContainer className='bg-light'>
 			<RecentClientsContainer featuredOnly={false} />
-			
+
 			<ReviewContainer />
 		</PageContainer>
 	);

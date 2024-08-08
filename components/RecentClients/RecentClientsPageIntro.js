@@ -2,7 +2,7 @@ import { MainHeading, TopHeading, Description } from '../utils/Typography';
 
 const RecentClientsPageIntro = () => {
 	return (
-		<div className='bg-gradient-to-b from-dark via-primary/20 to-primary/30 pt-12 lg:pt-24 pb-6 lg:pb-12'>
+		<div className='bg-gradient-to-b from-primary/40 via-primary/30 to-dark pt-12 lg:pt-24 pb-6 lg:pb-12'>
 			<div className='grid place-items-center gap-4'>
 				<div className='space-y-2 text-center px-2 lg:px-0'>
 					<TopHeading title='Our Work' theme='text-light' />

@@ -32,22 +32,20 @@ export const SocialMediaLinks = () => {
 	return (
 		<div className='flex   text-3xl justify-between mt-4 text-dark'>
 			<a
-				href='https://www.linkedin.com/in/jordan-latz-0b6b0b1b5/'
+				href='https://www.linkedin.com/in/jordan-latz/'
 				target='_blank'
 				rel='noreferrer'
 			>
 				<FaLinkedinIn />
 			</a>
-			<a href=' ' target='_blank' rel='noreferrer'>
+			<a href='https://www.instagram.com/latz.web.design/' target='_blank' rel='noreferrer'>
 				<FaInstagram />
 			</a>
 
-			<a href=' ' target='_blank' rel='noreferrer'>
+			<a href='https://www.facebook.com/people/Latz-Web-Design-LLC/100085931935051/' target='_blank' rel='noreferrer'>
 				<FaFacebookF />
 			</a>
-			<a href=' ' target='_blank' rel='noreferrer'>
-				<FaGithub />
-			</a>
+			
 		</div>
 	);
 };

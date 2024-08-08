@@ -1,4 +1,5 @@
 import ProcessAndPricingContainer from '@/components/process-and-pricing/ProcessAndPricingContainer';
+import ReviewContainer from '@/components/reviews/ReviewContainer';
 import PageContainer from '@/components/utils/animations/PageContainer';
 
 export const metadata = {
@@ -9,8 +10,9 @@ export const metadata = {
 const PricingAndBudgetPage = async () => {
 	return (
 		<PageContainer>
-			<div className=''>
+			<div className='bg-light grid gap-16 lg:gap-24'>
 				<ProcessAndPricingContainer />
+				<ReviewContainer />
 			</div>
 		</PageContainer>
 	);

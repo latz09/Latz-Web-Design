@@ -13,14 +13,17 @@ const Process = ({ data }) => {
 			<div className='max-w-6xl mx-auto px-4 lg:px-0 space-y-12 flex flex-col lg:flex-row  '>
 				{/* Left Column: Headings */}
 				<div className='flex-1 lg:pr-8 lg:h-[85vh] lg:flex lg:items-center lg:justify-center lg:sticky lg:top-8  text-center lg:text-start mb-4 lg:mb-0'>
-					<AnimateUp>
-						<div className='space-y-4'>
-							<MainHeading title={data.heading} theme='text-light' />
-							<div className='ml-2 hidden lg:block'>
-								<FreeEstimate />
-							</div>
+					<div className='space-y-4 pl-2'>
+						<AnimateUp>
+							<MainHeading
+								title={data.heading}
+								theme='text-light my-3 lg:my-0'
+							/>
+						</AnimateUp>
+						<div className='ml-2 hidden lg:block'>
+							<FreeEstimate />
 						</div>
-					</AnimateUp>
+					</div>
 				</div>
 
 				{/* Right Column: Steps */}
