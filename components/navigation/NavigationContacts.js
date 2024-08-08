@@ -32,7 +32,7 @@ export const SocialMediaLinks = () => {
 	return (
 		<div className='flex   text-3xl justify-between mt-4 text-dark'>
 			<a
-				href='https://www.linkedin.com/in/jordan-latz/'
+				href='https://www.linkedin.com/company/latz-web-design'
 				target='_blank'
 				rel='noreferrer'
 			>
