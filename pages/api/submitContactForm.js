@@ -28,18 +28,16 @@ export default async function handler(req, res) {
 			subject: `${name} Submitted a Contact Form`,
 			text: `A new form has been submitted with the following details:
         Name: ${name}
-        Email: ${email}
-        Phone Number: ${phoneNumber}
-        Description: ${description} // Add description to email
-        Sent At: ${new Date().toISOString()}`,
+        Email: ${email}       
+        Description: ${description} 
+        `,
 			html: `
         <p>A new form has been submitted with the following details:</p>
         <ul>
             <li><strong>Name:</strong> ${name}</li>
             <li><strong>Email:</strong> ${email}</li>
-           
-            <li><strong>Description:</strong> ${description}</li> // Add description to email
-            <li><strong>Sent At:</strong> ${new Date().toISOString()}</li>
+            <br>                     
+            <li><strong>Description:</strong> ${description}</li>           
         </ul>
         `,
 		};
@@ -57,3 +55,5 @@ export default async function handler(req, res) {
 }
 
 {/* <li><strong>Phone Number:</strong> <a href="tel:${phoneNumber}">${phoneNumber}</a></li> */}
+
+// Phone Number: ${phoneNumber}
