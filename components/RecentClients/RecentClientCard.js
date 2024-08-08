@@ -27,13 +27,11 @@ const RecentClientCard = ({ data }) => {
 						style={{ objectFit: 'cover', objectPosition: 'center' }}
 						className='rounded-sm'
 					/>
-					<div className='absolute inset-0 bg-dark/70 transition-colors duration-500 ease-in-out md:group-hover:bg-dark/30 flex flex-col justify-end text-light'>
+					<div className='absolute inset-0 bg-dark/70 transition-colors duration-500 ease-in-out md:group-hover:bg-dark/30 flex flex-col justify-end text-light '>
 						<div className='flex flex-col bg-dark/5 px-6 pt-4 transition-colors duration-500 ease-in-out md:group-hover:bg-dark/100'>
-							<h3 className='text-2xl lg:text-2xl font-black tracking-wider mb-2'>
-								{companyName}
-							</h3>
-							<div className='tracking-wider'>{websiteDescription}</div>
-							<div className='place-self-end py-3 lg:py-2 lg:font-semibold tracking-wider flex items-center'>
+							<h3 className='text-lg lg:text-2xl font-bold'>{companyName}</h3>
+							<div className='text-sm lg:text-base'>{websiteDescription}</div>
+							<div className='text-sm lg:text-base place-self-end py-3 lg:py-2 lg:font-semibold tracking-wider flex items-center'>
 								<span>Visit Site</span>
 								<FaLongArrowAltRight className='inline-block text-tertiary ml-2 transform transition-transform duration-500 ease-in-out group-hover:translate-x-2 text-lg lg:text-2xl group-hover:text-primary' />
 							</div>
