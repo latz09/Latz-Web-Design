@@ -29,11 +29,11 @@ body {
 }
 
 .form-input {
-  @apply p-3 rounded-sm border border-light/50 text-light bg-primary/10 focus:outline-none focus:border-primary focus:bg-primary transition-colors duration-300;
+  @apply p-3 rounded-sm border border-light/50 text-dark focus:text-light bg-primary/10 focus:outline-none focus:border-primary focus:bg-primary transition-colors duration-300;
 }
 
 .form-textarea {
-  @apply p-3 rounded-sm  bg-primary/10 border text-light border-light/50 focus:outline-none focus:border-primary focus:bg-primary transition-colors duration-300 h-32 resize-none;
+  @apply p-3 rounded-sm  bg-primary/10 border text-dark focus:text-light border-light/50 focus:outline-none focus:border-primary focus:bg-primary transition-colors duration-300 h-32 resize-none;
 }
 
 .form-button {

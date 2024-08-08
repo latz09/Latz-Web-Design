@@ -3,6 +3,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 const ContactForm = () => {
 	const [formData, setFormData] = useState({
@@ -12,8 +13,9 @@ const ContactForm = () => {
 	});
 
 	const [isLoading, setIsLoading] = useState(false);
-	const [isErrorMessage, setIsErrorMessage] = useState('');
-	const [successMessage, setSuccessMessage] = useState('');
+	const [buttonText, setButtonText] = useState('Send Your Ideas');
+
+	const router = useRouter();
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;
@@ -23,9 +25,7 @@ const ContactForm = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		setIsLoading(true);
-		setIsErrorMessage('');
-		setSuccessMessage('');
-		// Form submission logic
+		setButtonText('Sending...');
 
 		try {
 			const response = await fetch('/api/submitContactForm', {
@@ -41,21 +41,21 @@ const ContactForm = () => {
 				setFormData({
 					name: '',
 					email: '',
-					
-					description: '', // Reset description field
+					description: '',
 				});
-				setSuccessMessage('Form submitted successfully!');
-				// router.push(`/thank-you?name=${encodeURIComponent(formData.name)}`);
+				router.push(`/thank-you?name=${encodeURIComponent(formData.name)}`);
+				setButtonText('Form submitted successfully!');
+				setTimeout(() => setButtonText('Send Your Ideas'), 3000);
 			} else {
-				setIsErrorMessage(result.message || 'Submission failed');
+				setButtonText(result.message || 'Submission failed');
+				setTimeout(() => setButtonText('Send Your Ideas'), 3000);
 			}
 		} catch (error) {
-			setIsErrorMessage('Failed to submit form');
+			setButtonText('Failed to submit form');
+			setTimeout(() => setButtonText('Send Your Ideas'), 3000);
 		} finally {
 			setIsLoading(false);
 		}
-
-		
 	};
 
 	return (
@@ -74,7 +74,7 @@ const ContactForm = () => {
 					placeholder='e.g., John Doe'
 					value={formData.name}
 					onChange={handleChange}
-					className='form-input  tracking-wider'
+					className='form-input tracking-wider'
 					required
 				/>
 			</div>
@@ -106,12 +106,11 @@ const ContactForm = () => {
 					value={formData.description}
 					onChange={handleChange}
 					className='form-textarea'
-					required
 				/>
 			</div>
 			<div className='pt-2'>
-				<button type='submit' className='form-button '>
-					Send Your Ideas
+				<button type='submit' className='form-button' disabled={isLoading}>
+					{buttonText}
 				</button>
 			</div>
 		</form>
