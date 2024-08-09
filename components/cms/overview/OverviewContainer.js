@@ -43,7 +43,7 @@ const OverviewContainer = async ({includeLink}) => {
 							</AnimateUp>
 						))}
 					</div>
-					<div className='grid place-items-center gap-4 mx-4 md:mx-2 lg:mx-0'>
+					<div className='grid place-items-center gap-4 mx-4 md:mx-2 lg:mx-0 '>
 						<Image
 							src={data.cmsImageUrl}
 							alt='Web design in saint paul'
@@ -51,9 +51,9 @@ const OverviewContainer = async ({includeLink}) => {
 							height={800}
 							className=''
 						/>
-						<div className='italic lg:text-lg font-bold  grid  place-items-center text-primary/70'>
-							<span className='text-primary'>Integrated Contact Form</span>
-							<span className='text-sm lg:text-base font-semibold text-dark/60'>{`Sweet Juanjo's`}</span>
+						<div className='italic lg:text-lg font-bold  text-center text-primary/70'>
+							<div className='text-primary'>Integrated Contact Form</div>
+							<div className='text-sm lg:text-base font-semibold text-dark/60'>{`Sweet Juanjo's`}</div>
 						</div>
 					</div>
 				</div>

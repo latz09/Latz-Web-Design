@@ -18,7 +18,7 @@ const ContactFormContainer = ({ toggleModal }) => {
 				<DelayAnimateUp className='lg:w-5/6 w-full px-4 lg:px-0'>
 					<ContactForm toggleModal={toggleModal} />
 				</DelayAnimateUp>
-				<div className="lg:hidden mt-8 text-center">
+				<div className='lg:hidden mt-8 text-center grid place-items-center '>
 					<Contacts />
 				</div>
 			</div>
@@ -30,17 +30,20 @@ export default ContactFormContainer;
 
 const Contacts = () => {
 	return (
-		<div className='text-tertiary  grid gap-3  '>
-			<a
-				href='mailto:jordan@latzwebdesign.com'
-				className='underline underline-offset-8 mb-4'
-			>
-				jordan@latzwebdesign.com
-			</a>
-
-			<a href='tel:7156305689' className='underline underline-offset-8'>
-				(715) 630-5689
-			</a>
+		<div className='text-tertiary  grid gap-5 '>
+			<div>
+				<a
+					href='mailto:jordan@latzwebdesign.com'
+					className='underline underline-offset-8 mb-4'
+				>
+					jordan@latzwebdesign.com
+				</a>
+			</div>
+			<div>
+				<a href='tel:7156305689' className='underline underline-offset-8'>
+					(715) 630-5689
+				</a>
+			</div>
 		</div>
 	);
 };
