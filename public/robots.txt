@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://latz-web-design.vercel.app
+Host: https://www.latzwebdesign.com
 
 # Sitemaps
-Sitemap: https://latz-web-design.vercel.app/sitemap.xml
+Sitemap: https://www.latzwebdesign.com/sitemap.xml
