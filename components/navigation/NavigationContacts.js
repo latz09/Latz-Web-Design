@@ -1,5 +1,6 @@
-import { FaFacebookF, FaLinkedinIn, FaGithub } from 'react-icons/fa';
-import { FaInstagram } from 'react-icons/fa6';
+import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
+import { AiFillInstagram } from "react-icons/ai";
+
 
 const NavigationContacts = () => {
 	return (
@@ -39,7 +40,7 @@ export const SocialMediaLinks = () => {
 				<FaLinkedinIn />
 			</a>
 			<a href='https://www.instagram.com/latz.web.design/' target='_blank' rel='noreferrer'>
-				<FaInstagram />
+				<AiFillInstagram />
 			</a>
 
 			<a href='https://www.facebook.com/people/Latz-Web-Design-LLC/100085931935051/' target='_blank' rel='noreferrer'>
