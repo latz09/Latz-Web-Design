@@ -1,9 +1,6 @@
 import NavigationContainer from '@/components/navigation/NavigationContainer';
-
+import { Analytics } from '@vercel/analytics/react';
 import './globals.css';
-
-
-
 import { Roboto } from 'next/font/google';
 import Footer from '@/components/navigation/Footer';
 
@@ -38,6 +35,7 @@ const RootLayout = ({ children }) => {
 					<div>{children}</div>
 					<Footer />
 				</div>
+				<Analytics />
 			</body>
 		</html>
 	);
