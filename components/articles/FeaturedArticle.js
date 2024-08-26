@@ -35,7 +35,7 @@ const FeaturedArticle = async ({ featuredArticle, synopsis }) => {
 
 					{/* Synopsis at the Bottom */}
 					{synopsis && (
-						<div className='flex items-end justify-center pb-4 text-light  lg:text-2xl text-center lg:w-3/4 mx-auto leading-7 lg:leading-9 '>
+						<div className='flex items-end justify-center pb-4 text-light  lg:text-2xl text-center lg:w-5/6 mx-auto leading-7 lg:leading-9 '>
 							<p>{synopsis}</p>
 						</div>
 					)}
