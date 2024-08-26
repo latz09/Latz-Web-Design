@@ -35,7 +35,7 @@ const myPortableTextComponents = {
 			<ul className='  lg:pl-8 mb-4 space-y-2 '>{children}</ul>
 		),
 		number: ({ children }) => (
-			<ol className='list-decimal  lg:pl-8 mb-4 space-y-2'>{children}</ol>
+			<ol className='list-decimal pl-4 lg:pl-8 mb-4 space-y-2'>{children}</ol>
 		),
 	},
 	listItem: ({ children }) => (
