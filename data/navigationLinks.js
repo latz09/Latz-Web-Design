@@ -19,10 +19,6 @@ export const navigationLinks = [
 		title: 'Our Work',
 		href: '/our-work',
 	},
-	{
-		title: 'Latest Articles',
-		href: '/articles',
-	},
 
 	{
 		title: 'Contact',

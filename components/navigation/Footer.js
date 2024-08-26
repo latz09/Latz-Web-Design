@@ -28,10 +28,13 @@ const Footer = () => {
 							<span>{link.title}</span>
 						</Link>
 					))}
+					<Link href='/articles'>
+						<span className="text-primary">Latest Articles</span>
+					</Link>
 				</div>
 			</div>
 			<div className='grid place-items-center gap-2 pb-2'>
-			<Link href='/legal/privacy-policy'>
+				<Link href='/legal/privacy-policy'>
 					<span className='text-xs font-semibold'>Privacy Policy</span>
 				</Link>
 				<div className='flex space-x-2 items-center text-xs sm:text-sm  text-center '>
@@ -41,7 +44,6 @@ const Footer = () => {
 					</span>{' '}
 					{currentYear} Latz Web Design, LLC
 				</div>
-				
 			</div>
 		</div>
 	);
