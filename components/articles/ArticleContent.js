@@ -25,7 +25,7 @@ const myPortableTextComponents = {
 			</p>
 		),
 		blockquote: ({ children }) => (
-			<blockquote className='border-l-4 border-primary pl-4 italic text-lg lg:text-xl text-gray-600 my-4'>
+			<blockquote className='border-l-4 border-primary pl-4 italic text-lg lg:text-xl text-primary/80 font-semibold my-4'>
 				{children}
 			</blockquote>
 		),

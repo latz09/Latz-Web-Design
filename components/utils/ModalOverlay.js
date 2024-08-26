@@ -23,7 +23,7 @@ const ModalOverlay = ({ onClose }) => {
 				</div>
 				<div className='flex items-center space-x-8'>
                     <Link href='/articles' onClick={onClose}>
-					<div className='font-black text-xl text-dark tracking-wide border- border-primary'>{`View Latest Articles`}</div>
+					<div className='font-black text-lg lg:text-xl text-dark/80 tracking-wide border- border-primary'>{`View Latest Articles`}</div>
                     </Link>
 					<button
 						onClick={onClose}

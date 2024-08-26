@@ -8,6 +8,7 @@ import AnimateUp from '@/components/utils/animations/AnimateUp';
 import ReviewContainer from '@/components/reviews/ReviewContainer';
 import ProcessAndPricingContainer from '@/components/process-and-pricing/ProcessAndPricingContainer';
 import OverviewContainer from '@/components/cms/overview/OverviewContainer';
+import FeaturedArticle from '@/components/articles/FeaturedArticle';
 
 export default async function Home() {
 	const [data] = await fetchData(query);
@@ -32,6 +33,7 @@ export default async function Home() {
 				<div>
 					<OverviewContainer includeLink={true} />
 				</div>
+				<FeaturedArticle featuredArticle={data.featuredArticle} synopsis={data.articleSynopsis}/>
 			</div>
 		</main>
 	);

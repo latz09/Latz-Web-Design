@@ -18,7 +18,18 @@ export const FETCH_HOME_PAGE_DATA_QUERY = `
       linkTitle,
       paragraphs
     },
-    
+    featuredArticle->{
+    title,
+    subTitle,
+    slug,
+    articleImage {
+      asset->{
+        url
+      },
+      alt
+    }
+  },
+  articleSynopsis,
     services[] {
       title,
       "imageUrl": image.asset->url,

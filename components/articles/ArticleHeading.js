@@ -12,7 +12,8 @@ const ArticleHeading = ({ title, subTitle, imageUrl, author }) => {
 				alt={title}
 				width={1920}
 				height={1080}
-				className='rounded-t-xl rounded-b-sm shadow-lg shadow-primary/40'
+				priority
+				className='lg:rounded-t-xl rounded-b-sm shadow-lg shadow-primary/40'
 			/>
 			<div className='lg:col-span-2 grid gap-2 px-2'>
 				<MainHeading
