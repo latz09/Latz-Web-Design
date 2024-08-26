@@ -10,16 +10,16 @@ const nextConfig = {
 			},
 		],
 	},
-	async redirects() {
-		return [
-			{
-				source: '/articles/:slug', // Old article URLs
-				destination: '/', // Redirect to the homepage or another relevant page
-				permanent: true, // Permanent redirect (301 status)
-			},
-			// Add more redirects as needed
-		];
-	},
+	// async redirects() {
+	// 	return [
+	// 		{
+	// 			source: '/articles/:slug', // Old article URLs
+	// 			destination: '/', // Redirect to the homepage or another relevant page
+	// 			permanent: true, // Permanent redirect (301 status)
+	// 		},
+	// 		// Add more redirects as needed
+	// 	];
+	// },
 };
 
 export default nextConfig;
