@@ -18,6 +18,18 @@ export const FETCH_SEO_PAGE_DATA_QUERY = `
       feature,
       description
     }
-  }
+  },
+    featuredArticle->{
+    title,
+    subTitle,
+    slug,
+    articleImage {
+      asset->{
+        url
+      },
+      alt
+    }
+  },
+  articleSynopsis,
 }
 `
