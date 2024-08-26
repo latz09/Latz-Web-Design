@@ -22,12 +22,12 @@ const ModalOverlay = ({ onClose }) => {
 					<LogoGuy />
 				</div>
 				<div className='flex items-center space-x-8'>
-                    <Link href='contact-latz-web-design' onClick={onClose}>
-					<div className='text-white text-xl'>{`Let's Talk`}</div>
+                    <Link href='/articles' onClick={onClose}>
+					<div className='font-black text-xl text-dark tracking-wide border- border-primary'>{`View Latest Articles`}</div>
                     </Link>
 					<button
 						onClick={onClose}
-						className='text-xl text- hover:text-gray-700'
+						className='text-xl font-black hover:text-gray-700'
 					>
 						✕
 					</button>

@@ -39,3 +39,21 @@ body {
 .form-button {
   @apply  text-lg lg:text-xl font-bold w-full bg-primary  hover:scale-95 transition duration-700 text-light py-3 rounded-sm ;
 }
+
+
+/* ARTICLE */
+ol.list-decimal {
+  counter-reset: list; /* Reset the list counter */
+}
+
+ol.list-decimal li {
+  counter-increment: list; /* Increment the list counter */
+  /* font-weight: bold; Style the text inside the <li> */
+  color: #primary-color; /* Style the text color inside the <li> */
+}
+
+ol.list-decimal li::marker {
+  font-weight: bold; 
+  color: #primary-color; /* Style the number color */
+  font-size: 1.5rem; /* Adjust the size of the number */
+}
