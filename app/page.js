@@ -27,13 +27,16 @@ export default async function Home() {
 					<RecentClientsContainer />
 				</AnimateUp>
 				<ReviewContainer />
-				<div className=" pt-12">
+				<div className=' pt-12'>
 					<ProcessAndPricingContainer />
 				</div>
 				<div>
 					<OverviewContainer includeLink={true} />
 				</div>
-				<FeaturedArticle featuredArticle={data.featuredArticle} synopsis={data.articleSynopsis}/>
+				<FeaturedArticle
+					featuredArticle={data.featuredArticle}
+					synopsis={data.articleSynopsis}
+				/>
 			</div>
 		</main>
 	);

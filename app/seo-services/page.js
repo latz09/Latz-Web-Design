@@ -35,3 +35,5 @@ const SeoServicesPage = async () => {
 };
 
 export default SeoServicesPage;
+
+export const revalidate = 10;
