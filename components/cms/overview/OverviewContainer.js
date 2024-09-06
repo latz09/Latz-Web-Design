@@ -46,7 +46,7 @@ const OverviewContainer = async ({includeLink}) => {
 					<div className='grid place-items-center gap-4 mx-4 md:mx-2 lg:mx-0 '>
 						<Image
 							src={data.cmsImageUrl}
-							alt='Web design in saint paul'
+							alt='Web design in saint paul '
 							width={800}
 							height={800}
 							className=''
