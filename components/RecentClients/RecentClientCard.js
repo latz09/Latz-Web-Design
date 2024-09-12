@@ -24,7 +24,7 @@ const RecentClientCard = ({ data }) => {
           </div>
 
           {/* Image Section */}
-          <div className="relative w-full h-80 md:group-hover:scale-95 transition duration-700">
+          <div className="relative w-full h-72 lg:h-80 md:group-hover:scale-95 transition duration-700">
             <Image
               src={websiteImageUrl}
               alt={`${companyName} Website`}
