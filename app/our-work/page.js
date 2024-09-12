@@ -18,3 +18,5 @@ const OurWorkPage = async () => {
 };
 
 export default OurWorkPage;
+
+export const revalidate = 10;
