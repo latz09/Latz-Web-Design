@@ -28,7 +28,7 @@ const KeyBenefits = ({ data }) => {
 										width={350}
 										height={350}
                                         quality={100}
-										className='rounded-lg transform hover:scale-105 transition-transform duration-300 w-2/3 lg:w-full  mx-auto'
+										className='rounded-lg transform hover:scale-105 transition-transform duration-300 '
 									/>
 								</div>
 								{/* Text Section */}
@@ -52,7 +52,7 @@ const KeyBenefits = ({ data }) => {
 										width={350}
 										height={350}
                                         quality={100}
-										className='rounded-lg transform hover:scale-105 transition-transform duration-300 w-2/3 lg:w-full  mx-auto'
+										className='rounded-lg transform hover:scale-105 transition-transform duration-300 '
 									/>
 								</div>
 							</>
