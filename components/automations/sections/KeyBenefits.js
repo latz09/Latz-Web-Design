@@ -13,7 +13,7 @@ const KeyBenefits = ({ data }) => {
 				{data.map((benefit, index) => (
 					<li
 						key={index}
-						className={`grid lg:grid-cols-2  p-8 gap-8  ${
+						className={`grid lg:grid-cols-2  p-4 lg:p-8 gap-8  ${
 							index % 2 === 0 ? 'bg-white' : 'bg-gray-100'
 						} rounded-lg`}
 					>
