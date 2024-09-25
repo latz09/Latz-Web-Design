@@ -18,3 +18,5 @@ const LocalSeo = async () => {
 };
 
 export default LocalSeo;
+
+export const revalidate = 10;
