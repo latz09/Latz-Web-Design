@@ -1,7 +1,7 @@
 import React from 'react';
 import { BsMegaphoneFill, BsFillRocketTakeoffFill } from 'react-icons/bs';
 import { FaEnvelopeOpenText } from 'react-icons/fa';
-import { FaMapLocationDot } from 'react-icons/fa6';
+import { FaMapLocationDot, FaNetworkWired  } from 'react-icons/fa6';
 
 // Mapping icon names to their corresponding components
 const iconMap = {
@@ -9,6 +9,7 @@ const iconMap = {
 	rocket: BsFillRocketTakeoffFill,
 	envelope: FaEnvelopeOpenText,
 	map: FaMapLocationDot,
+	network: FaNetworkWired,
 };
 
 const AutomationIcon = ({

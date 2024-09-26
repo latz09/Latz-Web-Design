@@ -22,11 +22,7 @@ const LocalSeo = async () => {
 				videoData={data.videoVisuals[0]} 
 				descriptionHeading={data.descriptionHeading}
 			/>
-			{/* <div>
-				{data.videoVisuals.map((video, index) => (
-					<VideoPlayer key={index} videoData={video} />
-				))}
-			</div> */}
+			
 			<KeyBenefits data={data.keyBenefits} />
 		</Layout>
 	);
