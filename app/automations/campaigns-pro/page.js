@@ -11,6 +11,7 @@ const CampaignsPro = async () => {
 	return (
 		<Layout>
 			<Introduction
+			 
 				title={data.serviceName}
 				headline={data.headline}
 				intro={data.expandedCopy}
@@ -18,7 +19,8 @@ const CampaignsPro = async () => {
 				// videoData={data.videoVisuals[0]}
 				descriptionHeading={data.descriptionHeading}
 			/>
-			<KeyBenefits data={data.keyBenefits} />
+			<div>
+			<KeyBenefits data={data.keyBenefits} /></div>
 			<CheckList data={data.checklist} />
 		</Layout>
 	);
