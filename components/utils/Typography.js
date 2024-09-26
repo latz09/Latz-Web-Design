@@ -9,3 +9,8 @@ export const TopHeading = ({ title, theme }) => {
 export const Description = ({ description, theme }) => {
 	return <p className={`text-lg lg:text-xl leading-8 lg:leading-9 ${theme}`}>{description}</p>;
 };
+
+
+export const AutomationDescription = ({ description, theme }) => {
+	return <p className={` lg:text-[1.18rem] opacity-90 leading-7 lg:leading-8 ${theme}`}>{description}</p>;
+}

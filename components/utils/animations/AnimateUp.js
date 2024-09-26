@@ -19,3 +19,20 @@ const AnimateUp = ({ children, className, ...rest }) => {
 };
 
 export default AnimateUp;
+
+export const FadeIn = ({ children, className, ...rest }) => {
+	return (
+		<>
+			<motion.div
+				className={className}
+				initial={{ opacity: 0, scale: .8 }}
+				whileInView={{  opacity: 1, scale: 1 }}
+				transition={{ duration: 0.9, delay: 0.3 }}
+				viewport={{ once: true }}
+				{...rest}
+			>
+				<div>{children}</div>
+			</motion.div>
+		</>
+	);
+};

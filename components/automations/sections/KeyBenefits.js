@@ -1,4 +1,6 @@
+import AnimateUp, { FadeIn } from '@/components/utils/animations/AnimateUp';
 import {
+	AutomationDescription,
 	Description,
 	MainHeading,
 	TopHeading,
@@ -7,57 +9,49 @@ import Image from 'next/image';
 
 const KeyBenefits = ({ data }) => {
 	return (
-		<section className='px-4 py-8  lg:py-12 '>
+		<section className='lg:px-4 py-8 lg:py-12'>
 			{/* <MainHeading title='Key Benefits' /> */}
-			<ul className='grid gap-16 lg:gap-32 mt-8'>
+			<ul className='grid   mt-8 '>
 				{data.map((benefit, index) => (
-					<li
-						key={index}
-						className={`grid lg:grid-cols-2  p-4 lg:p-8 gap-8  ${
-							index % 2 === 0 ? 'bg-white' : 'bg-gray-100'
-						} rounded-lg`}
-					>
-						{/* Conditionally render image and text based on index */}
-						{index % 2 === 0 ? (
-							<>
-								{/* Image Section */}
-								<div className='flex justify-center items-center'>
+					<AnimateUp key={index} index={index}>
+						<li
+							key={index}
+							className={`grid  border-t-2 border-dark/60 border-dotted  lg:flex p-4 gap-16 py-24 lg:py-8 lg:px-16 lg:gap-24 ${
+								index % 2 === 0 ? 'bg-primary/10' : 'bg-tertiary/10'
+							} ${index === 0 ? 'rounded-t-3xl border-none' : ''}`}
+						>
+							{/* Text Section */}
+							<div
+								className={`flex lg:w-1/2 flex-col justify-center text-center lg:text-lef gap-3  ${
+									index % 2 !== 0 ? 'lg:order-2 ' : 'lg:order-1 '
+								}`}
+							>
+								<MainHeading title={benefit.benefitTitle} theme='text-dark' />
+								<AutomationDescription
+									description={benefit.benefitDescription}
+								/>
+							</div>
+
+							{/* Image Section */}
+							<div
+								className={`lg:w-1/2 mx-auto flex justify-center items-center  ${
+									index % 2 !== 0 ? 'lg:order-1 ' : 'lg:order-2 '
+								}`}
+							>
+								<FadeIn>
 									<Image
 										src={benefit.benefitScreenshotUrl}
 										alt={benefit.benefitTitle}
-										width={350}
-										height={350}
-                                        quality={100}
-										className='rounded-lg transform hover:scale-105 transition-transform duration-300 '
+										layout='responsive'
+										width={300} // Adjust the width according to your layout
+										height={200} // Adjust the height according to your layout
+										quality={100}
+										className='rounded-lg object-contain lg:p-16'
 									/>
-								</div>
-								{/* Text Section */}
-								<div className='flex flex-col justify-center text-center lg:text-left gap-3'>
-									<MainHeading title={benefit.benefitTitle} theme='text-primary' />
-									<TopHeading title={benefit.benefitDescription} />
-								</div>
-							</>
-						) : (
-							<>
-								{/* Text Section */}
-								<div className='flex flex-col justify-center text-center lg:text-left gap-3'>
-                                <MainHeading title={benefit.benefitTitle} theme='text-primary' />
-									<TopHeading title={benefit.benefitDescription} />
-								</div>
-								{/* Image Section */}
-								<div className='flex justify-center items-center'>
-									<Image
-										src={benefit.benefitScreenshotUrl}
-										alt={benefit.benefitTitle}
-										width={350}
-										height={350}
-                                        quality={100}
-										className='rounded-lg transform hover:scale-105 transition-transform duration-300 '
-									/>
-								</div>
-							</>
-						)}
-					</li>
+								</FadeIn>
+							</div>
+						</li>
+					</AnimateUp>
 				))}
 			</ul>
 		</section>

@@ -3,6 +3,8 @@ export const FETCH_AUTOMATION_SERVICES_QUERY = (filterKey) => `
     _id,
     serviceName,
     headline,
+    icon,
+    "landingImage": landingImage.asset->url,
     expandedCopy,
     keyBenefits[] {
       benefitTitle,
