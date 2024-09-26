@@ -8,7 +8,7 @@ import CheckList from '@/components/automations/sections/Checklist';
 const InboxPro = async () => {
 	const [data] = await fetchData(query('inboxPro'));
 	return (
-		<Layout>
+		<Layout id='#inboxPro'>
 			<Introduction
 				title={data.serviceName}
 				headline={data.headline}

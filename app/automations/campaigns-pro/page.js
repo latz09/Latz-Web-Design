@@ -9,7 +9,7 @@ const CampaignsPro = async () => {
 	const [data] = await fetchData(query('campaignsPro'));
 
 	return (
-		<Layout>
+		<Layout id='campaignsPro'>
 			<Introduction
 			 
 				title={data.serviceName}

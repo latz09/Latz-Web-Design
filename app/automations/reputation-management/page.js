@@ -7,7 +7,7 @@ const ReputationManagement = async () => {
     const [data] = await fetchData(query('reputationManagement'));
    
 	return (
-        <Layout >
+        <Layout id='#reputationManagement'>
         <Introduction
             title={data.serviceName}
             headline={data.headline}

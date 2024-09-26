@@ -11,21 +11,25 @@ const services = [
 		name: 'Inbox Pro',
 		icon: FaEnvelopeOpenText,
 		href: '/automations/inbox-pro',
+		id: 'inboxPro',
 	},
 	{
 		name: 'Local SEO',
 		icon: FaMapLocationDot,
 		href: '/automations/local-seo',
+		id: 'localSEO',
 	},
 	{
 		name: 'Reputation Management',
 		icon: BsMegaphoneFill,
 		href: '/automations/reputation-management',
+		id: 'reputationManagement',
 	},
 	{
 		name: 'Campaigns Pro',
 		icon: BsFillRocketTakeoffFill,
 		href: '/automations/campaigns-pro',
+		id: 'campaignsPro',
 	},
 ];
 
@@ -40,7 +44,11 @@ const ServiceTabBar = () => {
 					const isActive = pathname === service.href;
 
 					return (
-						<Link href={`${service.href}/#1`} key={index} className='w-full'>
+						<Link
+							href={`${service.href}/#${service.id}`}
+							key={index}
+							className='w-full'
+						>
 							<div
 								className={`flex items-center border gap-4 h-full w-full p-4 rounded cursor-pointer scale-95  transition duration-300 hover:scale-100 hover:shadow-xl ${
 									isActive

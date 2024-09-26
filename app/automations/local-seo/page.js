@@ -13,7 +13,7 @@ const LocalSeo = async () => {
 	const [data] = await fetchData(query('localSEO'));
 
 	return (
-		<Layout>
+		<Layout id='localSEO'>
 			<Introduction
 				title={data.serviceName}
 				headline={data.headline}
