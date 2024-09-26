@@ -19,7 +19,8 @@ const LocalSeo = async () => {
 				headline={data.headline}
 				intro={data.expandedCopy}
 				icon={data.icon}
-				videoData={data.videoVisuals[0]} // Pass the first video to Introduction
+				videoData={data.videoVisuals[0]} 
+				descriptionHeading={data.descriptionHeading}
 			/>
 			{/* <div>
 				{data.videoVisuals.map((video, index) => (

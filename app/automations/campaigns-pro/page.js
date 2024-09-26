@@ -3,6 +3,7 @@ import { FETCH_AUTOMATION_SERVICES_QUERY as query } from '@/data/queries/service
 import Introduction from '@/components/automations/sections/Introduction';
 import KeyBenefits from '@/components/automations/sections/KeyBenefits';
 import { AutomationPageLayout as Layout } from '@/components/automations/design-utils/AutomationPageLayout';
+import CheckList from '@/components/automations/sections/Checklist';
 
 const CampaignsPro = async () => {
 	const [data] = await fetchData(query('campaignsPro'));
@@ -15,8 +16,10 @@ const CampaignsPro = async () => {
 				intro={data.expandedCopy}
 				icon={data.icon}
 				// videoData={data.videoVisuals[0]}
+				descriptionHeading={data.descriptionHeading}
 			/>
 			<KeyBenefits data={data.keyBenefits} />
+			<CheckList data={data.checklist} />
 		</Layout>
 	);
 };

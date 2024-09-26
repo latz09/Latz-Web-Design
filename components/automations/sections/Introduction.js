@@ -10,9 +10,16 @@ const VideoPlayer = dynamic(() => import('@/components/utils/VideoPlayer'), {
 	ssr: false,
 });
 
-const Introduction = ({ title, headline, intro, icon, videoData }) => {
+const Introduction = ({
+	title,
+	headline,
+	intro,
+	icon,
+	videoData,
+	descriptionHeading,
+}) => {
 	return (
-		<div className='grid gap-8'>
+		<div className='grid gap-24'>
 			<div className='grid place-items-center lg:flex items-center gap-5 lg:w-2/3'>
 				{/* Icon container */}
 				<AutomationIcon
@@ -38,13 +45,19 @@ const Introduction = ({ title, headline, intro, icon, videoData }) => {
 					<div className='w-full h-auto'>
 						<VideoPlayer videoData={videoData} />
 					</div>
-					<div className='font-bold opacity-90 p-4 text-center lg:text-start'>
-						<AutomationDescription description={intro} />
+					<div className='space-y-4 p-4 opacity-90 text-center lg:text-start'>
+						<MainHeading title={descriptionHeading} />
+						<div className='font-bold   '>
+							<AutomationDescription description={intro} />
+						</div>
 					</div>
 				</div>
 			) : (
-				<div className='font-bold opacity-90 p-4 text-center lg:text-start  lg:w-2/3'>
-					<AutomationDescription description={intro} />
+				<div className='space-y-4 p-4 opacity-90 text-center lg:text-start'>
+					<MainHeading title={descriptionHeading} />
+					<div className='font-bold   '>
+						<AutomationDescription description={intro} />
+					</div>
 				</div>
 			)}
 		</div>

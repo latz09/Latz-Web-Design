@@ -15,6 +15,7 @@ const ReputationManagement = async () => {
             icon={data.icon}
             image={data.landingImage}
             videoData={data.videoVisuals[0]}
+            descriptionHeading={data.descriptionHeading}
         />
         <KeyBenefits data = {data.keyBenefits} />
     </Layout>
