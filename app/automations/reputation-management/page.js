@@ -18,3 +18,5 @@ const ReputationManagement = async () => {
 };
 
 export default ReputationManagement;
+
+export const revalidate = 10;

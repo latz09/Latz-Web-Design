@@ -18,3 +18,5 @@ const InboxPro = async () => {
 };
 
 export default InboxPro;
+
+export const revalidate = 10;

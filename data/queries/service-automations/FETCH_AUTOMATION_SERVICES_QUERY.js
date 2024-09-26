@@ -4,14 +4,23 @@ export const FETCH_AUTOMATION_SERVICES_QUERY = (filterKey) => `
     serviceName,
     headline,
     expandedCopy,
-    keyBenefits[]{
+    keyBenefits[] {
       benefitTitle,
       benefitDescription,
       "benefitScreenshotUrl": benefitScreenshot.asset->url
     },
     checklist,
     imageVisuals,
-    videoVisuals, 
+    videoVisuals[] {
+      videoTitle,
+      "videoUrl": videoUrl, // Updated to fetch the YouTube URL
+      videoThumbnail {
+        asset->{
+          _id,
+          url
+        }
+      }
+    }, 
     ctaButtonText,
     ctaButtonLink
   }

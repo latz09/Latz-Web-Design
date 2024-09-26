@@ -20,3 +20,5 @@ const CampaignsPro = async () => {
 };
 
 export default CampaignsPro;
+
+export const revalidate = 10;

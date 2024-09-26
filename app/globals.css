@@ -57,3 +57,16 @@ ol.list-decimal li::marker {
   color: #primary-color; /* Style the number color */
   font-size: 1.5rem; /* Adjust the size of the number */
 }
+
+
+.react-player-wrapper {
+	position: relative;
+	padding-top: 56.25%; /* for 16:9 aspect ratio */
+	height: 0;
+}
+
+.react-player {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
