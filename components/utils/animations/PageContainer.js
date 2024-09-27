@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 const PageContainer = ({ children, className }) => {
 	return (
-		<div className=" mt-[15vh] ">
+		<div className=" mt-[15vh] grid gap-24 ">
 			<motion.div
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}

@@ -20,7 +20,7 @@ const ServiceLayout = async () => {
 			headline={data.headline}
 			intro={data.expandedCopy}
 			icon={data.icon}
-			
+			videoData={data.videoVisuals[0]}
 			descriptionHeading={data.descriptionHeading}
 		/>
 		
