@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const GetStartedNow = () => {
 	return (
-		<div className='max-w-4xl mx-auto space-y-4  px-4 py-6 lg:px-8 lg:py-12 bg-dark text-light lg:rounded-lg shadow-lg my-24'>
+		<div className='max-w-4xl mx-auto space-y-4  px-4  lg:px-8 py-12 bg-dark text-light lg:rounded-lg shadow-lg my-24'>
 			<div className='space-y-2'>
 				<MainHeading
 					title='Ready to Elevate Your Business?'
