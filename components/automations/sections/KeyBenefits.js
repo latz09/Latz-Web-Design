@@ -42,11 +42,11 @@ const KeyBenefits = ({ data }) => {
 									<Image
 										src={benefit.benefitScreenshotUrl}
 										alt={benefit.benefitTitle}
-										layout='responsive'
-										width={300} // Adjust the width according to your layout
-										height={200} // Adjust the height according to your layout
+										// layout='responsive'
+										width={1000} // Adjust the width according to your layout
+										height={1000} // Adjust the height according to your layout
 										quality={100}
-										className='rounded-lg object-contain lg:p-16'
+										className='rounded-lg object-contain  '
 									/>
 								</FadeIn>
 							</div>
