@@ -62,7 +62,7 @@ const Introduction = ({
 					</div>
 				</div>
 			) : (
-				<div className='space-y-4 p-4 opacity-90 text-center lg:text-start w-2/3 '>
+				<div className='space-y-4 p-4 opacity-90 text-center lg:text-start lg:w-2/3 '>
 					<MainHeading title={descriptionHeading} />
 					<div className='font-bold lg:text-start space-y-4 opacity-80'>
 						{intro.map((paragraph, index) => (
