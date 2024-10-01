@@ -34,6 +34,7 @@ const RootLayout = ({ children }) => {
 				<div className='max-w-7l mx-auto   '>
 					<div>{children}</div>
 					<Footer />
+					
 				</div>
 				<Analytics />
 			</body>

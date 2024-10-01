@@ -12,6 +12,10 @@ export const navigationLinks = [
 		href: '/custom-cms',
 	},
 	{
+		title: 'CRM and Automations',
+		href: '/customer-relationship-manager#automations',
+	},
+	{
 		title: 'SEO',
 		href: '/seo-services',
 	},

@@ -6,7 +6,7 @@ import ContactFormIntro from './ContactFormIntro';
 
 const ContactFormContainer = ({ toggleModal }) => {
 	return (
-		<div className='bg-gradient-to-b from-dark via-dark/90 to-dark pt-8 pb-32'>
+		<div className='bg- to-dark pt-8 pb-32'>
 			<div className=' max-w-7xl mx-auto grid  lg:grid-cols-2 gap-8 lg:gap-2 place-items-center '>
 				<div className='p-6 space-y-8 grid place-items-start'>
 					<ContactFormIntro />
@@ -30,7 +30,7 @@ export default ContactFormContainer;
 
 const Contacts = () => {
 	return (
-		<div className='text-tertiary  grid gap-5 '>
+		<div className='text-dark  grid gap-5 '>
 			<div>
 				<a
 					href='mailto:jordan@latzwebdesign.com'

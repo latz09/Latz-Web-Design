@@ -29,15 +29,15 @@ body {
 }
 
 .form-input {
-  @apply p-3 rounded-sm border border-light/50 text-dark focus:text-light bg-primary/10 focus:outline-none focus:border-primary focus:bg-primary transition-colors duration-300;
+  @apply p-3 rounded-sm border border-dark/50 text-dark focus:text-light  focus:outline-none focus:border-tertiary focus:bg-dark transition-colors duration-300;
 }
 
 .form-textarea {
-  @apply p-3 rounded-sm  bg-primary/10 border text-dark focus:text-light border-light/50 focus:outline-none focus:border-primary focus:bg-primary transition-colors duration-300 h-32 resize-none;
+  @apply p-3 rounded-sm   border text-dark focus:text-light border-dark/50 focus:outline-none focus:border-primary focus:bg-dark transition-colors duration-300 h-32 resize-none;
 }
 
 .form-button {
-  @apply  text-lg lg:text-xl font-bold w-full bg-primary  hover:scale-95 transition duration-700 text-light py-3 rounded-sm ;
+  @apply  text-lg lg:text-xl font-bold w-full bg-dark  hover:scale-95 transition duration-700 text-light py-3 rounded-sm ;
 }
 
 

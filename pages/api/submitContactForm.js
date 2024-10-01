@@ -9,17 +9,22 @@ export default async function handler(req, res) {
 	}
 
 	try {
-		const { name, email, description } = req.body;
+		const { name, email, serviceTypes, description } = req.body;
 
 		// Store in Sanity
 		const result = await sanityClient.create({
 			_type: 'contactForm',
 			name,
 			email,
-
-			description, // Add description to the Sanity document
+			serviceTypes, // Storing serviceTypes array in Sanity
+			description,
 			sentAt: new Date().toISOString(),
 		});
+
+		// Prepare a formatted list of selected services for the email
+		const formattedServices = serviceTypes.length > 0
+			? serviceTypes.map((service) => `<li>${service}</li>`).join('')
+			: '<li>No service selected</li>';
 
 		// Send email using Nodemailer
 		const mailOptions = {
@@ -28,7 +33,8 @@ export default async function handler(req, res) {
 			subject: `${name} Submitted a Contact Form`,
 			text: `A new form has been submitted with the following details:
         Name: ${name}
-        Email: ${email}       
+        Email: ${email}
+        Services Interested In: ${serviceTypes.join(', ')}
         Description: ${description} 
         `,
 			html: `
@@ -36,7 +42,10 @@ export default async function handler(req, res) {
         <ul>
             <li><strong>Name:</strong> ${name}</li>
             <li><strong>Email:</strong> ${email}</li>
-            <br>                     
+            <br>
+            <li><strong>Services Interested In:</strong></li>
+            <ul>${formattedServices}</ul>
+            <br>
             <li><strong>Description:</strong> ${description}</li>           
         </ul>
         `,
@@ -53,6 +62,7 @@ export default async function handler(req, res) {
 		res.status(500).json({ success: false, message: error.message });
 	}
 }
+
 
 {/* <li><strong>Phone Number:</strong> <a href="tel:${phoneNumber}">${phoneNumber}</a></li> */}
 

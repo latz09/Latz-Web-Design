@@ -12,25 +12,25 @@ const services = [
 	{
 		name: 'Inbox Pro',
 		icon: FaEnvelopeOpenText,
-		href: '/automations/inbox-pro',
+		href: '/customer-relationship-manager/inbox-pro',
 		id: 'inboxPro',
 	},
 	{
 		name: 'Local SEO',
 		icon: FaMapLocationDot,
-		href: '/automations/local-seo',
+		href: '/customer-relationship-manager/local-seo',
 		id: 'localSEO',
 	},
 	{
 		name: 'Reputation Management',
 		icon: BsMegaphoneFill,
-		href: '/automations/reputation-management',
+		href: '/customer-relationship-manager/reputation-management',
 		id: 'reputationManagement',
 	},
 	{
 		name: 'Campaigns Pro',
 		icon: BsFillRocketTakeoffFill,
-		href: '/automations/campaigns-pro',
+		href: '/customer-relationship-manager/campaigns-pro',
 		id: 'campaignsPro',
 	},
 ];
@@ -42,18 +42,18 @@ const ServiceTabBar = () => {
 		<div className='space-y-4'>
 			{/* Separate link above the mapped links */}
 			<div className='max-w-7xl mx-auto px-2 lg:w-1/2 '>
-				<Link href={`/automations/#automations`} className='w-full'>
-					{/* Check if the current pathname matches the base /automations path */}
+				<Link href={`/customer-relationship-manager/#automations`} className='w-full'>
+					{/* Check if the current pathname matches the base /customer-relationship-manager path */}
 					<div
 						className={`flex items-center justify-center border gap-12 h-full w-full p-2 rounded cursor-pointer scale-95 transition duration-300 hover:scale-100 hover:shadow-xl ${
-							pathname === '/automations'
+							pathname === '/customer-relationship-manager'
 								? 'shadow-lg bg-dark text-light border-primary/0 scale-100'
 								: 'text-dark border-primary/30 scale-90'
 						}`}
 					>
 						<div
 							className={`text-5xl lg:text-6xl p-3 rounded-full ${
-								pathname === '/automations'
+								pathname === '/customer-relationship-manager'
 									? 'bg-tertiary text-dark shadow-lg'
 									: 'text-dark bg-tertiary'
 							}`}

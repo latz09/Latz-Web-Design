@@ -9,6 +9,7 @@ import ReviewContainer from '@/components/reviews/ReviewContainer';
 import ProcessAndPricingContainer from '@/components/process-and-pricing/ProcessAndPricingContainer';
 import OverviewContainer from '@/components/cms/overview/OverviewContainer';
 import FeaturedArticle from '@/components/articles/FeaturedArticle';
+import CRMBlurb from '@/components/automations/CRMBlurb';
 
 export default async function Home() {
 	const [data] = await fetchData(query);
@@ -27,6 +28,7 @@ export default async function Home() {
 					<RecentClientsContainer />
 				</AnimateUp>
 				<ReviewContainer />
+				{/* <CRMBlurb /> */}
 				<div className=' pt-12'>
 					<ProcessAndPricingContainer />
 				</div>

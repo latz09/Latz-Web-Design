@@ -1,5 +1,3 @@
-// components/free-estimate/ContactForm.js
-
 'use client';
 
 import { useState } from 'react';
@@ -9,17 +7,28 @@ const ContactForm = () => {
 	const [formData, setFormData] = useState({
 		name: '',
 		email: '',
+		serviceTypes: [], // Updated to be an array to hold multiple selections
 		description: '',
 	});
 
 	const [isLoading, setIsLoading] = useState(false);
-	const [buttonText, setButtonText] = useState('Send Your Ideas');
+	const [buttonText, setButtonText] = useState('Send Your Request');
 
 	const router = useRouter();
 
 	const handleChange = (e) => {
-		const { name, value } = e.target;
-		setFormData({ ...formData, [name]: value });
+		const { name, value, type, checked } = e.target;
+
+		if (type === 'checkbox') {
+			// Add or remove the service type based on whether it is checked
+			const updatedServices = checked
+				? [...formData.serviceTypes, value]
+				: formData.serviceTypes.filter((service) => service !== value);
+
+			setFormData({ ...formData, serviceTypes: updatedServices });
+		} else {
+			setFormData({ ...formData, [name]: value });
+		}
 	};
 
 	const handleSubmit = async (e) => {
@@ -41,18 +50,19 @@ const ContactForm = () => {
 				setFormData({
 					name: '',
 					email: '',
+					serviceTypes: [],
 					description: '',
 				});
 				router.push(`/thank-you?name=${encodeURIComponent(formData.name)}`);
 				setButtonText('Form submitted successfully!');
-				setTimeout(() => setButtonText('Send Your Ideas'), 3000);
+				setTimeout(() => setButtonText('Send Your Request'), 3000);
 			} else {
 				setButtonText(result.message || 'Submission failed');
-				setTimeout(() => setButtonText('Send Your Ideas'), 3000);
+				setTimeout(() => setButtonText('Send Your Request'), 3000);
 			}
 		} catch (error) {
 			setButtonText('Failed to submit form');
-			setTimeout(() => setButtonText('Send Your Ideas'), 3000);
+			setTimeout(() => setButtonText('Send Your Request'), 3000);
 		} finally {
 			setIsLoading(false);
 		}
@@ -61,7 +71,7 @@ const ContactForm = () => {
 	return (
 		<form
 			onSubmit={handleSubmit}
-			className='space-y-6 px-4 pb-10 lg:pb-12 pt-14 lg:pt-16 lg:px-8 bg-light rounded-b-xl shadow-lg border border-tertiary/10 shadow-tertiary/30'
+			className='space-y-6 px-4 pb-10 lg:pb-12 pt-14 lg:pt-16 lg:px-8 bg-light rounded-b-xl  shadow shadow-dark/30'
 		>
 			<div className='flex flex-col'>
 				<label htmlFor='name' className='form-label'>
@@ -95,14 +105,43 @@ const ContactForm = () => {
 				/>
 			</div>
 
+			{/* Updated Service Type Checkboxes */}
+			<div className='flex flex-col'>
+				<label className='form-label'>I'm Interested In</label>
+				<div className='flex flex-col space-y-2'>
+					<label className='inline-flex items-center'>
+						<input
+							type='checkbox'
+							name='serviceTypes'
+							value='web-design'
+							checked={formData.serviceTypes.includes('web-design')}
+							onChange={handleChange}
+							className='form-checkbox'
+						/>
+						<span className='ml-2'>Custom Web Design</span>
+					</label>
+					<label className='inline-flex items-center'>
+						<input
+							type='checkbox'
+							name='serviceTypes'
+							value='crm'
+							checked={formData.serviceTypes.includes('crm')}
+							onChange={handleChange}
+							className='form-checkbox'
+						/>
+						<span className='ml-2'>CRM & Automation Services</span>
+					</label>
+				</div>
+			</div>
+
 			<div className='flex flex-col pt-4'>
 				<label htmlFor='description' className='form-label'>
-					Describe Your Vision
+					Describe Your Project/Needs
 				</label>
 				<textarea
 					id='description'
 					name='description'
-					placeholder='Tell us about your project...'
+					placeholder='Tell us about your project or how we can help with CRM...'
 					value={formData.description}
 					onChange={handleChange}
 					className='form-textarea'
