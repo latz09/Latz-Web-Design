@@ -11,7 +11,7 @@ const NavigationLinks = ({ onLinkClick }) => {
 				<Link
 					key={index}
 					href={link.href}
-					className='text-4xl lg:text-5xl font-black my-2 py-2'
+					className='text-3xl lg:text-5xl font-bold lg:font-black my-2 py-2'
 					onClick={onLinkClick} // Close modal on link click
 				>
 					<NavigationLinkEntry>{link.title}</NavigationLinkEntry>
