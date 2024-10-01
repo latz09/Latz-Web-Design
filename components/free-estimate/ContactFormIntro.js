@@ -10,8 +10,8 @@ const ContactFormIntro = () => {
 					{`Ready to elevate your business? Whether you need a custom website that stands out or want to streamline your operations with our CRM & Automation services, we're here to help. `}
 				</p>
 				<p className='leading-8 lg:leading-10 font-bold'>
-					Fill out the form, and we'll reach out to discuss how we can bring
-					your vision to life.
+					{`Fill out the form, and we'll reach out to discuss how we can bring
+					your vision to life.`}
 				</p>
 			</div>
 		</div>
