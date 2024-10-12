@@ -20,7 +20,7 @@ const myPortableTextComponents = {
 			</h5>
 		),
 		normal: ({ children }) => (
-			<p className='text-lg lg:text-xl leading-8 lg:leading-9 mb-4'>
+			<p className='text-lg lg:text-xl leading-8 lg:leading-9 mb-4'>	
 				{children}
 			</p>
 		),

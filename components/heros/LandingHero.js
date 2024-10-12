@@ -37,11 +37,11 @@ const CONTAINER_CLASSES =
 const INNER_CONTAINER_CLASSES =
 	'relative z-10 text-light flex flex-col justify-center items-center h-full max-w-7xl mx-auto ';
 const CONTENT_CLASSES =
-	'lg:w-5/6 mx-auto grid gap-4 bg-dark/70 px-6 lg:px-8 py-2 lg:py-16 ';
+	'lg:w-5/6 mx-auto grid gap-4 bg-dark/70 px-3 lg:px-8 py-2 lg:py-16 ';
 const HEADING_CLASSES = 'grid gap-2';
-const TOP_HEADING_CLASSES = 'text-lg lg:text-2xl text-tertiary';
-const MAIN_HEADING_CLASSES = 'text-4xl lg:text-7xl font-bold';
-const SUB_HEADING_CLASSES = 'text-lg lg:text-3xl';
+const TOP_HEADING_CLASSES = 'text-lg lg:text-2xl opacity-70';
+const MAIN_HEADING_CLASSES = 'text-4xl lg:text-7xl font-bold pb-2';
+const SUB_HEADING_CLASSES = 'text-lg lg:text-3xl text-tertiary';
 const BUTTON_CONTAINER_CLASSES =
 	'lg:text-xl mt-2 lg:mt-8 uppercase font-semibold flex justify-between items-center w-2/3';
 
@@ -58,8 +58,8 @@ const LandingHero = ({ image, heading, subHeading, topHeading }) => {
 					<div className={HEADING_CLASSES}>
 						<p className={TOP_HEADING_CLASSES}>{topHeading}</p>
 						<h1 className={MAIN_HEADING_CLASSES}>{heading}</h1>
+						<h2 className={SUB_HEADING_CLASSES}>{subHeading}</h2>
 					</div>
-					<h2 className={SUB_HEADING_CLASSES}>{subHeading}</h2>
 					<div className={BUTTON_CONTAINER_CLASSES}>
 						<FreeEstimate />
 					</div>
