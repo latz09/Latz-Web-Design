@@ -28,7 +28,7 @@ const RecentClientCard = ({ data }) => {
 				<div className='p-5 bg-dark text-light mt-4 rounded-sm '>
 					{/* Company Name and Visit Link */}
 					<div className='flex items-center justify-between mb-2 '>
-						<h3 className='text-lg lg:text-xl font-bold text-light group-hover:text-primary transition-colors duration-300'>
+						<h3 className='text-lg lg:text-xl font-bold text-tertiary group-hover:text-primary transition-colors duration-300'>
 							{companyName}
 						</h3>
 						<div className='flex items-center text-primary'>
@@ -38,7 +38,7 @@ const RecentClientCard = ({ data }) => {
 					</div>
 
 					{/* Website Description */}
-					<p className='text-sm lg:text-base text-light'>
+					<p className='lg:text-xl text-light'>
 						{websiteDescription}
 					</p>
 				</div>

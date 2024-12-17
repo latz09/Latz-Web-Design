@@ -12,7 +12,7 @@ const OverviewContainer = async ({includeLink}) => {
 	const data = await fetchData(query);
 
 	return (
-		<div className='max-w-6xl mx-auto  grid '>
+		<div className='max-w-6xl mx-auto  grid py-24 '>
 			<div className='grid gap-12 lg:gap-16 '>
 				<SlideIn>
 					<div className='space-y-2 mx-4 lg:mx-0 lg:w-3/5 '>
