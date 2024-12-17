@@ -1,6 +1,5 @@
 'use client';
 
-
 import { motion } from 'framer-motion';
 import NavigationLinks from '../navigation/NavigationLinks'; // Ensure you have this component
 import NavigationLogo, { LogoGuy } from '../navigation/NavigationLogo';
@@ -22,9 +21,9 @@ const ModalOverlay = ({ onClose }) => {
 					<LogoGuy />
 				</div>
 				<div className='flex items-center space-x-8'>
-                    <Link href='/articles' onClick={onClose}>
-					<div className='font-black text-lg lg:text-xl text-dark/80 tracking-wide border- border-primary'>{`View Latest Articles`}</div>
-                    </Link>
+					<Link href='/articles' onClick={onClose}>
+						<div className='font-black text-lg lg:text-xl text-dark/80 tracking-wide border- border-primary'>{`View Latest Articles`}</div>
+					</Link>
 					<button
 						onClick={onClose}
 						className='text-xl font-black hover:text-gray-700'
@@ -48,5 +47,3 @@ const ModalOverlay = ({ onClose }) => {
 };
 
 export default ModalOverlay;
-
-

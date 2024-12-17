@@ -16,10 +16,10 @@ const NavigationContainer = () => {
 	const isHome = pathname === '/';
 
 	return (
-		<>
+		<div>
 			<HomeNavigation scrolled={scrolled} />
 			
-		</>
+		</div>
 	);
 };
 

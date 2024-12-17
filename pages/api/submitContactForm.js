@@ -22,9 +22,10 @@ export default async function handler(req, res) {
 		});
 
 		// Prepare a formatted list of selected services for the email
-		const formattedServices = serviceTypes.length > 0
-			? serviceTypes.map((service) => `<li>${service}</li>`).join('')
-			: '<li>No service selected</li>';
+		const formattedServices =
+			serviceTypes.length > 0
+				? serviceTypes.map((service) => `<li>${service}</li>`).join('')
+				: '<li>No service selected</li>';
 
 		// Send email using Nodemailer
 		const mailOptions = {
@@ -63,7 +64,8 @@ export default async function handler(req, res) {
 	}
 }
 
-
-{/* <li><strong>Phone Number:</strong> <a href="tel:${phoneNumber}">${phoneNumber}</a></li> */}
+{
+	/* <li><strong>Phone Number:</strong> <a href="tel:${phoneNumber}">${phoneNumber}</a></li> */
+}
 
 // Phone Number: ${phoneNumber}

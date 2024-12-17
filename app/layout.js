@@ -1,7 +1,9 @@
 import NavigationContainer from '@/components/navigation/NavigationContainer';
 import { Analytics } from '@vercel/analytics/react';
+import Script from 'next/script';
 import './globals.css';
 import { Roboto } from 'next/font/google';
+
 import Footer from '@/components/navigation/Footer';
 
 const roboto = Roboto({
@@ -12,7 +14,9 @@ const roboto = Roboto({
 });
 
 export const metadata = {
-	metadataBase: new URL('https://www.latzwebdesign.com/' || 'http://localhost:3000/'),
+	metadataBase: new URL(
+		'https://www.latzwebdesign.com/' || 'http://localhost:3000/'
+	),
 	applicationName: 'St Paul Web design and Website Development',
 	title: {
 		default: 'St. Paul Web Design and Website Development - 2024',
@@ -29,12 +33,17 @@ const RootLayout = ({ children }) => {
 	return (
 		<html lang='en'>
 			<body className={`${roboto.className}  text-dark `}>
-				
+				{/* Vendasta Chat Widget Script */}
+
+				<Script
+					src='https://cdn.apigateway.co/webchat-client..prod/sdk.js'
+					data-widget-id='c79ac1d5-a8ee-11ef-87c4-7ac49ff1d0eb'
+					defer
+				/>
 				<NavigationContainer />
-				<div className='max-w-7l mx-auto   '>
+				<div className='max-w-7l mx-auto'>
 					<div>{children}</div>
 					<Footer />
-					
 				</div>
 				<Analytics />
 			</body>

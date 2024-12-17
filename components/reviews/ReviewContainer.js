@@ -19,3 +19,5 @@ const ReviewContainer = async () => {
 };
 
 export default ReviewContainer;
+
+export const revalidate = 10;
