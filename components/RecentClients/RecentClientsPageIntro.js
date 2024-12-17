@@ -2,13 +2,13 @@ import { MainHeading, TopHeading, Description } from '../utils/Typography';
 
 const RecentClientsPageIntro = () => {
 	return (
-		<div className='bg-gradient-to-b from-primary/40 via-primary/30 to-dark pt-12 lg:pt-24 pb-6 lg:pb-12'>
+		<div className='bg-gradient-to-b from-dark via-dark/80 to-dark py-16'>
 			<div className='grid place-items-center gap-4'>
 				<div className='space-y-2 text-center px-2 lg:px-0'>
 					<TopHeading title='Our Work' theme='text-light' />
 					<MainHeading
 						title='Where Creativity Meets Functionality'
-						theme='text-light'
+						theme='text-tertiary'
 					/>
 				</div>
 				<div className='w-full px-2 lg:w-1/2 mx-auto text-center '>

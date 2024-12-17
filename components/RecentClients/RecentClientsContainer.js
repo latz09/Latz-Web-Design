@@ -10,11 +10,11 @@ const RecentClientsContainer = async ({ featuredOnly = true }) => {
 	const data = await fetchData(query);
 
 	return (
-		<div className=' bg-dark pb-12 lg:pb-24'>
+		<div className='  pb-12 lg:pb-24 bg-dark'>
 			{featuredOnly && <FeaturedClientsIntro />}
 			{!featuredOnly && <RecentClientsPageIntro />}
 
-			<div className='max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 lg:gap-y-24  px-1 lg:px-4 py-12 '>
+			<div className='max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 lg:gap-y-24  px-1 lg:px-4 py-12  '>
 				{data.map((client, index) => (
 					<RecentClientCard key={index} data={client} />
 				))}
