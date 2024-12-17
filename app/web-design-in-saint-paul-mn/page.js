@@ -19,7 +19,7 @@ export default async function WebDesignInSaintPaulMn() {
 	const [data] = await fetchData(query);
 
 	return (
-		<main className='grid gap-24 bg-light'>
+		<main >
 			<AreaLandingHero
 				image={data.imageUrl}
 				heading={data.headline}
