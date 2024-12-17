@@ -1,5 +1,5 @@
 import { fetchData } from '@/lib/sanity/sanityFetch';
-import { FETCH_HOME_PAGE_DATA_QUERY as query } from '@/data/queries/home-page/FETCH_HOME_PAGE_DATA_QUERY';
+import { FETCH_TWIN_CITIES_PAGE_DATA as query } from '@/data/queries/landingPages/FETCH_TWIN_CITIES_PAGE_DATA';
 import LandingHero from '@/components/heros/LandingHero';
 import CreativeWebDesign from '@/components/home-page/CreativeWebDesign';
 import RecentClientsContainer from '@/components/RecentClients/RecentClientsContainer';
@@ -12,20 +12,21 @@ import FeaturedArticle from '@/components/articles/FeaturedArticle';
 import CRMBlurb from '@/components/automations/CRMBlurb';
 import OurFullCircle from '@/components/automations/OurFullCircle';
 import CoreServices from '@/components/home-page/CoreServices';
-
+import AreaLandingHero from '@/components/heros/AreaLandingHero';
 
 export default async function WebDesignInSaintPaulMn() {
 	const [data] = await fetchData(query);
 
 	return (
 		<main className='grid gap-24 bg-light'>
-			<LandingHero
-				image={data.landingImage}
-				heading={data.landingHeading}
-				subHeading={data.landingSubHeading}
-				topHeading={data.topHeading}
+		
+			<AreaLandingHero
+				image={data.imageUrl}
+				heading={data.headline}
+				subHeading={data.subheadline}
+				topHeading={data.topHeadline}
 			/>
-			<div className='grid gap-24 w-full'>
+			{/* <div className='grid gap-24 w-full'>
 				<OurFullCircle /> 
 				<CoreServices />
 				<CreativeWebDesign data={data.creativeWebDesign} />
@@ -44,10 +45,9 @@ export default async function WebDesignInSaintPaulMn() {
 					featuredArticle={data.featuredArticle}
 					synopsis={data.articleSynopsis}
 				/> 
-			</div>
+			</div> */}
 		</main>
 	);
 }
 
 export const revalidate = 10;
-

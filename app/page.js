@@ -1,5 +1,5 @@
 import { fetchData } from '@/lib/sanity/sanityFetch';
-import { FETCH_LANDING_PAGE_DATA as query } from '@/data/queries/landingPage/FETCH_LANDING_PAGE_DATA';
+import { FETCH_LANDING_PAGE_DATA as query } from '@/data/queries/landingPages/FETCH_LANDING_PAGE_DATA';
 import LandingHero from '@/components/heros/LandingHero';
 import CreativeWebDesign from '@/components/home-page/CreativeWebDesign';
 import RecentClientsContainer from '@/components/RecentClients/RecentClientsContainer';
