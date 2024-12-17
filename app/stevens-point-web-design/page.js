@@ -15,6 +15,7 @@ import CoreServices from '@/components/home-page/CoreServices';
 import AreaLandingHero from '@/components/heros/AreaLandingHero';
 import SharedContent from '@/components/site-content/SharedContent';
 
+
 export default async function StevensPointWebDesign() {
 	const [data] = await fetchData(query);
 
@@ -26,6 +27,7 @@ export default async function StevensPointWebDesign() {
 				subHeading={data.subheadline}
 				topHeading={data.topHeadline}
 			/>
+			
 			<SharedContent />
 		</main>
 	);
