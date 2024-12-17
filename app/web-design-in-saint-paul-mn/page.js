@@ -19,7 +19,7 @@ export default async function WebDesignInSaintPaulMn() {
 	const [data] = await fetchData(query);
 
 	return (
-		<main >
+		<main className="bg-light" >
 			<AreaLandingHero
 				image={data.imageUrl}
 				heading={data.headline}
