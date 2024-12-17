@@ -3,47 +3,49 @@ import AnimateUp from '../utils/animations/AnimateUp';
 
 const Reviews = ({ data }) => {
 	return (
-		<div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-4 max-w-7xl mx-auto p-4'>
-			{data.map((review, index) => {
-				return (
-					<article
-						key={index}
-						className='bg-prmary/5 grid gap-4 p-2 lg:p-6 h-full '
-					>
-						<div className='flex flex-col justify-between h-full'>
-							{/* Logo and Website Name */}
-							<div className='flex flex-col justify-start items-cente mb-4'>
-								<div className='flex justify-center lg:justify-start items-center h-20'>
-									<Image
-										src={review.logo}
-										alt={`${review.websiteName} Logo`}
-										width={125} // Adjust the width as needed
-										height={75} // Adjust the height as needed
-										className='grayscale filter contrast-200 pb-6 mx-8'
-										style={{ objectFit: 'contain', objectPosition: 'center' }}
-									/>
+		<div className="max-w-7xl mx-auto px-4 py-10">
+			<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 place-items-center">
+				{data.map((review, index) => (
+					<AnimateUp key={index}>
+						<article className="bg-tertiary/5 rounded-lg shadow-lg shadow-dark/30 p-8 flex flex-col h-full transition-transform transform hover:scale-[1.02] duration-500 ">
+							<div className="flex flex-col justify-between h-full">
+								{/* Logo and Website Name */}
+								<div className="mb-6 text-center lg:text-left">
+									<div className="flex justify-center lg:justify-start items-center h-20 mb-4">
+										<Image
+											src={review.logo}
+											alt={`${review.websiteName} Logo`}
+											width={140}
+											height={90}
+											className="grayscale contrast-200 object-contain"
+										/>
+									</div>
+									<p className="text-prmary text-xl font-bold tracking-wide border-t border-dark/20 pt-4">
+										{review.websiteName}
+									</p>
 								</div>
-								<p className=' text-lg font-black tracking-wider pt-6 border-t border-dark/30 text-prmary'>
-									{review.websiteName}
-								</p>
-							</div>
 
-							{/* Review Text */}
-							<div className='flex-1 flex items-center justify-center'>
-								<p className='lg:font-semibold text-dark/80 leading-7'>
-									{`"${review.reviewText}"`}
-								</p>
-							</div>
+								{/* Review Text */}
+								<blockquote className="flex-1 flex items-center justify-center text-center lg:text-left  ">
+									<p className="text-lg  text-dark leading-relaxed italic">
+										“{review.reviewText}”
+									</p>
+								</blockquote>
 
-							{/* Reviewer Name and Title */}
-							<div className='flex flex-col  mt-8 uppercase opacity-70'>
-								<h3 className=' font-bold '>{review.reviewerName},</h3>
-								<p className='text-sm italic mt-2'>{review.reviewerTitle}</p>
+								{/* Reviewer Name and Title */}
+								<div className="mt-8 text-center lg:text-left">
+									<h3 className="text-md font-bold uppercase text-gray-700">
+										{review.reviewerName}
+									</h3>
+									<p className="text-sm italic text-gray-500 mt-1">
+										{review.reviewerTitle}
+									</p>
+								</div>
 							</div>
-						</div>
-					</article>
-				);
-			})}
+						</article>
+					</AnimateUp>
+				))}
+			</div>
 		</div>
 	);
 };
