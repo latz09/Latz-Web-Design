@@ -17,7 +17,7 @@ const Process = ({ data }) => {
 						<AnimateUp>
 							<MainHeading
 								title={data.heading}
-								theme='text-light my-3 lg:my-0'
+								theme='text-tertiary my-3 lg:my-0'
 							/>
 						</AnimateUp>
 						<div className='ml-2 hidden lg:block'>
@@ -38,8 +38,8 @@ const Process = ({ data }) => {
 								<div key={index} className='flex items-center mb-12 text-light'>
 									{/* Left Section: Icon */}
 									<div className='flex-shrink-0 mr-4 lg:mr-8 self-start'>
-										<div className='border-2 border-light/80 rounded-full p-3 lg:p-4'>
-											<div className='border border-light/70 rounded-full p-2 lg:p-4 text-2xl lg:text-4xl'>
+										<div className='border-2 border-light rounded-full p-3 lg:p-4'>
+											<div className='border border-tertiary/70 rounded-full p-2 lg:p-4 text-2xl lg:text-4xl'>
 												<IconComponent className='text-light' />
 											</div>
 										</div>
@@ -47,7 +47,7 @@ const Process = ({ data }) => {
 
 									{/* Right Section: Text */}
 									<div className='flex-1'>
-										<h3 className='text-xl lg:text-2xl font-bold mb-4 text-primary'>
+										<h3 className='text-xl lg:text-2xl font-bold mb-4 text-tertiary'>
 											{step.stepHeading}
 										</h3>
 										<p className='lg:text-lg leading-7 lg:leading-8'>

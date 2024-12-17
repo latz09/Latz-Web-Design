@@ -14,7 +14,7 @@ const RecentClientCard = ({ data }) => {
 				className='block group  overflow-hidden transition-transform duration-300 hover:scale-[1.02]'
 			>
 				{/* Image Section */}
-				<div className='relative w-full h-60 lg:h-72   '>
+				<div className='relative w-full h-72   '>
 					<Image
 						src={websiteImageUrl}
 						alt={`${companyName} Website`}

@@ -12,13 +12,14 @@ import FeaturedArticle from '@/components/articles/FeaturedArticle';
 import CRMBlurb from '@/components/automations/CRMBlurb';
 import OurFullCircle from '@/components/automations/OurFullCircle';
 import CoreServices from '@/components/home-page/CoreServices';
+import SharedContent from '@/components/site-content/SharedContent';
 
 export default async function Home() {
 	const [data] = await fetchData(query);
 	
 
 	return (
-		<main className='grid gap-24 bg-light'>
+		<main className='grid bg-light'>
 			<LandingHero
 				// image={data.landingImage}
 				heading={data.headline}
@@ -26,6 +27,7 @@ export default async function Home() {
 				topHeading={data.topHeadline}
 				links={data.links}
 			/>
+			<SharedContent />
 		</main>
 	);
 }
