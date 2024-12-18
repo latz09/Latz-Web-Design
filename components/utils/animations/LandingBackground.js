@@ -36,9 +36,9 @@ const LandingBackground = ({ x, y, length, delay, direction }) => {
 				left: x,
 				width: direction === 'horizontal' ? length : `${thickness}px`,
 				height: direction === 'vertical' ? length : `${thickness}px`,
-				backgroundColor: 'rgba(255, 238, 101, 1)',
+				backgroundColor: 'rgba(255, 238, 101, .90)',
 				borderRadius: '1px',
-				filter: 'blur(1px)', // Apply blur effect for motion blur
+				filter: 'blur(.5px)', // Apply blur effect for motion blur
 			}}
 			variants={animation}
 			initial='initial'

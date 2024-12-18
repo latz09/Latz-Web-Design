@@ -18,7 +18,7 @@ const SERVICES_CONTAINER_CLASSES =
 const SERVICES_WRAPPER_CLASSES =
 	'max-w-7xl mx-auto grid gap-x-8 gap-y-16 lg:gap-x-16 lg:gap-y-24 md:grid-cols-2 lg:grid-cols-3 text-center';
 const SERVICE_CARD_CLASSES = 'flex flex-col  items-center gap-4';
-const ICON_CLASSES = 'text-4xl  ';
+const ICON_CLASSES = 'text-6xl text-primary  ';
 
 const iconMap = {
 	FaLaptop: FaLaptop,
@@ -50,7 +50,7 @@ const ServicesOverviewContainer = async () => {
 					return (
 						<AnimateUp key={index}>
 							<div className={SERVICE_CARD_CLASSES}>
-								<div className='p-4 lg:p-6 rounded-full bg-primary text-light grid place-items-center shadow-lg shadow-primary/30'>
+								<div className=''>
 									<Icon className={ICON_CLASSES} />
 								</div>
 

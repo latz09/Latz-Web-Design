@@ -4,39 +4,58 @@ import React from 'react';
 import LandingBackground from '../utils/animations/LandingBackground';
 import ScrollIndicator from '../utils/animations/ScrollIndicator';
 import Link from 'next/link';
-import GetStartedNow from '../automations/design-utils/GetStartedNow';
-import FreeEstimate from '../utils/FreeEstimate';
-import Image from 'next/image';
 
 // Function to generate random line properties
 const generateRandomLineProperties = () => ({
 	x: `${Math.random() * 100}vw`,
 	y: `${Math.random() * 100}vh`,
-	length: `${Math.random() * 500 + 150}px`, // Line length
+	length: `${Math.random() * 500 + 150}px`,
 	delay: Math.random() * 5,
-	direction: Math.random() > 0.5 ? 'horizontal' : 'vertical', // Random direction
+	direction: Math.random() > 0.5 ? 'horizontal' : 'vertical',
 });
 
-// Function to generate lines
+// Generate animated lines
 const generateLines = (numLines) => {
 	return Array.from({ length: numLines }, (_, i) => {
 		const { x, y, length, delay, direction } = generateRandomLineProperties();
 		return (
-			<LandingBackground
+			<motion.div
 				key={i}
-				x={x}
-				y={y}
-				length={length}
-				repeateDelay={delay}
-				direction={direction}
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{
+					duration: 1,
+					delay: Math.random() * 2,
+					ease: 'easeInOut',
+					repeat: Infinity,
+					repeatType: 'mirror',
+				}}
+				className="absolute"
+				style={{
+					top: y,
+					left: x,
+					width: direction === 'horizontal' ? length : '2px',
+					height: direction === 'vertical' ? length : '2px',
+					backgroundColor: 'rgba(255, 255, 255, 0.2)',
+				}}
 			/>
 		);
 	});
 };
 
+// Animation Variants
+const variants = {
+	hidden: { opacity: 0, y: 20 },
+	visible: { opacity: 1, y: 0 },
+};
+
+const buttonHover = {
+	hover: { scale: 1.05, transition: { type: 'spring', stiffness: 300 } },
+};
+
 // Constants for repeated class names
 const CONTAINER_CLASSES =
-	'relative h-[90vh] xl:h-[100vh]  overflow-hidden bg-dark text-light';
+	'relative h-[90vh] xl:h-[100vh] overflow-hidden bg-dark text-light';
 const INNER_CONTAINER_CLASSES =
 	'relative z-10 flex flex-col justify-center items-center h-full max-w-5xl px-4 mx-auto text-center';
 const HEADING_CLASSES = 'grid gap-4 lg:space-y-4';
@@ -45,35 +64,67 @@ const TOP_HEADING_CLASSES =
 const MAIN_HEADING_CLASSES =
 	'text-3xl lg:text-7xl text-center font-extrabold text-white leading-tight';
 const SUB_HEADING_CLASSES = 'text-md lg:text-2xl text-light/80';
-const BUTTON_CLASSES = 'transition duration-700 hover:scale-95 block text-center p-3 lg:p-4 lg:w-1/2 mx-auto text-lg lg:text-2xl  rounded-full font-bold bg-tertiary text-dark hover:bg-tertiary/0 hover:text-tertiary hover:border';
+const BUTTON_CLASSES =
+	'transition duration-700 hover:scale-95 block text-center p-3 lg:p-4 lg:w-1/2 mx-auto text-lg lg:text-2xl rounded-full font-bold bg-tertiary text-dark hover:bg-tertiary/0 hover:text-tertiary hover:border';
 
 // Component
-const AreaLandingHero = ({ heading, subHeading, topHeading, image }) => {
+const AreaLandingHero = ({ heading, subHeading, topHeading }) => {
 	return (
 		<div className={CONTAINER_CLASSES}>
 			{/* Animated Lines Background */}
-			<div className='absolute inset-0 opacity-20 pointer-events-none'>
+			<div className="absolute inset-0 opacity-20 pointer-events-none">
 				{generateLines(20)}
 			</div>
 
 			{/* Hero Content */}
-			<div className={INNER_CONTAINER_CLASSES}>
+			<motion.div
+				className={INNER_CONTAINER_CLASSES}
+				initial="hidden"
+				animate="visible"
+				variants={{
+					visible: { transition: { staggerChildren: 0.3 } },
+				}}
+			>
 				<div className={HEADING_CLASSES}>
-					<p className={TOP_HEADING_CLASSES}>{topHeading}</p>
-					<h1 className={MAIN_HEADING_CLASSES}>{heading}</h1>
-					<h2 className={SUB_HEADING_CLASSES}>{subHeading}</h2>
-					<div>
-						<Link href='/contact-latz-web-design' className=''>
-							<span className={BUTTON_CLASSES}>
+					<motion.p
+						className={TOP_HEADING_CLASSES}
+						variants={variants}
+						transition={{ duration: 0.8 }}
+					>
+						{topHeading}
+					</motion.p>
+					<motion.h1
+						className={MAIN_HEADING_CLASSES}
+						variants={variants}
+						transition={{ duration: 1 }}
+					>
+						{heading}
+					</motion.h1>
+					<motion.h2
+						className={SUB_HEADING_CLASSES}
+						variants={variants}
+						transition={{ duration: 1.2 }}
+					>
+						{subHeading}
+					</motion.h2>
+					<motion.div
+						variants={variants}
+						transition={{ duration: 1.4 }}
+					>
+						<Link href="/contact-latz-web-design">
+							<motion.span
+								className={BUTTON_CLASSES}
+								whileHover="hover"
+								variants={buttonHover}
+							>
 								Get Started Now
-							</span>
+							</motion.span>
 						</Link>
-						
-					</div>
-					
+					</motion.div>
+
 					<ScrollIndicator />
 				</div>
-			</div>
+			</motion.div>
 		</div>
 	);
 };

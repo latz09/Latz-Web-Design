@@ -4,6 +4,7 @@ import React from 'react';
 import LandingBackground from '../utils/animations/LandingBackground';
 import ScrollIndicator from '../utils/animations/ScrollIndicator';
 import Link from 'next/link';
+import AnimateUp from '../utils/animations/AnimateUp';
 
 // Function to generate random line properties
 const generateRandomLineProperties = () => ({
@@ -54,16 +55,25 @@ const LandingHero = ({ heading, subHeading, topHeading, links = [] }) => {
 
 			{/* Hero Content */}
 			<div className={INNER_CONTAINER_CLASSES}>
-				<div className={HEADING_CLASSES}>
+				<motion.div
+					className={HEADING_CLASSES}
+					initial={{ opacity: 0, scale: 0.95 }}
+					animate={{ opacity: 1, scale: 1 }}
+					transition={{ duration: 1, delay: 0.3 }}
+				>
 					<p className={TOP_HEADING_CLASSES}>{topHeading}</p>
 					<h1 className={MAIN_HEADING_CLASSES}>{heading}</h1>
 					<h2 className={SUB_HEADING_CLASSES}>{subHeading}</h2>
-				</div>
+				</motion.div>
 
 				{/* Links Section */}
 				<div className='w-full space-y-4 mt-8'>
-					
-					<div className='grid gap-6 lg:flex lg:gap-4'>
+					<motion.div
+						className='grid gap-6 lg:flex lg:gap-4'
+						initial={{ opacity: 0, scale: 0.95 }}
+						animate={{ opacity: 1, scale: 1 }}
+						transition={{ duration: 1, delay: 0.5 }}
+					>
 						{links.map((link, index) => (
 							<Link key={index} href={`/${link.slug}`} className='lg:w-1/2'>
 								<span
@@ -77,7 +87,7 @@ const LandingHero = ({ heading, subHeading, topHeading, links = [] }) => {
 								</span>
 							</Link>
 						))}
-					</div>
+					</motion.div>
 					<p className='text-lg italic'>Select Your Area</p>
 				</div>
 			</div>

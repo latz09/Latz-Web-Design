@@ -10,9 +10,9 @@ const SharedContent = () => {
 		<div>
 			<ServicesOverviewContainer />
 			<AnimateUp>
-				<RecentClientsContainer />
+				<RecentClientsContainer includeViewMore={true} />
 			</AnimateUp>
-			<ReviewContainer />
+			<ReviewContainer  />
 			<ProcessAndPricingContainer />
 			<OverviewContainer includeLink={true} />
 		</div>
