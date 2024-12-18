@@ -18,7 +18,7 @@ const SERVICES_CONTAINER_CLASSES =
 const SERVICES_WRAPPER_CLASSES =
 	'max-w-7xl mx-auto grid gap-x-8 gap-y-16 lg:gap-x-16 lg:gap-y-24 md:grid-cols-2 lg:grid-cols-3 text-center ';
 const SERVICE_CARD_CLASSES = 'flex flex-col  items-center gap-4 group';
-const ICON_CLASSES = 'text-5xl lg:text-6xl text-primary group-hover:scale-110 group-hover:text-dark group-hover:rotate-12 transition duration-500';  
+const ICON_CLASSES = 'text-7xl lg:text-6xl text-primary group-hover:scale-110 group-hover:text-dark group-hover:rotate-12 transition duration-500';  
 
 const iconMap = {
 	FaLaptop: FaLaptop,
