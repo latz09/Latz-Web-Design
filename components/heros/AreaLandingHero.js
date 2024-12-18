@@ -14,37 +14,25 @@ const generateRandomLineProperties = () => ({
 	direction: Math.random() > 0.5 ? 'horizontal' : 'vertical',
 });
 
-// Generate animated lines
+// Generate lines (keep original logic)
 const generateLines = (numLines) => {
 	return Array.from({ length: numLines }, (_, i) => {
 		const { x, y, length, delay, direction } = generateRandomLineProperties();
 		return (
-			<motion.div
+			<LandingBackground
 				key={i}
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
-				transition={{
-					duration: 1,
-					delay: Math.random() * 2,
-					ease: 'easeInOut',
-					repeat: Infinity,
-					repeatType: 'mirror',
-				}}
-				className="absolute"
-				style={{
-					top: y,
-					left: x,
-					width: direction === 'horizontal' ? length : '2px',
-					height: direction === 'vertical' ? length : '2px',
-					backgroundColor: 'rgba(255, 255, 255, 0.2)',
-				}}
+				x={x}
+				y={y}
+				length={length}
+				repeateDelay={delay}
+				direction={direction}
 			/>
 		);
 	});
 };
 
 // Animation Variants
-const variants = {
+const textVariants = {
 	hidden: { opacity: 0, y: 20 },
 	visible: { opacity: 1, y: 0 },
 };
@@ -65,13 +53,13 @@ const MAIN_HEADING_CLASSES =
 	'text-3xl lg:text-7xl text-center font-extrabold text-white leading-tight';
 const SUB_HEADING_CLASSES = 'text-md lg:text-2xl text-light/80';
 const BUTTON_CLASSES =
-	'transition duration-700 hover:scale-95 block text-center p-3 lg:p-4 lg:w-1/2 mx-auto text-lg lg:text-2xl rounded-full font-bold bg-tertiary text-dark hover:bg-tertiary/0 hover:text-tertiary hover:border';
+	'transition duration-700 block text-center p-3 lg:p-4 lg:w-1/2 mx-auto text-lg lg:text-2xl rounded-full font-bold bg-tertiary text-dark hover:bg-tertiary/0 hover:text-tertiary hover:border';
 
 // Component
 const AreaLandingHero = ({ heading, subHeading, topHeading }) => {
 	return (
 		<div className={CONTAINER_CLASSES}>
-			{/* Animated Lines Background */}
+			{/* Background Lines */}
 			<div className="absolute inset-0 opacity-20 pointer-events-none">
 				{generateLines(20)}
 			</div>
@@ -88,27 +76,27 @@ const AreaLandingHero = ({ heading, subHeading, topHeading }) => {
 				<div className={HEADING_CLASSES}>
 					<motion.p
 						className={TOP_HEADING_CLASSES}
-						variants={variants}
+						variants={textVariants}
 						transition={{ duration: 0.8 }}
 					>
 						{topHeading}
 					</motion.p>
 					<motion.h1
 						className={MAIN_HEADING_CLASSES}
-						variants={variants}
+						variants={textVariants}
 						transition={{ duration: 1 }}
 					>
 						{heading}
 					</motion.h1>
 					<motion.h2
 						className={SUB_HEADING_CLASSES}
-						variants={variants}
+						variants={textVariants}
 						transition={{ duration: 1.2 }}
 					>
 						{subHeading}
 					</motion.h2>
 					<motion.div
-						variants={variants}
+						variants={textVariants}
 						transition={{ duration: 1.4 }}
 					>
 						<Link href="/contact-latz-web-design">
