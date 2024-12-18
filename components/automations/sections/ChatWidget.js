@@ -69,7 +69,7 @@ const ChatWidget = ({ data }) => {
 										theme=' font-bold mb-2'
 									/>
 								</div>
-								<p className='lg:text-lg text-dark leading-relaxed p-6 bg-tertiary rounded-b '>
+								<p className='lg:text-lg font-bold text-dark leading-relaxed p-6 bg-tertiary rounded-b '>
 									{feature.description}
 								</p>
 							</div>
