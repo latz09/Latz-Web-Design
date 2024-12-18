@@ -6,7 +6,8 @@ export const FETCH_AI_CHAT_WIDGET_SECTION = `
   videoVisuals,
   features[]{
     title,
-    description
+    description,
+    icon,
   },
   cta,
   ctaLink
