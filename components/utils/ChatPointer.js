@@ -3,23 +3,11 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import logo from '@/public/web-design-in-saint-paul.png';
-import { useState, useEffect } from 'react';
 
 const ChatPointer = () => {
-    const [isVisible, setIsVisible] = useState(true);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setIsVisible(false);
-            setTimeout(() => setIsVisible(true), 18000); // Visible for 8 seconds
-        }, 8000); // Show every 10 seconds
-        return () => clearInterval(interval);
-    }, []);
-
     const containerVariants = {
         hidden: { opacity: 0, y: 50 }, // Initial hidden state
         visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }, // Slide in
-        exit: { opacity: 0, y: 50, transition: { duration: 0.8 } }, // Slide out
     };
 
     const pulseVariants = {
@@ -36,7 +24,7 @@ const ChatPointer = () => {
         <motion.div
             className="fixed bottom-5 right-20 bg-light text-primary px-3 py-2 rounded-lg shadow-lg z-[999999] flex items-center gap-3 tracking-wider font-bold text-xs"
             initial="hidden"
-            animate={isVisible ? 'visible' : 'exit'} // Control animation state
+            animate="visible" // Always animate to 'visible'
             variants={containerVariants}
         >
             <motion.div
