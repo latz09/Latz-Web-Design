@@ -67,9 +67,9 @@ const LandingHero = ({ heading, subHeading, topHeading, links = [] }) => {
 				</motion.div>
 
 				{/* Links Section */}
-				<div className='w-full space-y-4 mt-8'>
+				<div className='w-full space-y-4 mt-8 '>
 					<motion.div
-						className='grid gap-6 lg:flex lg:gap-4'
+						className='grid gap-6 lg:flex lg:gap-4 '
 						initial={{ opacity: 0, scale: 0.95 }}
 						animate={{ opacity: 1, scale: 1 }}
 						transition={{ duration: 1, delay: 0.5 }}

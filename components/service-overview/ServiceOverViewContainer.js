@@ -14,11 +14,11 @@ import AnimateUp from '../utils/animations/AnimateUp';
 
 // Tailwind CSS classes
 const SERVICES_CONTAINER_CLASSES =
-	'bg-gradient-to-b from-light via-primary/10 to-light py-16 lg:py-24 px-4 lg:px-8 grid gap-8 mt-2';
+	'bg-gradient-to-b from-light via-primary/10 to-light py-16 lg:py-24 px-4 lg:px-8 grid gap-8 mt-2 ';
 const SERVICES_WRAPPER_CLASSES =
-	'max-w-7xl mx-auto grid gap-x-8 gap-y-16 lg:gap-x-16 lg:gap-y-24 md:grid-cols-2 lg:grid-cols-3 text-center';
-const SERVICE_CARD_CLASSES = 'flex flex-col  items-center gap-4';
-const ICON_CLASSES = 'text-6xl text-primary  ';
+	'max-w-7xl mx-auto grid gap-x-8 gap-y-16 lg:gap-x-16 lg:gap-y-24 md:grid-cols-2 lg:grid-cols-3 text-center ';
+const SERVICE_CARD_CLASSES = 'flex flex-col  items-center gap-4 group';
+const ICON_CLASSES = 'text-5xl lg:text-6xl text-primary group-hover:scale-110 group-hover:text-dark group-hover:rotate-12 transition duration-500';  
 
 const iconMap = {
 	FaLaptop: FaLaptop,
@@ -50,13 +50,13 @@ const ServicesOverviewContainer = async () => {
 					return (
 						<AnimateUp key={index}>
 							<div className={SERVICE_CARD_CLASSES}>
-								<div className='border'>
+								<div className=''>
 									<Icon className={ICON_CLASSES} />
 								</div>
 
-								<TopHeading title={service.title} />
+								<TopHeading title={service.title} theme='group-hover:text-primary transition duration-500 ' />
 
-								<Description description={service.description} />
+								<Description description={service.description} theme='group-hover:font-bold transition duration-500'/>
 							</div>
 						</AnimateUp>
 					);
