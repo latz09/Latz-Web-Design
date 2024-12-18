@@ -1,3 +1,4 @@
+import ChatWidgetContainer from '../automations/ChatWidgetContainer';
 import OverviewContainer from '../cms/overview/OverviewContainer';
 import ProcessAndPricingContainer from '../process-and-pricing/ProcessAndPricingContainer';
 import RecentClientsContainer from '../RecentClients/RecentClientsContainer';
@@ -9,12 +10,14 @@ const SharedContent = () => {
 	return (
 		<div>
 			<ServicesOverviewContainer />
+			<ChatWidgetContainer />
+			<ReviewContainer  />
 			<AnimateUp>
 				<RecentClientsContainer includeViewMore={true} />
 			</AnimateUp>
-			<ReviewContainer  />
-			<ProcessAndPricingContainer />
+			
 			<OverviewContainer includeLink={true} />
+			<ProcessAndPricingContainer />
 		</div>
 	);
 };
