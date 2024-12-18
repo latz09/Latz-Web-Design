@@ -9,7 +9,7 @@ export const metadata = {
 
 const ContactPage = () => {
 	return (
-		<div className='mt-[15vh] grid gap-24 bg-light'>
+		<div className='mt-[15vh]  bg-light'>
 			<ContactFormContainer />
 			<ReviewContainer />
 		</div>

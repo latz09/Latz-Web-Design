@@ -1,4 +1,5 @@
 import AnimateUp from '../utils/animations/AnimateUp';
+import AnimateUpWithBounce from '../utils/animations/AnimateUpWithBounce';
 import DelayAnimateUp from '../utils/animations/DelayAnimateUp';
 import SlideIn from '../utils/animations/SlideIn';
 import ContactForm from './ContactForm';
@@ -11,7 +12,8 @@ const ContactFormContainer = ({ toggleModal }) => {
 				<div className='p-6 space-y-8 grid place-items-start'>
 					<ContactFormIntro />
 					<div className='hidden lg:grid '>
-						<Contacts />
+						<AnimateUpWithBounce>
+						<Contacts /></AnimateUpWithBounce>
 					</div>
 				</div>
 
@@ -34,13 +36,13 @@ const Contacts = () => {
 			<div>
 				<a
 					href='mailto:jordan@latzwebdesign.com'
-					className='underline underline-offset-8 mb-4'
+					className='underline underline-offset-8 mb-4 hover:text-primary hover:font-bold transition duration-300'
 				>
 					jordan@latzwebdesign.com
 				</a>
 			</div>
 			<div>
-				<a href='tel:7156305689' className='underline underline-offset-8'>
+				<a href='tel:7156305689' className='underline underline-offset-8 hover:text-primary hover:font-bold transition duration-300'>
 					(715) 630-5689
 				</a>
 			</div>

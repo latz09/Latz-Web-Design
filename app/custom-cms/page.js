@@ -32,7 +32,7 @@ const CustomCMSPage = async () => {
 			<div className='bg-light   '>
 				{/* Page Container */}
 
-				<div className='grid gap-16 lg:gap-24 '>
+				<div className='grid  '>
 					{/* Client Success Story */}
 					<section className='bg-dark py-16 text-light'>
 						<CmsIntro

@@ -4,6 +4,7 @@ import { MainHeading, TopHeading } from '@/components/utils/Typography';
 // Import specific icons
 import { FaPalette, FaRobot, FaRegAddressCard, FaWrench } from 'react-icons/fa';
 import Link from 'next/link';
+import AnimateUp from '@/components/utils/animations/AnimateUp';
 
 const VideoPlayer = dynamic(() => import('@/components/utils/VideoPlayer'), {
 	ssr: false,
@@ -50,29 +51,25 @@ const ChatWidget = ({ data }) => {
 
 			{/* Features Section */}
 			{features && features.length > 0 && (
-				<div className='max-w-6xl mx-auto mt-12 grid gap-8 lg:grid-cols-2 '>
+				<div className='max-w-6xl mx-auto mt-12 grid gap-12 lg:gap-8 lg:grid-cols-2 '>
 					{features.map((feature, index) => {
 						const IconComponent = iconsMap[feature.icon]; // Map icon names to components
 						return (
-							<div
-								key={index}
-								className='flex flex-col items-center text-center shadow-lg shadow-tertiary/30   '
-							>
-								<div className="flex items-center justify-around bg-dark text-light py-4 w-full border border-tertiary/10 rounded">
-									{IconComponent && (
-										<div className='t text-4xl mb-4 text-tertiary  '>
-											<IconComponent />
-										</div>
-									)}
-									<TopHeading
-										title={feature.title}
-										theme=' font-bold mb-2'
-									/>
+							<AnimateUp key={index}>
+								<div className='flex flex-col items-center text-center shadow-lg shadow-tertiary/30   '>
+									<div className='flex items-center justify-around bg-dark text-light py-4 w-full border border-tertiary/10 rounded'>
+										{IconComponent && (
+											<div className='t text-4xl mb-4 text-tertiary  '>
+												<IconComponent />
+											</div>
+										)}
+										<TopHeading title={feature.title} theme=' font-bold mb-2' />
+									</div>
+									<p className='lg:text-lg font-bold text-dark leading-relaxed p-6 bg-tertiary rounded-b '>
+										{feature.description}
+									</p>
 								</div>
-								<p className='lg:text-lg font-bold text-dark leading-relaxed p-6 bg-tertiary rounded-b '>
-									{feature.description}
-								</p>
-							</div>
+							</AnimateUp>
 						);
 					})}
 				</div>
@@ -81,13 +78,14 @@ const ChatWidget = ({ data }) => {
 			{/* Call to Action */}
 			{cta && (
 				<div className='text-center mt-16 px-6 lg:px-12'>
-                    <Link href={'/customer-relationship-manager/inbox-pro#inboxPro'} >
-					<span
-						href={ctaLink || '#'}
-						className='inline-block px-8 py-4 bg-light text-dark font-semibold lg:text-lg rounded-md shadow-md hover:bg-light/90 transition-colors duration-300'
-					>
-						{cta}
-					</span></Link>
+					<Link href={'/customer-relationship-manager/inbox-pro#inboxPro'}>
+						<span
+							href={ctaLink || '#'}
+							className='inline-block px-8 py-4 bg-light text-dark font-semibold lg:text-lg rounded-md shadow-md hover:bg-light/90 transition-colors duration-300'
+						>
+							{cta}
+						</span>
+					</Link>
 				</div>
 			)}
 		</section>

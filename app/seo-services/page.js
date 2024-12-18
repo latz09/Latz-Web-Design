@@ -19,16 +19,16 @@ const SeoServicesPage = async () => {
 	return (
 		<PageContainer>
 			<div className='grid  bg-light'>
-				<div>
-					<SeoServiceContainer section={data.onPageSeoSection} />
-				</div>
-				<div>
-					<SeoServiceContainer section={data.offPageSeoSection} />
-				</div>
-				<div className='py-16 '>
-					<ReviewContainer />
-				</div>
-				<FeaturedArticle featuredArticle={data.featuredArticle} synopsis={data.articleSynopsis} />
+				<SeoServiceContainer section={data.onPageSeoSection} />
+
+				<SeoServiceContainer section={data.offPageSeoSection} />
+
+				<ReviewContainer />
+
+				<FeaturedArticle
+					featuredArticle={data.featuredArticle}
+					synopsis={data.articleSynopsis}
+				/>
 			</div>
 		</PageContainer>
 	);

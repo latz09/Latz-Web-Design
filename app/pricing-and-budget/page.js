@@ -10,7 +10,7 @@ export const metadata = {
 const PricingAndBudgetPage = async () => {
 	return (
 		<PageContainer>
-			<div className='bg-light grid gap-16 lg:gap-24'>
+			<div className='bg-light grid'>
 				<ProcessAndPricingContainer />
 				<ReviewContainer />
 			</div>
