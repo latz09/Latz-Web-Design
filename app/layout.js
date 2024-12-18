@@ -5,6 +5,7 @@ import './globals.css';
 import { Roboto } from 'next/font/google';
 
 import Footer from '@/components/navigation/Footer';
+import ChatPointer from '@/components/utils/ChatPointer';
 
 const roboto = Roboto({
 	weight: ['100', '300', '400', '500', '700', '900'],
@@ -40,6 +41,7 @@ const RootLayout = ({ children }) => {
 					data-widget-id='c79ac1d5-a8ee-11ef-87c4-7ac49ff1d0eb'
 					defer
 				/>
+				<ChatPointer />
 				<NavigationContainer />
 				<div className='max-w-7l mx-auto'>
 					<div>{children}</div>
