@@ -84,7 +84,7 @@ const ChatWidget = ({ data }) => {
                     <Link href={'/customer-relationship-manager/inbox-pro#inboxPro'} >
 					<span
 						href={ctaLink || '#'}
-						className='inline-block px-8 py-4 bg-light text-dark font-semibold text-lg rounded-md shadow-md hover:bg-light/90 transition-colors duration-300'
+						className='inline-block px-8 py-4 bg-light text-dark font-semibold lg:text-lg rounded-md shadow-md hover:bg-light/90 transition-colors duration-300'
 					>
 						{cta}
 					</span></Link>
