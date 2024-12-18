@@ -50,7 +50,7 @@ const ServicesOverviewContainer = async () => {
 					return (
 						<AnimateUp key={index}>
 							<div className={SERVICE_CARD_CLASSES}>
-								<div className=''>
+								<div className='border'>
 									<Icon className={ICON_CLASSES} />
 								</div>
 
