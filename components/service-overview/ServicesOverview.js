@@ -47,14 +47,14 @@ const ServicesOverview = ({ services }) => {
 								whileInView={{ scale: 1, rotate: 12 }}
 								transition={{ duration: 1 }}
 							>
-								<Icon className='text-7xl lg:text-6xl text-primary mb-2 ' />
+								<Icon className='text-7xl lg:text-6xl text-dark mb-2  ' />
 							</motion.div>
 							<motion.div
 								initial={{ scale: 0.8 }}
 								whileInView={{ scale: 1 }}
 								transition={{ duration: 1 }}
 							>
-								<h2 className='text-xl lg:text-2xl font-bold uppercase'>
+								<h2 className='text-xl lg:text-2xl font-bold uppercase text-primary'>
 									{service.title}
 								</h2>
 							</motion.div>
@@ -63,7 +63,7 @@ const ServicesOverview = ({ services }) => {
 								whileInView={{ scale: 1, rotate: 0, opacity: 1 }}
 								transition={{ duration: 1 }}
 							>
-								<Description description={service.description} theme='' />
+								<Description description={service.description} theme='font-semibold text-dark/80 italic' />
 							</motion.div>
 						</div>
 					</AnimateUp>
