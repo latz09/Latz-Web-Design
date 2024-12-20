@@ -3,13 +3,15 @@
 import React from 'react';
 import {
 	FaCode,
-	FaCog,
-	FaRocket,
-	FaSearch,
+	
+	FaTools,
+	FaLightbulb,
+	FaSearchLocation,
 	FaLaptop,
-	FaCloud,
+	FaCloudDownloadAlt,
 	FaPenFancy,
-	FaMapMarkerAlt
+	FaThumbsUp
+	
 
 } from 'react-icons/fa';
 import { Description, MainHeading, TopHeading } from '../utils/Typography';
@@ -25,12 +27,12 @@ const SERVICE_CARD_CLASSES =
 const iconMap = {
 	FaLaptop: FaLaptop,
 	FaCode: FaCode,
-	FaCog: FaCog,
-	FaRocket: FaRocket,
-	FaSearch: FaSearch,
-	FaCloud: FaCloud,
+	FaTools: FaTools,
+	FaLightbulb: FaLightbulb,
+	FaSearchLocation : FaSearchLocation,
+	FaCloudDownloadAlt: FaCloudDownloadAlt,
 	FaPenFancy: FaPenFancy,
-	FaMapMarkerAlt: FaMapMarkerAlt
+	FaThumbsUp: FaThumbsUp
 };
 
 const ServicesOverview = ({ services }) => {
@@ -47,7 +49,7 @@ const ServicesOverview = ({ services }) => {
 								whileInView={{ scale: 1, rotate: 12 }}
 								transition={{ duration: 1 }}
 							>
-								<Icon className='text-7xl lg:text-6xl text-dark mb-2  ' />
+								<Icon className='text-6xl text-dark/80 mb-2  ' />
 							</motion.div>
 							<motion.div
 								initial={{ scale: 0.8 }}
