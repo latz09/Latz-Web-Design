@@ -65,7 +65,7 @@ const ChatWidget = ({ data }) => {
 										)}
 										<TopHeading title={feature.title} theme=' font-bold mb-2 text-tertiary' />
 									</div>
-									<p className='lg:text-lg font-bold text-dark leading-relaxed px-6 py-12 bg-light rounded-b '>
+									<p className='lg:text-lg font-bold text-dark leading-relaxed px-6 py-10 lg:py-12 bg-light rounded-b '>
 										{feature.description}
 									</p>
 								</div>
