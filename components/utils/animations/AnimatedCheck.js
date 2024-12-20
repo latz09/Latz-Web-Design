@@ -6,7 +6,10 @@ import { useInView } from "react-intersection-observer";
 
 const AnimatedCheck = () => {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ triggerOnce: true });
+  const [ref, inView] = useInView({
+    triggerOnce: true, 
+    rootMargin: "0px 0px -30% 0px", // Offset from the bottom
+  });
 
   useEffect(() => {
     if (inView) {
@@ -15,9 +18,10 @@ const AnimatedCheck = () => {
   }, [inView, controls]);
 
   const checkVariants = {
-    hidden: { pathLength: 0 },
+    hidden: { pathLength: 0, strokeOpacity: 0 },
     visible: {
       pathLength: 1,
+      strokeOpacity: 1,
       transition: { duration: 1, ease: "easeInOut" },
     },
   };
@@ -32,7 +36,7 @@ const AnimatedCheck = () => {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="text-primary/70 w-16 h-16 lg:w-20 lg:h-20"
+        className="text-primary/30 w-16 h-16 lg:w-20 lg:h-20"
       >
         <motion.path
           d="M5 13l4 4L19 7"
