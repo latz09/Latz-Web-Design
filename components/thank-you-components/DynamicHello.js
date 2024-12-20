@@ -21,7 +21,7 @@ const DynamicHello = () => {
 			</div>
 			<Image
 				src={logo}
-				alt='Web Design in Saint Paul'
+				alt='Web Design in Saint Paul Minnesota'
 				width={250}
 				height={250}
 				className="opacity-60 my-8"

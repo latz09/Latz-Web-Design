@@ -8,6 +8,9 @@ import {
 	FaSearch,
 	FaLaptop,
 	FaCloud,
+	FaPenFancy,
+	FaMapMarkerAlt
+
 } from 'react-icons/fa';
 import { Description, MainHeading, TopHeading } from '../utils/Typography';
 import AnimateUp from '../utils/animations/AnimateUp';
@@ -15,6 +18,7 @@ import { motion } from 'framer-motion';
 
 const SERVICES_WRAPPER_CLASSES =
 	'max-w-7xl mx-auto grid gap-x-8 gap-y-16 lg:gap-x-16 lg:gap-y-24 md:grid-cols-2 lg:grid-cols-3 text-center ';
+
 const SERVICE_CARD_CLASSES =
 	'flex flex-col items-center gap-4 transition duration-500';
 
@@ -25,6 +29,8 @@ const iconMap = {
 	FaRocket: FaRocket,
 	FaSearch: FaSearch,
 	FaCloud: FaCloud,
+	FaPenFancy: FaPenFancy,
+	FaMapMarkerAlt: FaMapMarkerAlt
 };
 
 const ServicesOverview = ({ services }) => {
@@ -41,7 +47,7 @@ const ServicesOverview = ({ services }) => {
 								whileInView={{ scale: 1, rotate: 12 }}
 								transition={{ duration: 1 }}
 							>
-								<Icon className='text-7xl lg:text-6xl text-primary mb-2' />
+								<Icon className='text-7xl lg:text-6xl text-primary mb-2 ' />
 							</motion.div>
 							<motion.div
 								initial={{ scale: 0.8 }}
