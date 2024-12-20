@@ -51,21 +51,21 @@ const ChatWidget = ({ data }) => {
 
 			{/* Features Section */}
 			{features && features.length > 0 && (
-				<div className='max-w-6xl mx-auto mt-12 grid gap-12 lg:gap-8 lg:grid-cols-2 '>
+				<div className='max-w-6xl mx-auto mt-12 grid gap-12 lg:gap-8 lg:grid-cols-2 place-items-center '>
 					{features.map((feature, index) => {
 						const IconComponent = iconsMap[feature.icon]; // Map icon names to components
 						return (
 							<AnimateUp key={index}>
-								<div className='flex flex-col items-center text-center shadow-lg shadow-tertiary/30   '>
+								<div className='flex flex-col items-center text-center shadow-md shadow-light/30   '>
 									<div className='flex items-center justify-around bg-dark text-light py-4 w-full border border-tertiary/10 rounded'>
 										{IconComponent && (
 											<div className='t text-4xl mb-4 text-tertiary  '>
 												<IconComponent />
 											</div>
 										)}
-										<TopHeading title={feature.title} theme=' font-bold mb-2' />
+										<TopHeading title={feature.title} theme=' font-bold mb-2 text-tertiary' />
 									</div>
-									<p className='lg:text-lg font-bold text-dark leading-relaxed p-6 bg-tertiary rounded-b '>
+									<p className='lg:text-lg font-bold text-dark leading-relaxed px-6 py-12 bg-light rounded-b '>
 										{feature.description}
 									</p>
 								</div>
@@ -81,7 +81,7 @@ const ChatWidget = ({ data }) => {
 					<Link href={'/customer-relationship-manager/inbox-pro#inboxPro'}>
 						<span
 							href={ctaLink || '#'}
-							className='inline-block px-8 py-4 bg-light text-dark font-semibold lg:text-lg rounded-md shadow-md hover:bg-light/90 transition-colors duration-300'
+							className='inline-block px-8 py-4 bg-tertiary text-dark font-semibold border border-light/0 lg:text-lg rounded-md shadow-md hover:border-light/70 hover:bg-dark hover:text-light hover:scale-95 transition duration-700'
 						>
 							{cta}
 						</span>
