@@ -56,7 +56,7 @@ const ChatWidget = ({ data }) => {
 						const IconComponent = iconsMap[feature.icon]; // Map icon names to components
 						return (
 							<AnimateUp key={index}>
-								<div className='flex flex-col items-center text-center shadow-md shadow-light/30   '>
+								<div className='flex flex-col items-center text-center shadow-md shadow-light/30 bg-light  '>
 									<div className='flex items-center justify-around bg-dark text-light py-4 w-full border border-tertiary/10 rounded'>
 										{IconComponent && (
 											<div className='t text-4xl mb-4 text-tertiary  '>
@@ -65,7 +65,7 @@ const ChatWidget = ({ data }) => {
 										)}
 										<TopHeading title={feature.title} theme=' font-bold mb-2 text-tertiary' />
 									</div>
-									<p className='lg:text-lg font-bold text-dark leading-relaxed px-6 py-10 lg:py-12 bg-light rounded-b '>
+									<p className='lg:text-lg font-bold text-dark leading-relaxed px-6 py-10 lg:py-12 bg-gradient-to-l from-light via-primary/10 to-light rounded-b '>
 										{feature.description}
 									</p>
 								</div>
