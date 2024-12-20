@@ -15,7 +15,7 @@ const ServicesOverviewContainer = async () => {
 	return (
 		<section className={SERVICES_CONTAINER_CLASSES}>
 			<div className='text-center mb-12 space-y-4'>
-				<MainHeading title={heading} theme='text-primary' />
+				<MainHeading title={heading} theme='text-primary uppercase' />
 				<TopHeading title={subheading} />
 			</div>
 			<div className="">

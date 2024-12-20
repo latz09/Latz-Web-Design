@@ -54,7 +54,7 @@ const ServicesOverview = ({ services }) => {
 								whileInView={{ scale: 1 }}
 								transition={{ duration: 1 }}
 							>
-								<h2 className='text-xl lg:text-2xl font-bold uppercase text-primary'>
+								<h2 className='text-2xl lg:text-3xl font-bold uppercase text-primary'>
 									{service.title}
 								</h2>
 							</motion.div>
