@@ -57,7 +57,7 @@ const ChatWidget = ({ data }) => {
 						return (
 							<AnimateUp key={index}>
 								<div className='flex flex-col items-center text-center shadow-md shadow-light/30 bg-light  '>
-									<div className='flex items-center justify-around bg-dark text-light py-4 w-full border border-tertiary/10 rounded'>
+									<div className='flex items-center justify-around bg-dark text-light py-4 w-full border border-tertiary/10 '>
 										{IconComponent && (
 											<div className='t text-4xl mb-4 text-tertiary  '>
 												<IconComponent />

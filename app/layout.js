@@ -18,16 +18,23 @@ export const metadata = {
 	metadataBase: new URL(
 		'https://www.latzwebdesign.com/' || 'http://localhost:3000/'
 	),
-	applicationName: 'St Paul Web design and Website Development',
+	applicationName: 'Latz Web Design - Midwest Web Design and Development',
 	title: {
-		default: 'St. Paul Web Design and Website Development - 2024',
+		default: 'Midwest Web Design and Development - Latz Web Design',
 		template: `%s | Latz Web Design`,
 	},
-	description: `Your business deserves a website that truly delivers! Experience the difference with personalized web design focused on turning clicks into customers. Discover the power of SEO-integrated, results-driven web design. Ready to outshine the competition? Get a free estimate today!`,
+	description: `Latz Web Design offers custom, results-driven websites for businesses across the Midwest. From Central Wisconsin to the Twin Cities, we specialize in responsive, SEO-focused web design that helps you grow.`,
 	twitter: {
 		card: 'summary_large_image',
 	},
-	keywords: ['web design in saint paul, web design services'],
+	keywords: ['midwest web design',
+		'web development',
+		'custom websites',
+		'SEO-focused web design',
+		'responsive web design',
+		'Stevens Point web design',
+		'Twin Cities web design',
+		'Central Wisconsin web design',],
 };
 
 const RootLayout = ({ children }) => {
