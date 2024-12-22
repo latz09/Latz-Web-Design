@@ -10,6 +10,7 @@ export const metadata = {
 	keywords: [
 		'Stevens Point web design',
 		'Central Wisconsin web development',
+		'Wausau Wisconsin web design',
 		'SEO web design Wisconsin',
 		'Stevens Point custom websites',
 	],

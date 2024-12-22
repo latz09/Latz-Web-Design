@@ -7,20 +7,20 @@ const Reviews = ({ data }) => {
 			<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 place-items-center">
 				{data.map((review, index) => (
 					<AnimateUp key={index}>
-						<article className="bg-tertiary/5 rounded-lg shadow-lg shadow-dark/30 p-8 flex flex-col h-full transition-transform transform hover:scale-[1.02] duration-500 border border-primary/60">
+						<article className="bg-tertiary/5 rounded-lg shadow-lg shadow-dark/30 px-4 lg:px-8 py-16 flex flex-col h-full transition-transform transform hover:scale-[1.02] duration-500 border border-primary/60">
 							<div className="flex flex-col justify-between h-full">
 								{/* Logo and Website Name */}
 								<div className="mb-6 text-center lg:text-left">
-									<div className="flex justify-center lg:justify-start items-center h-20 mb-4">
+									<div className="flex justify-center  items-center h-20 mb-4">
 										<Image
 											src={review.logo}
 											alt={`${review.websiteName} Logo`}
 											width={140}
 											height={90}
-											className="grayscale contrast-200 object-contain"
+											className="grayscale contrast-200 object-contain pb-4 "
 										/>
 									</div>
-									<p className="text-prmary text-xl font-bold tracking-wide border-t border-dark/20 pt-4">
+									<p className="text-prmary text-xl font-bold tracking-wide  pt-4">
 										{review.websiteName}
 									</p>
 								</div>
