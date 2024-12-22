@@ -6,7 +6,7 @@ import SharedContent from '@/components/site-content/SharedContent';
 
 export const metadata = {
 	title: 'Stevens Point Web Design & Development | Latz Web Design',
-	description: `Empower your Central Wisconsin business with a custom, SEO-focused website from Latz Web Design. We help Stevens Point companies drive growth with responsive, mobile-first solutions.`,
+	description: `Looking for web design in Stevens Point? Latz Web Design crafts modern, mobile-friendly sites with on-page SEO to help your business stand out in Central Wisconsin.`,
 	keywords: [
 		'Stevens Point web design',
 		'Central Wisconsin web development',
