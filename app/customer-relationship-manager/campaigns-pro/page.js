@@ -5,8 +5,16 @@ import KeyBenefits from '@/components/automations/sections/KeyBenefits';
 import { AutomationPageLayout as Layout } from '@/components/automations/design-utils/AutomationPageLayout';
 import CheckList from '@/components/automations/sections/Checklist';
 
+
+export const metadata = {
+	title: 'Campaigns Pro',
+	description: `Reach any audience with personalized messaging, reactivating cold leads and engaging new customers`,
+
+};
+
 const CampaignsPro = async () => {
 	const [data] = await fetchData(query('campaignsPro'));
+	
 
 	return (
 		<Layout id='campaignsPro'>

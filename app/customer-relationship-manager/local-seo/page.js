@@ -9,6 +9,12 @@ const VideoPlayer = dynamic(() => import('@/components/utils/VideoPlayer'), {
 	ssr: false,
 });
 
+export const metadata = {
+	title: 'Local SEO',
+	description: `Maximize your local visibility with our AI-driven Local SEO solution. We ensure your business information is synced across top directories, keeping your details consistent and accurate.`,
+
+};
+
 const LocalSeo = async () => {
 	const [data] = await fetchData(query('localSEO'));
 

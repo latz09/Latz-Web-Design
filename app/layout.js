@@ -42,11 +42,11 @@ const RootLayout = ({ children }) => {
 		<html lang='en'>
 			<body className={`${roboto.className}  text-dark `}>
 				{/* Vendasta Chat Widget Script */}
-
+				
 				<Script
-					src='https://cdn.apigateway.co/webchat-client..prod/sdk.js'
-					data-widget-id='c79ac1d5-a8ee-11ef-87c4-7ac49ff1d0eb'
-					defer
+					  src="https://cdn.apigateway.co/webchat-client..prod/sdk.js"
+					  data-widget-id="c79ac1d5-a8ee-11ef-87c4-7ac49ff1d0eb"
+					  defer
 				/>
 				<ChatPointer />
 				<NavigationContainer />

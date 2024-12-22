@@ -10,6 +10,13 @@ import CheckList from '@/components/automations/sections/Checklist';
 const VideoPlayer = dynamic(() => import('@/components/utils/VideoPlayer'), {
 	ssr: false,
 });
+
+export const metadata = {
+	title: 'Businness App CRM',
+	description: `The Business App CRM is designed for small businesses like yours, helping you manage all your customers, leads, and daily tasks in one easy-to-use platform.`,
+
+};
+
 const ServiceLayout = async () => {
 	const [data] = await fetchData(query('businessAppCRM'));
 

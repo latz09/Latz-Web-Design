@@ -5,6 +5,12 @@ import Introduction from '@/components/automations/sections/Introduction';
 import KeyBenefits from '@/components/automations/sections/KeyBenefits';
 import CheckList from '@/components/automations/sections/Checklist';
 
+export const metadata = {
+	title: 'Inbox Pro',
+	description: `Capture and convert more leads with Inbox Pro, your all-in-one communication hub. This service combines AI-assisted web chat, SMS messaging, Contact Forms, Facebook Messenger, and Instagram (coming soon) into a shared team inbox.`,
+
+};
+
 const InboxPro = async () => {
 	const [data] = await fetchData(query('inboxPro'));
 	return (
