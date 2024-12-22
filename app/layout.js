@@ -16,26 +16,26 @@ const roboto = Roboto({
 
 export const metadata = {
 	metadataBase: new URL(
-		'https://www.latzwebdesign.com/' || 'http://localhost:3000/'
+	  'https://www.latzwebdesign.com/' || 'http://localhost:3000/'
 	),
-	applicationName: 'Latz Web Design - Midwest Web Design and Development',
+	applicationName: 'Midwest Web Design & Website Development',
 	title: {
-		default: 'Midwest Web Design and Development - Latz Web Design',
-		template: `%s | Latz Web Design`,
+	  default: 'Midwest Web Design & Website Development - 2024',
+	  template: '%s | Latz Web Design',
 	},
-	description: `Latz Web Design offers custom, results-driven websites for businesses across the Midwest. From Central Wisconsin to the Twin Cities, we specialize in responsive, SEO-focused web design that helps you grow.`,
+	description: `Ready to boost your online presence across the Midwest? From Stevens Point to Saint Paul, we create high-converting, SEO-focused websites that drive real business results. Let's build something incredible together—get a free estimate today!`,
 	twitter: {
-		card: 'summary_large_image',
+	  card: 'summary_large_image',
 	},
-	keywords: ['midwest web design',
-		'web development',
-		'custom websites',
-		'SEO-focused web design',
-		'responsive web design',
-		'Stevens Point web design',
-		'Twin Cities web design',
-		'Central Wisconsin web design',],
-};
+	keywords: [
+	  'midwest web design',
+	  'web design in stevens point',
+	  'web design in saint paul',
+	  'website development',
+	  'SEO-focused web design',
+	],
+  };
+  
 
 const RootLayout = ({ children }) => {
 	return (
