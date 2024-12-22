@@ -7,7 +7,7 @@ const Reviews = ({ data }) => {
 			<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 place-items-center">
 				{data.map((review, index) => (
 					<AnimateUp key={index}>
-						<article className="bg-tertiary/5 rounded-lg shadow-lg shadow-dark/30 px-4 lg:px-8 py-16 flex flex-col h-full transition-transform transform hover:scale-[1.02] duration-500 border border-primary/60">
+						<article className="bg-tertiary/5 rounded-lg shadow-lg shadow-dark/30 px-6 lg:px-8 py-16 flex flex-col h-full transition-transform transform hover:scale-[1.02] duration-500 border border-primary/60">
 							<div className="flex flex-col justify-between h-full">
 								{/* Logo and Website Name */}
 								<div className="mb-6 text-center lg:text-left">
