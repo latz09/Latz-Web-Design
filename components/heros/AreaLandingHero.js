@@ -50,7 +50,7 @@ const HEADING_CLASSES = 'grid gap-4 lg:space-y-4';
 const TOP_HEADING_CLASSES =
 	'text-lg lg:text-2xl font-light uppercase tracking-widest text-tertiary';
 const MAIN_HEADING_CLASSES =
-	'text-3xl lg:text-7xl text-center font-extrabold text-white leading-tight';
+	'text-3xl lg:text-7xl text-center font-extrabold text-white tracking-wide';
 const SUB_HEADING_CLASSES = 'text-md lg:text-2xl text-light/80';
 const BUTTON_CLASSES =
 	'transition duration-700 block text-center p-3 lg:p-4 lg:w-1/2 mx-auto text-lg lg:text-2xl rounded-full font-bold bg-tertiary text-dark hover:bg-tertiary/0 hover:text-tertiary hover:border';
