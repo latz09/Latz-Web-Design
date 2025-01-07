@@ -1,5 +1,5 @@
 import * as Icons from 'react-icons/ai'; // Import all AI icons
-import { MainHeading, TopHeading } from '../utils/Typography';
+import { Description, MainHeading, TopHeading } from '../utils/Typography';
 import StepsAnimation from '../utils/animations/StepsAnimation';
 import AnimateUp from '../utils/animations/AnimateUp';
 import FreeEstimate from '../utils/FreeEstimate';
@@ -27,7 +27,7 @@ const Process = ({ data }) => {
 				</div>
 
 				{/* Right Column: Steps */}
-				<div className='flex-1 space-y-20 z-[1]'>
+				<div className='flex-1 space-y-20 z-[1] '>
 					<StepsAnimation>
 						{data.steps.map((step, index) => {
 							// Dynamically get the icon component from react-icons
@@ -35,24 +35,22 @@ const Process = ({ data }) => {
 								Icons[step.icon] || Icons.AiOutlineQuestionCircle;
 
 							return (
-								<div key={index} className='flex items-center mb-12 text-light'>
+								<div key={index} className='grid place-items-center lg:flex lg:items-center mb-12 text-light'>
 									{/* Left Section: Icon */}
-									<div className='flex-shrink-0 mr-4 lg:mr-8 self-start'>
-										<div className='border-2 border-light rounded-full p-3 lg:p-4'>
-											<div className='border border-tertiary/70 rounded-full p-2 lg:p-4 text-2xl lg:text-4xl'>
+									<div className='flex-shrink-0 mr-4 lg:mr-8 self-start mb-4 lg:mb-0 '>
+										<div className='border-2 border-light rounded-full p-3 lg:p-4 shadow-lg shadow-light/20'>
+											<div className='border border-tertiary/70 rounded-full p-2 lg:p-4 text-4xl'>
 												<IconComponent className='text-light' />
 											</div>
 										</div>
 									</div>
 
 									{/* Right Section: Text */}
-									<div className='flex-1'>
-										<h3 className='text-xl lg:text-2xl font-bold mb-4 text-tertiary'>
-											{step.stepHeading}
-										</h3>
-										<p className='lg:text-lg leading-7 lg:leading-8'>
-											{step.description}
-										</p>
+									<div className='flex-1 text-center lg:text-start'>
+									
+										<MainHeading title={step.stepHeading} theme='text-tertiary'/>
+									
+										<Description description={step.description} theme='text-light mt-2' />
 									</div>
 								</div>
 							);
