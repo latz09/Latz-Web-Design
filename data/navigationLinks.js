@@ -1,8 +1,8 @@
 export const navigationLinks = [
-	// {
-	// 	title: 'Home',
-	// 	href: '/',
-	// },
+	{
+		title: 'Who We Are',
+		href: '/who-we-are',
+	},
 	{
 		title: 'Our Process',
 		href: '/pricing-and-budget',
