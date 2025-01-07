@@ -36,7 +36,7 @@ const OverviewContainer = async ({ includeLink }) => {
 									{/* <div className='text-primary text-5xl'>
 										<FaArrowTrendUp />
 									</div> */}
-									<div key={index} className='grid gap-4 ml-4'>
+									<div key={index} className='grid gap-4 lg:ml-4'>
 										<div className='grid place-items-center gap-4 text-center'>
 										<AnimatedCheck />
 											<MainHeading title={feature.feature} />
