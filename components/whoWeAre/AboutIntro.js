@@ -3,6 +3,7 @@ import { FETCH_WHO_WE_ARE_INTRO as query } from '@/data/queries/who-we-are/FETCH
 import Image from 'next/image';
 import Link from 'next/link';
 import { MainHeading, Description } from '@/components/utils/Typography';
+import AnimateUp from '../utils/animations/AnimateUp';
 
 const AboutIntro = async () => {
 	const data = await fetchData(query);
@@ -30,11 +31,13 @@ const AboutIntro = async () => {
 
 					{/* Description Paragraphs */}
 					{data.paragraphs.map((paragraph, index) => (
+                        <AnimateUp key={index}>
 						<Description
 							key={index}
 							description={paragraph}
 							theme="text-dark/80 mx-4"
 						/>
+                        </AnimateUp>
 					))}
 
 					{/* CTA Link */}
