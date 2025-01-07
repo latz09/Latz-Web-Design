@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const AboutCta = ({ image, cta }) => {
     return (
-        <div className='relative h-[70vh] lg:h-screen w-full mt-24'>
+        <div className='relative h-[70vh] lg:h-screen w-full mt-12 lg:mt-24'>
             {/* Background Image */}
             <Image
                 src={image}
