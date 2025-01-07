@@ -42,7 +42,7 @@ const AboutContent = ({ data }) => {
 									<div className='flex justify-center '>
 										<div className='border rounded-full border-primary/40 shadow shadow-dark/20'>
 											<div className='p-6 bg-primary/10 rounded-full '>
-												<IconComponent className='text-primary text-3xl lg:text-5xl  ' />
+												<IconComponent className='text-primary text-4xl lg:text-5xl  ' />
 											</div>
 										</div>
 									</div>
@@ -73,7 +73,7 @@ const AboutContent = ({ data }) => {
 									<div className='p-6 bg-dark rounded-full '>
 										{React.createElement(
 											IconMap[lastItem.icon.toLowerCase()],
-											{ className: 'text-light text-3xl lg:text-5xl ' },
+											{ className: 'text-light text-4xl lg:text-5xl ' },
 											null
 										)}
 									</div>
