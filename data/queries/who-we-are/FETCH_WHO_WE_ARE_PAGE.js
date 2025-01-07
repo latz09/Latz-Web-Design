@@ -6,7 +6,7 @@ export const FETCH_WHO_WE_ARE_PAGE = `
     paragraphs[] {
       heading,
       text,
-      
+      icon,
     },
     "finalImageUrl": finalImage.asset->url,
     cta
