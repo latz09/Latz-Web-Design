@@ -2,10 +2,13 @@ export const FETCH_WHO_WE_ARE_PAGE = `
   *[_type == "whoWeArePage"] {
     mainHeading,
     subHeading,
+    "landingImageUrl": landingImage.asset->url,
     paragraphs[] {
       heading,
       text,
-      "imageUrl": photo.asset->url
-    }
+      
+    },
+    "finalImageUrl": finalImage.asset->url,
+    cta
   }
 `;
