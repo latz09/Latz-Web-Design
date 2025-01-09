@@ -71,7 +71,7 @@ const ReportDetails = ({ scrollNote, snapshotDetails }) => {
 
 	return (
 		<div className='space-y-12 bg-gradient-to-l from-dark via-dark/80 to-dark py-24 '>
-			<MainHeading title={`${scrollNote}:`} theme={'text-center text-light'} />
+			<MainHeading title={`${scrollNote}:`} theme={'text-center text-light px-2'} />
 
 			<div className='max-w-7xl mx-auto grid place-items-center lg:grid-cols-2 gap-6 text-dark'>
 				{snapshotDetails.map((detail, index) => {
