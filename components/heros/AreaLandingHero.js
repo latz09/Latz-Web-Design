@@ -98,7 +98,7 @@ const AreaLandingHero = ({ heading, subHeading, topHeading }) => {
 						<div className='w-full grid lg:grid-cols-2 gap-8 mt-8'>
 							<Link
 								href='/contact-latz-web-design'
-								className='w-full rounded-full mx-auto bg-tertiary text-dark py-4 grid place-items-center lg:text-2xl text-lg font-bold shdow-lg shadow-tertiary/30 hover:scale-95 transition duration-500'
+								className='w-full rounded-full mx-auto bg-tertiary text-dark py-3 lg:py-4 grid place-items-center lg:text-2xl text-lg font-bold shdow-lg shadow-tertiary/30 hover:scale-95 transition duration-500'
 							>
 								<motion.span
 									className=''
@@ -111,7 +111,7 @@ const AreaLandingHero = ({ heading, subHeading, topHeading }) => {
 
 							<Link
 								href='/free-business-report'
-								className='w-full mx-auto border border-tertiary/20 text-tertiary0 rounded-full py-4 grid text-lg lg:text-2xl  place-items-center shadow-lg shadow-tertiary/20 hover:shadow-tertiary/50 hover:border-tertiary/50 transition duration-500 '
+								className='w-full mx-auto border border-tertiary/20 text-tertiary0 rounded-full py-3 lg:py-4 grid text-lg lg:text-2xl  place-items-center shadow-lg shadow-tertiary/20 hover:shadow-tertiary/50 hover:border-tertiary/50 transition duration-500 '
 							>
 								<motion.span
 									className=''
