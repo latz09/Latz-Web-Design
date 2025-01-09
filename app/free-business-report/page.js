@@ -1,4 +1,4 @@
-import Image from 'next/image';
+
 import { fetchData } from '@/lib/sanity/sanityFetch';
 import { FETCH_BUSINESS_SNAPSHOT_REPORT_DATA as query } from '@/data/queries/snapshotReport/FETCH_BUSINESS_SNAPSHOT_REPORT_DATA';
 import { FaMapMarkedAlt } from 'react-icons/fa';
@@ -139,3 +139,5 @@ const ReportDetails = ({ scrollNote, snapshotDetails }) => {
 		</div>
 	);
 };
+
+
