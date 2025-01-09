@@ -4,6 +4,7 @@ import LandingHero from '@/components/heros/LandingHero';
 
 import SharedContent from '@/components/site-content/SharedContent';
 
+
 export default async function Home() {
 	const [data] = await fetchData(query);
 	
@@ -17,6 +18,7 @@ export default async function Home() {
 				topHeading={data.topHeadline}
 				links={data.links}
 			/>
+		
 			<SharedContent />
 		</main>
 	);

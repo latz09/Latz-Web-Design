@@ -4,12 +4,14 @@ import ProcessAndPricingContainer from '../process-and-pricing/ProcessAndPricing
 import RecentClientsContainer from '../RecentClients/RecentClientsContainer';
 import ReviewContainer from '../reviews/ReviewContainer';
 import ServicesOverviewContainer from '../service-overview/ServiceOverViewContainer';
+import SnapshotModal from '../snapshot-report/SnapshotModal';
 import AnimateUp from '../utils/animations/AnimateUp';
 import AboutIntro from '../whoWeAre/AboutIntro';
 
 const SharedContent = () => {
 	return (
 		<div>
+			<SnapshotModal />
 			<ServicesOverviewContainer />
 			<AboutIntro />
 			<ChatWidgetContainer />

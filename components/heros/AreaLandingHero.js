@@ -41,9 +41,10 @@ const buttonHover = {
 	hover: { scale: 1.05, transition: { type: 'spring', stiffness: 300 } },
 };
 
+
 // Constants for repeated class names
 const CONTAINER_CLASSES =
-	'relative h-[90vh] xl:h-[100vh] overflow-hidden bg-dark text-light';
+	'relative h-[90vh] xl:h-[100vh] overflow-hidden bg-dark text-light  shadow-xl shadow-tertiary/30';
 const INNER_CONTAINER_CLASSES =
 	'relative z-10 flex flex-col justify-center items-center h-full max-w-5xl px-4 mx-auto text-center';
 const HEADING_CLASSES = 'grid gap-4 lg:space-y-4';
@@ -52,23 +53,21 @@ const TOP_HEADING_CLASSES =
 const MAIN_HEADING_CLASSES =
 	'text-3xl lg:text-7xl text-center font-extrabold text-white tracking-wide';
 const SUB_HEADING_CLASSES = 'text-md lg:text-2xl text-light/80';
-const BUTTON_CLASSES =
-	'transition duration-700 block text-center p-3 lg:p-4 lg:w-1/2 mx-auto text-lg lg:text-2xl rounded-full font-bold bg-tertiary text-dark hover:bg-tertiary/0 hover:text-tertiary hover:border';
 
 // Component
 const AreaLandingHero = ({ heading, subHeading, topHeading }) => {
 	return (
 		<div className={CONTAINER_CLASSES}>
 			{/* Background Lines */}
-			<div className="absolute inset-0 opacity-20 pointer-events-none">
-				{generateLines(20)}
+			<div className='absolute inset-0 opacity-20 pointer-events-none'>
+				{generateLines(27)}
 			</div>
 
 			{/* Hero Content */}
 			<motion.div
 				className={INNER_CONTAINER_CLASSES}
-				initial="hidden"
-				animate="visible"
+				initial='hidden'
+				animate='visible'
 				variants={{
 					visible: { transition: { staggerChildren: 0.3 } },
 				}}
@@ -95,19 +94,34 @@ const AreaLandingHero = ({ heading, subHeading, topHeading }) => {
 					>
 						{subHeading}
 					</motion.h2>
-					<motion.div
-						variants={textVariants}
-						transition={{ duration: 1.4 }}
-					>
-						<Link href="/contact-latz-web-design">
-							<motion.span
-								className={BUTTON_CLASSES}
-								whileHover="hover"
-								variants={buttonHover}
+					<motion.div variants={textVariants} transition={{ duration: 1.4 }}>
+						<div className='w-full grid lg:grid-cols-2 gap-8 mt-8'>
+							<Link
+								href='/contact-latz-web-design'
+								className='w-full rounded-full mx-auto bg-tertiary text-dark py-4 grid place-items-center lg:text-2xl text-xl font-bold shdow-lg shadow-tertiary/30 hover:scale-95 transition duration-500'
 							>
-								Get Started Now
-							</motion.span>
-						</Link>
+								<motion.span
+									className=''
+									whileHover='hover'
+									variants={buttonHover}
+								>
+									Get Started Now
+								</motion.span>
+							</Link>
+
+							<Link
+								href='/free-business-report'
+								className='w-full mx-auto border border-tertiary/20 text-tertiary0 rounded-full py-4 grid text-xl lg:text-2xl  place-items-center shadow-lg shadow-tertiary/20 hover:shadow-tertiary/50 hover:border-tertiary/50 transition duration-500 '
+							>
+								<motion.span
+									className=''
+									whileHover='hover'
+									variants={buttonHover}
+								>
+									Claim Your Free Report!
+								</motion.span>
+							</Link>
+						</div>
 					</motion.div>
 
 					<ScrollIndicator />

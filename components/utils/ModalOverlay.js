@@ -1,5 +1,5 @@
 'use client';
-
+import { MdClose } from "react-icons/md";
 import { motion } from 'framer-motion';
 import NavigationLinks from '../navigation/NavigationLinks'; // Ensure you have this component
 import NavigationLogo, { LogoGuy } from '../navigation/NavigationLogo';
@@ -26,9 +26,9 @@ const ModalOverlay = ({ onClose }) => {
 					</Link>
 					<button
 						onClick={onClose}
-						className='text-xl font-black hover:text-gray-700'
+						className='text-3xl font-black hover:text-gray-700'
 					>
-						✕
+						<MdClose />
 					</button>
 				</div>
 			</div>
