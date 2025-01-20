@@ -21,7 +21,7 @@ export const metadata = {
 	),
 	applicationName: 'Midwest Web Design & Website Development',
 	title: {
-		default: 'Midwest Web Design & Website Development - 2024',
+		default: 'Midwest Web Design & Website Development - 2025',
 		template: '%s | Latz Web Design',
 	},
 	description: `Ready to boost your online presence across the Midwest? From Stevens Point to Saint Paul, we create high-converting, SEO-focused websites that drive real business results. Let's build something incredible together—get a free estimate today!`,
