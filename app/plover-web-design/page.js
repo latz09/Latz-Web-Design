@@ -5,7 +5,7 @@ import SharedContent from '@/components/site-content/SharedContent';
 
 export const metadata = {
 	title: {
-		default: 'Plover Web Design and Website Development - 2024',
+		default: 'Plover Web Design and Website Development - 2025',
 		template: `%s | Latz Web Design`,
 	},
 	description: `Boost your Plover business with custom web design tailored for growth and success. Our personalized, results-focused websites help you stand out in Central Wisconsin. Take your online presence to the next level. Get a free estimate today!`,
