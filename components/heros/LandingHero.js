@@ -69,13 +69,13 @@ const LandingHero = ({ heading, subHeading, topHeading, links = [] }) => {
 				{/* Links Section */}
 				<div className='w-full space-y-4 mt-8 '>
 					<motion.div
-						className='grid gap-6 lg:flex lg:gap-4 '
+						className='grid gap-6 md:flex md:gap-4 '
 						initial={{ opacity: 0, scale: 0.95 }}
 						animate={{ opacity: 1, scale: 1 }}
 						transition={{ duration: 1, delay: 0.5 }}
 					>
 						{links.map((link, index) => (
-							<Link key={index} href={`/${link.slug}`} className='lg:w-1/2'>
+							<Link key={index} href={`/${link.slug}`} className='md:w-1/2'>
 								<span
 									className={`transition duration-700 hover:scale-95 block text-center p-3 lg:p-4 w-full text-lg lg:text-2xl  rounded-full font-bold ${
 										index === 0

@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 import { MainHeading, TopHeading } from '@/components/utils/Typography';
+import React from 'react';
 
 // Import specific icons
 import { FaPalette, FaRobot, FaRegAddressCard, FaWrench } from 'react-icons/fa';
@@ -30,11 +31,20 @@ const ChatWidget = ({ data }) => {
 
 	return (
 		<section className='bg-dark text-light py-20'>
-			<div className='max-w-5xl mx-auto space-y-6 text-center px-6 lg:px-12'>
+			<div className='max-w-5xl mx-auto space-y-6 text-center px-6 lg:px-12 pb-8'>
 				<MainHeading title={heading} theme='text-tertiary' />
-				<p className='text-lg lg:text-xl text-light/90 leading-relaxed'>
-					{subheading}
-				</p>
+				<div className='text-lg lg:text-xl text-light/90 leading-relaxed'>
+					{subheading.split('.').map((sentence, index, array) => (
+						<p
+							key={index}
+							className={`mb-2 ${
+								index === array.length - 1 ? 'font-black tracking-wide pt-2 text-tertiary mb-0' : ''
+							}`}
+						>
+							{sentence.trim()}.
+						</p>
+					))}
+				</div>
 			</div>
 			<div className='md:w-2/3 2xl:w-1/2 mx-auto'>
 				<VideoPlayer videoData={videoVisuals[0]} />
@@ -42,15 +52,15 @@ const ChatWidget = ({ data }) => {
 
 			{/* Featured Heading */}
 			{featuredHeading && (
-				<div className='max-w-4xl mx-auto mt-16 text-center px-6 lg:px-12'>
-					<h3 className='text-xl lg:text-2xl font-bold text-tertiary'>
+				<div className='max-w-4xl mx-auto mt-16  text-center px-6 lg:px-12'>
+					<h3 className='text-xl lg:text-2xl font-bold text-light'>
 						{featuredHeading}
 					</h3>
 				</div>
 			)}
 
 			{/* Features Section */}
-			{features && features.length > 0 && (
+			{/* {features && features.length > 0 && (
 				<div className='max-w-6xl mx-auto mt-12 grid gap-12 lg:gap-8 lg:grid-cols-2 place-items-center '>
 					{features.map((feature, index) => {
 						const IconComponent = iconsMap[feature.icon]; // Map icon names to components
@@ -73,15 +83,15 @@ const ChatWidget = ({ data }) => {
 						);
 					})}
 				</div>
-			)}
+			)} */}
 
 			{/* Call to Action */}
 			{cta && (
 				<div className='text-center mt-16 px-6 lg:px-12'>
-					<Link href={'/customer-relationship-manager/inbox-pro#inboxPro'}>
+					<Link href={'/custom-ai-assistant'}>
 						<span
 							href={ctaLink || '#'}
-							className='inline-block px-8 py-4 bg-tertiary text-dark font-semibold border border-light/0 lg:text-lg rounded-md shadow-md hover:border-light/70 hover:bg-dark hover:text-light hover:scale-95 transition duration-700'
+							className='inline-block px-8 py-3 bg-tertiary text-dark font-semibold border border-light/0 lg:text-lg rounded-md shadow-md hover:border-light/70 hover:bg-dark hover:text-light hover:scale-95 transition duration-700'
 						>
 							{cta}
 						</span>
