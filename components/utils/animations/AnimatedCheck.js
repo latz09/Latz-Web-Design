@@ -24,7 +24,7 @@ const AnimatedCheck = () => {
       strokeOpacity: 1,
       transition: { duration: 1, ease: "easeInOut" },
     },
-  };
+  }; 
 
   return (
     <div ref={ref} className="flex justify-center items-center">

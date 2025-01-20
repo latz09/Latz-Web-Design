@@ -1,5 +1,5 @@
 export const MainHeading = ({ title, theme }) => {
-	return <h1 className={`text-3xl lg:text-5xl font-black ${theme}`}>{title}</h1>;
+	return <h1 className={`text-3xl tracking-wide lg:text-5xl font-black ${theme}`}>{title}</h1>;
 };
 
 export const TopHeading = ({ title, theme }) => {
@@ -7,7 +7,7 @@ export const TopHeading = ({ title, theme }) => {
 };
 
 export const Description = ({ description, theme }) => {
-	return <p className={`text-lg lg:text-xl leading-8 lg:leading-9 ${theme}`}>{description}</p>;
+	return <p className={`text-lg lg:text-xl leading-8 lg:leading-9  ${theme}`}>{description}</p>;
 };
 
 
