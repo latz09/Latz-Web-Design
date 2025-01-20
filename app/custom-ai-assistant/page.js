@@ -34,7 +34,7 @@ export default async function StevensPointWebDesign() {
 		<PageContainer className='bg-light py-12 md:py-24'>
 			<main className='bg-light grid gap-24'>
 				<div className='grid '>
-					<div className='h-[60vh] grid place-items-center'>
+					<div className='h-[65vh] grid place-items-center'>
 						<AiLandingHero
 							headline={data.headline}
 							subheadline={data.subheadline}
