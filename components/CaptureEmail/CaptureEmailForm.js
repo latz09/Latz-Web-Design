@@ -7,7 +7,7 @@ const CaptureEmailForm = ({ctaText}) => {
           id="email"
           name="email"
           placeholder="Enter your email"
-          className="md:w-2/3 px-4 py-2 border border-dark/70 bg-light rounded-md"
+          className="md:w-2/3 px-4 py-3 border border-dark/70 bg-light rounded-md"
           required
         />
         <button
