@@ -12,7 +12,7 @@ const CaptureEmailForm = ({ctaText}) => {
         />
         <button
           type="submit"
-          className="bg-primary md:w-1/3 px-4 py-2 rounded-md text-light font-bold"
+          className="bg-primary md:w-1/3 px-4 py-3 rounded-md text-light font-bold"
         >
           {ctaText}
         </button>
