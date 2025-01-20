@@ -48,7 +48,7 @@ const RootLayout = ({ children }) => {
 					data-widget-id='c79ac1d5-a8ee-11ef-87c4-7ac49ff1d0eb'
 					defer
 				/>
-				<ChatPointer />
+				{/* <ChatPointer /> */}
 				{/* Snapshot Modal */}
 
 				<NavigationContainer />

@@ -12,7 +12,7 @@ const WhyThisChatBot = ({ data }) => {
 		<section className='bg-light'>
 			<div className='max-w-5xl mx-auto px-4'>
 				<div className='text-center mb-16'>
-					<MainHeading title='Why Our AI Assistant?' theme='text-primary' />
+					<MainHeading title='Why Our AI Assistant?' theme='text-dark' />
 			
 				</div>
 
