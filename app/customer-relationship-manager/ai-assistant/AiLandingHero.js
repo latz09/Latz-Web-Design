@@ -9,11 +9,11 @@ import {
 
 const AiLandingHero = ({ headline, subheadline }) => {
 	return (
-		<div className='space-y-4 md:space-y-6 text-center px-6 md:px-12 max-w-4xl mx-auto'>
+		<div className='space-y-4 md:space-y-6 text-center px-6 md:px-12 max-w-4xl mx-auto pt-12 pb-16'>
 			<MainHeading title={headline} theme='scale-y-110' />
 
 			<h3
-				className=''
+				className='text-lg'
 				dangerouslySetInnerHTML={{
 					__html: subheadline.replace(
 						'24/7 AI-powered',

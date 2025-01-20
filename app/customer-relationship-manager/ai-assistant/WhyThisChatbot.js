@@ -13,10 +13,7 @@ const WhyThisChatBot = ({ data }) => {
 			<div className='max-w-5xl mx-auto px-4'>
 				<div className='text-center mb-16'>
 					<MainHeading title='Why Our AI Assistant?' theme='text-primary' />
-					<p className='mt-2 text-gray-600 text-lg'>
-						Discover how our AI-powered chatbot can boost engagement and
-						streamline your customer interactions.
-					</p>
+			
 				</div>
 
 				{/* Features Grid */}

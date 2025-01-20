@@ -33,24 +33,20 @@ export default async function StevensPointWebDesign() {
 	return (
 		<PageContainer className='bg-light py-12 md:py-24'>
 			<main className='bg-light grid gap-24'>
-				<div className='grid '>
-					<div className='h-[65vh] grid place-items-center'>
-						<AiLandingHero
-							headline={data.headline}
-							subheadline={data.subheadline}
-						/>
-					</div>
-					<div className="grid">
-						<FeaturesBanner data={data.features} />
-					</div>
-				</div>
+				<AiLandingHero
+					headline={data.headline}
+					subheadline={data.subheadline}
+				/>
+
+				<FeaturesBanner data={data.features} />
+
 				<WhyThisChatBot data={data.whyThisAIChatbot} />
 
 				<HowItWorks data={data.howItWorks} featuresData={data.features} />
 				<ChatbotKeyBenefits data={data.keyBenefits} />
 				<FAQs data={data.faqs} />
 				<CallToAction data={data.cta} />
-				<FeaturesBanner data={data.features} />
+				{/* <FeaturesBanner data={data.features} /> */}
 				<FooterNote data={data.footerNote} />
 			</main>
 		</PageContainer>

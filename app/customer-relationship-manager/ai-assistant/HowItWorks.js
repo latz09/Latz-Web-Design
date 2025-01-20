@@ -17,9 +17,7 @@ const HowItWorks = ({ data, featuresData }) => {
 				{/* Section Header */}
 				<div className='text-center mb-16'>
 					<MainHeading title='How It Works' theme='text-dark' />
-					<p className='mt-2 text-gray-600 text-lg'>
-						Step-by-step guide to getting your AI chatbot ready.
-					</p>
+					
 				</div>
 
 				{/* Steps Grid */}
@@ -31,7 +29,7 @@ const HowItWorks = ({ data, featuresData }) => {
 						return (
 							<motion.div
 								key={index}
-								className='border border-dark/50 px-4 pt-12 pb-6 bg-gradient-to-l from-light via-dark/10 to-light shadow-lg rounded-md flex flex-col items-center justify-between text-center'
+								className='border border-primary/30 px-4 pt-12 pb-6 bg-light shadow-lg rounded-md flex flex-col items-center justify-between text-center'
 								initial={{ opacity: 0, y: 70 }}
 								whileInView={{ opacity: 1, y: 0 }}
 								viewport={{ once: true }}
