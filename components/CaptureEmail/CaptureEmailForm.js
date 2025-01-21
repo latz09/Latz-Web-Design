@@ -103,9 +103,9 @@ const CaptureEmailForm = ({ ctaText = 'Notify Me' }) => {
 													? 'bg-dark text-light z-[99999] border-tertiary/50 border'
 													: 'bg-tertiary border border-dark/60 text-dark'
 											}`}
+					onClick={closeBanner}
 				>
 					<button
-						onClick={closeBanner}
 						className=' text-lg font-bold focus:outline-none'
 						aria-label='Close'
 					>
