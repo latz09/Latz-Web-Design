@@ -5,7 +5,7 @@ import { MainHeading, TopHeading } from '../utils/Typography';
 import ServicesOverview from './ServicesOverview';
 
 const SERVICES_CONTAINER_CLASSES =
-	'bg-gradient-to-b from-light via-dark/10 to-light py-16 lg:py-24 px-4 lg:px-8 grid gap-8 mt-2 ';
+	' py-16 lg:py-24 px-4 lg:px-8 grid gap-8 mt-2 ';
 
 const ServicesOverviewContainer = async () => {
 	// Fetch data

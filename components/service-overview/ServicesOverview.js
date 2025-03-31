@@ -2,17 +2,11 @@
 
 import React from 'react';
 import {
-	FaCode,
-	
+	FaPuzzlePiece,
+	FaBolt,
 	FaTools,
-	FaLightbulb,
-	FaSearchLocation,
+	FaHandshake,
 	FaLaptop,
-	FaCloudDownloadAlt,
-	FaPenFancy,
-	FaThumbsUp
-	
-
 } from 'react-icons/fa';
 import { Description, MainHeading, TopHeading } from '../utils/Typography';
 import AnimateUp from '../utils/animations/AnimateUp';
@@ -26,13 +20,10 @@ const SERVICE_CARD_CLASSES =
 
 const iconMap = {
 	FaLaptop: FaLaptop,
-	FaCode: FaCode,
 	FaTools: FaTools,
-	FaLightbulb: FaLightbulb,
-	FaSearchLocation : FaSearchLocation,
-	FaCloudDownloadAlt: FaCloudDownloadAlt,
-	FaPenFancy: FaPenFancy,
-	FaThumbsUp: FaThumbsUp
+	FaPuzzlePiece: FaPuzzlePiece,
+	FaBolt: FaBolt,
+	FaHandshake: FaHandshake,
 };
 
 const ServicesOverview = ({ services }) => {
@@ -61,11 +52,14 @@ const ServicesOverview = ({ services }) => {
 								</h2>
 							</motion.div>
 							<motion.div
-								initial={{ scale: 0.8, rotate: 4, opacity: .6 }}
+								initial={{ scale: 0.8, rotate: 4, opacity: 0.6 }}
 								whileInView={{ scale: 1, rotate: 0, opacity: 1 }}
 								transition={{ duration: 1 }}
 							>
-								<Description description={service.description} theme='font-semibold text-dark/80 italic g' />
+								<Description
+									description={service.description}
+									theme='font-semibold text-dark/80 italic g'
+								/>
 							</motion.div>
 						</div>
 					</AnimateUp>
