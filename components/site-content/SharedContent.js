@@ -11,7 +11,7 @@ import AboutIntro from '../whoWeAre/AboutIntro';
 const SharedContent = () => {
 	return (
 		<div>
-			<SnapshotModal />
+			{/* <SnapshotModal /> */}
 			<ServicesOverviewContainer />
 			<AboutIntro />
 			<ChatWidgetContainer />

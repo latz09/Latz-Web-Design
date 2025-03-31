@@ -10,12 +10,12 @@ const LandingBackground = ({ x, y, length, delay, direction }) => {
 	// Define animation variants for lines
 	const animation = {
 		initial: {
-			x: direction === 'horizontal' ? '-100vw' : 0,
+			// x: direction === 'horizontal' ? '-100vw' : 0,
 			y: direction === 'vertical' ? '-100vh' : 0,
 			opacity: 0,
 		},
 		animate: {
-			x: direction === 'horizontal' ? '100vw' : 0,
+			// x: direction === 'horizontal' ? '100vw' : 0,
 			y: direction === 'vertical' ? '100vh' : 0,
 			opacity: [0, 1, 0],
 			transition: {
