@@ -48,9 +48,9 @@ const INNER_CONTAINER_CLASSES =
 	'relative z-10 flex flex-col justify-center items-center h-full max-w-7xl px-2 mx-auto text-center lg:text-start  ';
 const HEADING_CLASSES = 'grid gap-4 lg:space-y-2 ';
 const TOP_HEADING_CLASSES =
-	'text-[2.4rem] lg:text-2xl font-light uppercase tracking-widest text-tertiary';
+	'text-lg lg:text-2xl font-light uppercase tracking-widest text-tertiary';
 const MAIN_HEADING_CLASSES =
-	'uppercase text-5xl sm:text-5xl lg:text-7xl font-bold tracking-wider font-heading  ';
+	'uppercase text-[2.4rem] sm:text-5xl lg:text-7xl font-bold tracking-wider font-heading  ';
 const SUB_HEADING_CLASSES = 'text-lg lg:text-2xl text-light text-center';
 
 // Component
@@ -89,7 +89,7 @@ const AreaLandingHero = ({ heading, subHeading, topHeading }) => {
 					>
 						{topHeading}
 					</motion.p>
-				
+					{/* 4xl - size-2.25rem lineheight 2.5    5xl 3  and 1 */}
 
 					<motion.div variants={textVariants} transition={{ duration: 1.4 }}>
 						<div className='w-full grid md:grid-cols-2 gap-4 lg:gap-8 mt-8  '>
