@@ -48,7 +48,7 @@ const INNER_CONTAINER_CLASSES =
 	'relative z-10 flex flex-col justify-center items-center h-full max-w-7xl px-2 mx-auto text-center lg:text-start  ';
 const HEADING_CLASSES = 'grid gap-4 lg:space-y-2 ';
 const TOP_HEADING_CLASSES =
-	'text-lg lg:text-2xl font-light uppercase tracking-widest text-tertiary';
+	'text-[2.4rem] lg:text-2xl font-light uppercase tracking-widest text-tertiary';
 const MAIN_HEADING_CLASSES =
 	'uppercase text-5xl sm:text-5xl lg:text-7xl font-bold tracking-wider font-heading  ';
 const SUB_HEADING_CLASSES = 'text-lg lg:text-2xl text-light text-center';
@@ -89,9 +89,10 @@ const AreaLandingHero = ({ heading, subHeading, topHeading }) => {
 					>
 						{topHeading}
 					</motion.p>
+				
 
 					<motion.div variants={textVariants} transition={{ duration: 1.4 }}>
-						<div className='w-full grid md:grid-cols-2 gap-4 lg:gap-8 mt-8'>
+						<div className='w-full grid md:grid-cols-2 gap-4 lg:gap-8 mt-8  '>
 							<Link
 								href='/contact-latz-web-design'
 								className='w-full rounded-sm mx-auto bg-tertiary text-dark py-3 lg:py-3 grid place-items-center uppercase lg:text-2xl  font-bold shdow-lg shadow-tertiary/30 hover:scale-95 transition duration-500'
