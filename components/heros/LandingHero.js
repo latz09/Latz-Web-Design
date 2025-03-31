@@ -34,24 +34,24 @@ const generateLines = (numLines) => {
 
 // Constants for repeated class names
 const CONTAINER_CLASSES =
-	'relative h-[90vh] xl:h-[90vh]  mt-8 overflow-hidden bg-dark text-light';
+	'relative py-24 lg:py-36  mt-20 lg:mt-28 overflow-hidden bg-dark from-dark via-dark/95 to-dark text-light grid place-items-center';
 const INNER_CONTAINER_CLASSES =
-	'relative z-10 flex flex-col justify-center items-center h-full max-w-5xl px-2 mx-auto  ';
-const HEADING_CLASSES = 'grid gap-4 space-y-4';
+	'relative z-10 grid place-items-center   max-w-7xl px-2 text-center lg:text-start  ';
+const HEADING_CLASSES = 'grid gap-4 space-y-4 ';
 const TOP_HEADING_CLASSES =
-	'text-lg lg:text-2xl font-light uppercase tracking-widest text-tertiary ';
+	'text-lg lg:text-2xl font-light uppercase tracking-widest text-tertiary font-heading';
 const MAIN_HEADING_CLASSES =
-	'text-3xl lg:text-7xl font-extrabold text-white leading-tight';
-const SUB_HEADING_CLASSES = 'text-md lg:text-2xl text-light/80';
+	'text-3xl lg:text-6xl font-bold tracking-wider font-heading  ';
+const SUB_HEADING_CLASSES = 'text-lg lg:text-2xl text-light text-center';
 
 // Component
 const LandingHero = ({ heading, subHeading, topHeading, links = [] }) => {
 	return (
 		<div className={CONTAINER_CLASSES}>
 			{/* Animated Lines Background */}
-			{/* <div className='absolute inset-0 opacity-5 pointer-events-none'>
+			<div className='absolute inset-0 opacity-5 pointer-events-none'>
 				{generateLines(20)}
-			</div> */}
+			</div>
 
 			{/* Hero Content */}
 			<div className={INNER_CONTAINER_CLASSES}>
@@ -61,27 +61,27 @@ const LandingHero = ({ heading, subHeading, topHeading, links = [] }) => {
 					animate={{ opacity: 1, scale: 1 }}
 					transition={{ duration: 1, delay: 0.3 }}
 				>
-					<p className={TOP_HEADING_CLASSES}>{topHeading}</p>
-					<h1 className={MAIN_HEADING_CLASSES}>{heading}</h1>
-					{/* <h2 className={SUB_HEADING_CLASSES}>{subHeading}</h2> */}
+					<h1 className={MAIN_HEADING_CLASSES}>{topHeading}</h1>
+					<div>
+						<p className={TOP_HEADING_CLASSES}>{heading}</p>
+					</div>
 				</motion.div>
 
 				{/* Links Section */}
-				<div className='w-full space-y-4 mt-12 '>
-				<p className='text-lg italic text-center'>Select Your Area</p>
+				<div className='w-full mt-12  '>
+					<p className='text-lg text-light font-thin text-center mb-4'>Select Your Area</p>
 					<motion.div
 						className='grid gap-6 md:flex md:gap-4 '
 						initial={{ opacity: 0, scale: 0.95 }}
 						animate={{ opacity: 1, scale: 1 }}
 						transition={{ duration: 1, delay: 0.5 }}
 					>
-						
 						{links.map((link, index) => (
 							<Link key={index} href={`/${link.slug}`} className='md:w-1/2'>
 								<span
-									className={`transition duration-700 hover:scale-95 block text-center p-3 lg:p-4 w-full text-lg lg:text-2xl  rounded-sm font-bold ${
+									className={`transition duration-700 hover:scale-95 block text-center p-3 lg:p-4 w-full  lg:text-xl  rounded-sm font-semibold uppercase ${
 										index === 0
-											? 'bg-light text-dark hover:bg-tertiary/0 hover:text-tertiary hover:border' // First link
+											? 'bg-light/70 text-dark hover:bg-light/0 hover:text-tertiary hover:border' // First link
 											: 'text-tertiary border border-tertiary hover:border-tertiary/0  hover:bg-light hover:text-dark' // Other links
 									}`}
 								>
@@ -90,7 +90,9 @@ const LandingHero = ({ heading, subHeading, topHeading, links = [] }) => {
 							</Link>
 						))}
 					</motion.div>
-					
+				</div>
+				<div className='mt-12'>
+					<h2 className={SUB_HEADING_CLASSES}>{subHeading}</h2>
 				</div>
 			</div>
 		</div>

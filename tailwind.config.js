@@ -10,11 +10,12 @@ module.exports = {
 			primary: '#18a1ad',		
 			secondary: '#779E43',
 			tertiary: '#ffee65',
-			// dark: '#001D20',
-			dark: '#000F11',
+			dark: '#00090A',
+			// dark: '#000F11',
 			light: '#F2FCFE',
 			// light: '#FCFCFC',
 		},
+		
 		
 	},
 	plugins: [
