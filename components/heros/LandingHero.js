@@ -81,7 +81,7 @@ const LandingHero = ({ heading, subHeading, topHeading, links = [] }) => {
 								<span
 									className={`transition duration-700 hover:scale-95 block text-center p-3 lg:p-4 w-full  lg:text-xl  rounded-sm font-semibold uppercase ${
 										index === 0
-											? 'bg-light/70 text-dark hover:bg-light/0 hover:text-tertiary hover:border' // First link
+											? 'bg-light text-dark hover:bg-light/0 hover:text-tertiary hover:border' // First link
 											: 'text-tertiary border border-tertiary hover:border-tertiary/0  hover:bg-light hover:text-dark' // Other links
 									}`}
 								>
