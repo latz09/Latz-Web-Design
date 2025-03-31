@@ -9,7 +9,7 @@ const AboutIntro = async () => {
 	const data = await fetchData(query);
 
 	return (
-		<section className="about-intro py-16 lg:py-24 bg-light">
+		<section className="about-intro py-24 lg:py-32 bg-light">
 			<div className="max-w-7xl mx-auto flex flex-col items-center gap-12 lg:gap-16 lg:flex-row">
 				{/* Text Section */}
 				<div className="text-content text-center lg:text-left space-y-6 lg:w-1/2">

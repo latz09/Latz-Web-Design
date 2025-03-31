@@ -4,7 +4,7 @@ import FeaturedClientsIntro from './FeaturedClientsIntro';
 import RecentClientCard from './RecentClientCard';
 import SlideIn from '../utils/animations/SlideIn';
 import RecentClientsPageIntro from './RecentClientsPageIntro';
-import { MainHeading } from '../utils/Typography';
+import { MainHeading, TopHeading } from '../utils/Typography';
 import Link from 'next/link';
 
 const RecentClientsContainer = async ({
@@ -25,10 +25,10 @@ const RecentClientsContainer = async ({
 				))}
 			</div>
 			{includeViewMore && (
-				<div className='text-center mt-8 p-4 border border-tertiary grid place-items-center w-4/5 lg:w-1/2 mx-auto rounded-sm hover:scale-95 transition duration-300 cursor-pointer'>
+				<div className='text-center mt-8 p-4 border  border-tertiary grid place-items-center w-4/5 lg:w-1/2 mx-auto rounded-sm hover:scale-95 transition duration-300 cursor-pointer'>
 					<Link href='/our-work' passHref>
 						<span className='w-full h-full block'>
-							<MainHeading title='View More' theme='text-tertiary' />
+							<TopHeading title='View More' theme='text-tertiary' />
 						</span>
 					</Link>
 				</div>

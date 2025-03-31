@@ -1,6 +1,7 @@
 import ChatWidgetContainer from '../automations/ChatWidgetContainer';
 import OverviewContainer from '../cms/overview/OverviewContainer';
 import ProcessAndPricingContainer from '../process-and-pricing/ProcessAndPricingContainer';
+import ShortenProcess from '../process-and-pricing/ShortenProcess';
 import RecentClientsContainer from '../RecentClients/RecentClientsContainer';
 import ReviewContainer from '../reviews/ReviewContainer';
 import ServicesOverviewContainer from '../service-overview/ServiceOverViewContainer';
@@ -13,15 +14,19 @@ const SharedContent = () => {
 		<div>
 			{/* <SnapshotModal /> */}
 			<ServicesOverviewContainer />
-			<AboutIntro />
+
+			<ShortenProcess />
+			<ReviewContainer />
 			<ChatWidgetContainer />
-			<ReviewContainer  />
+			
+			<AboutIntro />
 			<AnimateUp>
 				<RecentClientsContainer includeViewMore={true} />
 			</AnimateUp>
+			{/* <ProcessAndPricingContainer /> */}
 			
-			<OverviewContainer includeLink={true} />
-			<ProcessAndPricingContainer />
+			{/* <OverviewContainer includeLink={true} /> */}
+			
 		</div>
 	);
 };

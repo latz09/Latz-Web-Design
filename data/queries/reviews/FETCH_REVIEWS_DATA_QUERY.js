@@ -6,7 +6,8 @@ export const FETCH_REVIEWS_DATA_QUERY = `
       reviewText,
       reviewerTitle,
       websiteName,
-      "logo": logo.asset->url
+      "logo": logo.asset->url,
+      "ownerImage": ownerImage.asset->url
     }
   }
 `;

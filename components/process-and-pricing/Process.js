@@ -10,7 +10,7 @@ const Process = ({ data }) => {
 			<div className='text-center lg:pt-8 pb-8 px-2 lg:pb-12'>
 				<TopHeading title={data.subheading} theme='text-light/80' />
 			</div>
-			<div className='max-w-6xl mx-auto px-4 lg:px-0 space-y-12 flex flex-col lg:flex-row  '>
+			<div className='max-w-7xl mx-auto px-4 lg:px-0 space-y-12 flex flex-col lg:flex-row  '>
 				{/* Left Column: Headings */}
 				<div className='flex-1 lg:pr-8 lg:h-[85vh] lg:flex lg:items-center lg:justify-center lg:sticky lg:top-8  text-center lg:text-start mb-4 lg:mb-0'>
 					<div className='space-y-4 pl-2'>

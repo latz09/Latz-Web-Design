@@ -45,7 +45,7 @@ const buttonHover = {
 const CONTAINER_CLASSES =
 	'relative py-24 lg:py-36  mt-20 lg:mt-28 overflow-hidden bg-dark from-dark via-dark/95 to-dark text-light grid place-items-center';
 const INNER_CONTAINER_CLASSES =
-	'relative z-10 flex flex-col justify-center items-center h-full max-w-7xl px-2 mx-auto text-center lg:text-start  ';
+	'relative z-10 flex flex-col justify-center items-center h-full max-w-7xl px-2 mx-auto text-center   ';
 const HEADING_CLASSES = 'grid gap-4 lg:space-y-2 ';
 const TOP_HEADING_CLASSES =
 	'text-lg lg:text-2xl font-light uppercase tracking-widest text-tertiary';
@@ -72,16 +72,27 @@ const AreaLandingHero = ({ heading, subHeading, topHeading }) => {
 				}}
 			>
 				<div className={HEADING_CLASSES}>
-					<motion.h1
-						className={MAIN_HEADING_CLASSES}
-						variants={textVariants}
-						transition={{ duration: 1 }}
-					>
-						<span>{heading} </span>
-						<br className='sm:hidden' />
+					<div>
+						<motion.h1
+							className={MAIN_HEADING_CLASSES}
+							variants={textVariants}
+							transition={{ duration: 1 }}
+						>
+							<span>{heading} </span>
+							<br className='sm:hidden' />
 
-						<span>Web Design</span>
-					</motion.h1>
+							<span>Web Design</span>
+						</motion.h1>
+						<motion.p
+							className='my-2 text-xl lg:text-2xl italic tracking-widest text-primary text-center'
+							initial={{opacity:0}}
+							animate={{opacity:1}}
+						
+							transition={{ duration: 1.2, delay: 0.5 }}
+						>
+							& Development
+						</motion.p>
+					</div>
 					<motion.p
 						className={TOP_HEADING_CLASSES}
 						variants={textVariants}

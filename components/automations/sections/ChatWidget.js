@@ -30,7 +30,7 @@ const ChatWidget = ({ data }) => {
 	} = data;
 
 	return (
-		<section className='bg-dark text-light py-20'>
+		<section className='bg-dark text-light py-24 lg:py-32'>
 			<div className='max-w-5xl mx-auto space-y-6 text-center px-6 lg:px-12 pb-8'>
 				<MainHeading title={heading} theme='text-tertiary' />
 				<div className='text-lg lg:text-xl text-light/90 leading-relaxed'>
@@ -38,10 +38,10 @@ const ChatWidget = ({ data }) => {
 						<p
 							key={index}
 							className={`mb-2 ${
-								index === array.length - 1 ? 'font-black tracking-wide pt-2 text-tertiary mb-0' : ''
+								index === array.length - 1 ? ' tracking-wide pt-8 text-tertiary mb-0' : 'text-xl lg:text-2xl leading-8 lg:leading-9'
 							}`}
 						>
-							{sentence.trim()}.
+							{sentence.trim()}
 						</p>
 					))}
 				</div>
