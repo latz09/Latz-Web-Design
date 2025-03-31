@@ -50,7 +50,7 @@ const HEADING_CLASSES = 'grid gap-4 lg:space-y-2 ';
 const TOP_HEADING_CLASSES =
 	'text-lg lg:text-2xl font-light uppercase tracking-widest text-tertiary';
 const MAIN_HEADING_CLASSES =
-	'uppercase text-5xl lg:text-7xl font-bold tracking-wider font-heading  ';
+	'uppercase text-4xl sm:text-5xl lg:text-7xl font-bold tracking-wider font-heading  ';
 const SUB_HEADING_CLASSES = 'text-lg lg:text-2xl text-light text-center';
 
 // Component
@@ -77,10 +77,10 @@ const AreaLandingHero = ({ heading, subHeading, topHeading }) => {
 						variants={textVariants}
 						transition={{ duration: 1 }}
 					>
-					<span>{heading} </span>
-					<br className="sm:hidden" />
-				
-					<span >Web Design</span>
+						<span>{heading} </span>
+						<br className='sm:hidden' />
+
+						<span>Web Design</span>
 					</motion.h1>
 					<motion.p
 						className={TOP_HEADING_CLASSES}
