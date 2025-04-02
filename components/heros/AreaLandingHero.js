@@ -96,7 +96,7 @@ const AreaLandingHero = ({ heading, subHeading, topHeading }) => {
 						variants={textVariants}
 						transition={{ duration: 1 }}
 					>
-						<span>{heading}</span>
+						<span>{heading} </span>
 						<br className='sm:hidden' />
 						<span>Web Design</span>
 					</motion.h1>
