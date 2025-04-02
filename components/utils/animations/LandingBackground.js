@@ -30,20 +30,26 @@ const LandingBackground = ({ x, y, length, delay, direction }) => {
 
 	return (
 		<motion.div
-			style={{
-				position: 'absolute',
-				top: y,
-				left: x,
-				width: direction === 'horizontal' ? length : `${thickness}px`,
-				height: direction === 'vertical' ? length : `${thickness}px`,
-				backgroundColor: 'rgba(255, 238, 101, .8)',
-				borderRadius: '1px',
-				filter: 'blur(.5px)', // Apply blur effect for motion blur
-			}}
-			variants={animation}
-			initial='initial'
-			animate='animate'
-		/>
+		style={{
+		  position: 'absolute',
+		  top: y,
+		  left: x,
+		  width: size,
+		  height: size,
+		  borderRadius: '50%',
+		  background: 'rgba(255, 238, 101, 0.3)',
+		  filter: 'blur(40px)',
+		}}
+		animate={{
+		  x: [0, 50, -50, 0],
+		  y: [0, -30, 30, 0],
+		}}
+		transition={{
+		  duration: 15,
+		  repeat: Infinity,
+		  ease: 'easeInOut',
+		}}
+	  />
 	);
 };
 
