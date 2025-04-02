@@ -98,23 +98,25 @@ const AreaLandingHero = ({ heading, subHeading, topHeading }) => {
 				variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
 			>
 				<div className={HEADING_CLASSES}>
-					<motion.h1
-						className={MAIN_HEADING_CLASSES}
-						variants={textVariants}
-						transition={{ duration: 1 }}
-					>
-						<span>{heading} </span>
-						<br className='sm:hidden' />
-						<span>Web Design</span>
-					</motion.h1>
-					<motion.p
-						className='my-2 text-xl lg:text-2xl italic tracking-widest text-primary text-center'
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						transition={{ duration: 1.2, delay: 0.5 }}
-					>
-						& Development
-					</motion.p>
+					<div className="pb-2 lg:pb-4">
+						<motion.h1
+							className={MAIN_HEADING_CLASSES}
+							variants={textVariants}
+							transition={{ duration: 1 }}
+						>
+							<span>{heading} </span>
+							<br className='sm:hidden' />
+							<span>Web Design</span>
+						</motion.h1>
+						<motion.p
+							className='pb-2 text-xl lg:text-2xl italic tracking-widest text-primary text-center'
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							transition={{ duration: 1.2, delay: 0.5 }}
+						>
+							& Development
+						</motion.p>
+					</div>
 				</div>
 
 				<motion.p
