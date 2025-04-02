@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import LandingBlob from '../utils/animations/LandingBlob';
 import Link from 'next/link';
 
-function preventWidow(text) {
+export function preventWidow(text) {
 	const words = text.trim().split(' ');
 	if (words.length < 2) return text;
 	const lastTwo = words.splice(-2, 2).join('\u00A0'); // non-breaking space
