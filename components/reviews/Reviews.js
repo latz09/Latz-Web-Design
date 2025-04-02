@@ -30,7 +30,7 @@ const Reviews = ({ data }) => {
 						<AnimateUp key={index}>
 							<article
 								onClick={() => setSelectedReview(review)}
-								className='cursor-pointer py-8 bg-dark/0 rounded-sm shadow-sm shadow-primary/30 hover:shadow-lg transition-transform hover:scale-[1.01] duration-500 p-3 md:p-5 flex flex-col items-center gap-8'
+								className='cursor-pointer py-8  rounded-sm shadow shadow-dark/30 hover:shadow-lg transition-transform hover:scale-[1.01] duration-500 p-2 md:p-5 flex flex-col items-center gap-8'
 							>
 								{review.ownerImage && (
 									<div className='relative overflow-hidden flex-shrink-0 shadow-md'>
@@ -45,7 +45,7 @@ const Reviews = ({ data }) => {
 								)}
 
 								<div className='flex-1 text-center md:text-left space-y-4'>
-									<blockquote className='text-dark/80 text-xl lg:text-2xl leading-9 line-clamp-2 font-bold'>
+									<blockquote className='text-dark/80 text-xl lg:text-2xl leading-8 lg:leading-9 line-clamp-2 font-bold'>
 										“{review.reviewText}”
 									</blockquote>
 									<div className='text-center p-4 flex items-center justify-center gap-2'>

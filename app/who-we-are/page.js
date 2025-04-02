@@ -11,8 +11,8 @@ const WhoWeAre = async () => {
 
 	return (
 		<PageContainer>
-			<div className='bg-light'>
-				<AboutHero image={data.landingImageUrl} heading={data.mainHeading} />
+			<div className='bg-dark'>
+				<AboutHero image={data.landingImageUrl} heading={data.mainHeading} subheading={data.subHeading} />
 
 				<AboutContent data={data.paragraphs} />
 				<AboutCta image={data.finalImageUrl} cta={data.cta} />

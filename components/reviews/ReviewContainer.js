@@ -9,7 +9,7 @@ const ReviewContainer = async () => {
 	const [data] = await fetchData(query);
 
 	return (
-		<div className='grid gap-16 py-24 lg:py-32'>
+		<div className='grid gap-16 py-24 lg:py-32 '>
 			<ReviewsIntro />
 			<AnimateUp>
 				<Reviews data={data.reviewList} />

@@ -1,9 +1,9 @@
-import { MainHeading } from '../utils/Typography';
+import { MainHeading, TopHeading } from '../utils/Typography';
 import Image from 'next/image';
 
-const AboutHero = ({ image, heading }) => {
+const AboutHero = ({ image, heading, subheading }) => {
 	return (
-		<div className='relative h-[40vh] lg:h-[50vh] 2xl:h-[65vh] w-full'>
+		<div className='relative h-[40vh] lg:h-[50vh] 2xl:h-[60vh] w-full'>
 			{/* Background Image */}
 			<Image
 				src={image}
@@ -11,7 +11,7 @@ const AboutHero = ({ image, heading }) => {
 				fill
 				style={{ objectFit: 'cover', objectPosition: 'top' }}
 				priority
-				className='z-0 shadow-xl shadow-primary/30'
+				className='z-0 shadow-lg shadow-primary/20'
 			/>
 
 			{/* Dark overlay */}
@@ -20,8 +20,9 @@ const AboutHero = ({ image, heading }) => {
 			{/* Scrollable Content */}
 			<div className='absolute inset-0 overflow-y-auto z-20 flex flex-col items-center justify-end'>
 				{/* Add your scrollable content here */}
-				<div className='p-4 max-w-4xl text-center'>
-					<MainHeading title={heading} theme='text-light/60' />
+				<div className='p-2 lg:p-4 max-w-4xl text-center lg:space-y-2'>
+					<MainHeading title={heading} theme='text-light' />
+					<TopHeading title={subheading} theme='text-light' />
 				
                     
 				</div>

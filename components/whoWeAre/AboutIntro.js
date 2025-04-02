@@ -12,7 +12,7 @@ const AboutIntro = async () => {
 		<section className="about-intro py-24 lg:py-32 bg-light">
 			<div className="max-w-7xl mx-auto flex flex-col items-center gap-12 lg:gap-16 lg:flex-row">
 				{/* Text Section */}
-				<div className="text-content text-center lg:text-left space-y-6 lg:w-1/2">
+				<div className="text-content text-center lg:text-left space-y-2 lg:w-1/2">
 					{/* Main Heading */}
 					<MainHeading title={data.heading} theme="text-primary" />
 
@@ -35,7 +35,7 @@ const AboutIntro = async () => {
 						<Description
 							key={index}
 							description={paragraph}
-							theme="text-dark/80 mx-4"
+							theme="text-dark/80 my-4 "
 						/>
                         </AnimateUp>
 					))}
