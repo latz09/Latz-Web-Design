@@ -118,8 +118,8 @@ const AreaLandingHero = ({ heading, subHeading, topHeading }) => {
 					{topHeading}
 				</motion.p>
 
-				<motion.div variants={textVariants} transition={{ duration: 1.4 }}>
-					<div className='w-full grid md:grid-cols-2 gap-4 lg:gap-8 mt-8'>
+				<motion.div variants={textVariants} transition={{ duration: 1.4 }} className="w-full">
+					<div className='w-full grid md:grid-cols-2 gap-4 lg:gap-8 mt-8 '>
 						<Link
 							href='/contact-latz-web-design'
 							className='w-full rounded-sm mx-auto bg-tertiary text-dark py-3 lg:py-3 grid place-items-center uppercase lg:text-2xl font-bold shadow-lg shadow-tertiary/30 hover:scale-95 transition duration-500'
