@@ -12,7 +12,7 @@ const LandingBlob = ({ x, y, size, delay }) => {
         width: size,
         height: size,
         borderRadius: '50%',
-        backgroundColor: 'rgba(24, 161, 173, 0.6)',
+        backgroundColor: 'rgba(24, 161, 173, 0.8)',
         filter: 'blur(8px)',
       }}
       animate={{

@@ -4,6 +4,13 @@ import React, { useEffect, useState } from 'react';
 import LandingBlob from '../utils/animations/LandingBlob';
 import Link from 'next/link';
 
+function preventWidow(text) {
+	const words = text.trim().split(' ');
+	if (words.length < 2) return text;
+	const lastTwo = words.splice(-2, 2).join('\u00A0'); // non-breaking space
+	return [...words, lastTwo].join(' ');
+}
+
 const CONTAINER_CLASSES =
 	'relative py-24 lg:py-36 mt-20 lg:mt-28 overflow-hidden bg-dark text-light grid place-items-center';
 const INNER_CONTAINER_CLASSES =
@@ -118,7 +125,11 @@ const AreaLandingHero = ({ heading, subHeading, topHeading }) => {
 					{topHeading}
 				</motion.p>
 
-				<motion.div variants={textVariants} transition={{ duration: 1.4 }} className="w-full">
+				<motion.div
+					variants={textVariants}
+					transition={{ duration: 1.4 }}
+					className='w-full'
+				>
 					<div className='w-full grid md:grid-cols-2 gap-4 lg:gap-8 mt-8 '>
 						<Link
 							href='/contact-latz-web-design'
@@ -140,13 +151,13 @@ const AreaLandingHero = ({ heading, subHeading, topHeading }) => {
 					</div>
 				</motion.div>
 
-				<div className='pt-4'>
+				<div className='pt-6 lg:pt-8'>
 					<motion.h2
 						className={SUB_HEADING_CLASSES}
 						variants={textVariants}
 						transition={{ duration: 1.2 }}
 					>
-						{subHeading}
+						{preventWidow(subHeading)}
 					</motion.h2>
 				</div>
 			</motion.div>
