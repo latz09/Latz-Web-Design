@@ -12,7 +12,7 @@ const AboutIntro = async () => {
 		<section className="about-intro py-24 lg:py-32 bg-light">
 			<div className="max-w-7xl mx-auto flex flex-col items-center gap-12 lg:gap-16 lg:flex-row">
 				{/* Text Section */}
-				<div className="text-content text-center lg:text-left space-y-2 lg:w-1/2">
+				<div className="text-content text-center lg:text-left space-y-2 lg:w-1/2 ">
 					{/* Main Heading */}
 					<MainHeading title={data.heading} theme="text-primary" />
 
@@ -35,14 +35,14 @@ const AboutIntro = async () => {
 						<Description
 							key={index}
 							description={paragraph}
-							theme="text-dark/80 my-4 "
+							theme="text-dark/80 my-4 px-2"
 						/>
                         </AnimateUp>
 					))}
 
 					{/* CTA Link */}
 					<Link href="/who-we-are">
-						<span className="inline-block mt-8 px-6 py-3 text-light bg-primary hover:bg-dark transition duration-300 text-lg lg:text-2xl rounded-full font-bold">
+						<span className="inline-block mt-8 px-6 py-3 text-light bg-primary hover:bg-dark transition duration-300 text-lg lg:text-2xl rounded-sm font-bold">
 							{data.ctaText}
 						</span>
 					</Link>
