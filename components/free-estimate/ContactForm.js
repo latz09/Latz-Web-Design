@@ -12,7 +12,7 @@ const ContactForm = () => {
 	});
 
 	const [isLoading, setIsLoading] = useState(false);
-	const [buttonText, setButtonText] = useState('Send Your Request');
+	const [buttonText, setButtonText] = useState('Send Request');
 
 	const router = useRouter();
 
@@ -55,14 +55,14 @@ const ContactForm = () => {
 				});
 				router.push(`/thank-you?name=${encodeURIComponent(formData.name)}`);
 				setButtonText('Form submitted successfully!');
-				setTimeout(() => setButtonText('Send Your Request'), 3000);
+				setTimeout(() => setButtonText('Send Request'), 3000);
 			} else {
 				setButtonText(result.message || 'Submission failed');
-				setTimeout(() => setButtonText('Send Your Request'), 3000);
+				setTimeout(() => setButtonText('Send Request'), 3000);
 			}
 		} catch (error) {
 			setButtonText('Failed to submit form');
-			setTimeout(() => setButtonText('Send Your Request'), 3000);
+			setTimeout(() => setButtonText('Send Request'), 3000);
 		} finally {
 			setIsLoading(false);
 		}
@@ -71,7 +71,7 @@ const ContactForm = () => {
 	return (
 		<form
 			onSubmit={handleSubmit}
-			className='space-y-6 px-4 pb-10 lg:pb-12 pt-14 lg:pt-16 lg:px-8 bg-light rounded-b-xl  shadow shadow-dark/30'
+			className='space-y-6 px-4 pb-10 lg:pb-12 pt-14 lg:pt-16 lg:px-8 bg-light rounded-b-xl  shadow shadow-dark/10'
 		>
 			<div className='flex flex-col'>
 				<label htmlFor='name' className='form-label'>
@@ -136,12 +136,12 @@ const ContactForm = () => {
 
 			<div className='flex flex-col pt-4'>
 				<label htmlFor='description' className='form-label'>
-					Describe Your Project/Needs
+					Tell Me About Your Project
 				</label>
 				<textarea
 					id='description'
 					name='description'
-					placeholder='Tell us about your project or how we can help with CRM...'
+					placeholder={`What do you need help with? What's not working? I'd love to hear.`}
 					value={formData.description}
 					onChange={handleChange}
 					className='form-textarea'

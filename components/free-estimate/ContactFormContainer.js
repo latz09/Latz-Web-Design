@@ -8,7 +8,7 @@ import ContactFormIntro from './ContactFormIntro';
 const ContactFormContainer = ({ toggleModal }) => {
 	return (
 		<div className='bg- to-dark pt-8 pb-32'>
-			<div className=' max-w-7xl mx-auto grid  lg:grid-cols-2 gap-8 lg:gap-2 place-items-center '>
+			<div className=' max-w-[90rem] mx-auto grid  lg:grid-cols-2 gap-8 lg:gap-2 place-items-center '>
 				<div className='p-6 space-y-8 grid place-items-start'>
 					<ContactFormIntro />
 					<div className='hidden lg:grid '>
@@ -32,18 +32,21 @@ export default ContactFormContainer;
 
 const Contacts = () => {
 	return (
-		<div className='text-dark  grid gap-5 '>
+		<div className='text-dark  grid gap-5 text-lg lg:text-xl '>
 			<div>
 				<a
 					href='mailto:jordan@latzwebdesign.com'
-					className='underline underline-offset-8 mb-4 hover:text-primary hover:font-bold transition duration-300'
+					className='mb-4  hover:font-bold transition duration-300 tracking-wide'
 				>
-					jordan@latzwebdesign.com
+					<span>Email:</span>
+					<span> Jordan@LatzWebDesign.com</span>
 				</a>
 			</div>
 			<div>
-				<a href='tel:7156305689' className='underline underline-offset-8 hover:text-primary hover:font-bold transition duration-300'>
-					(715) 630-5689
+				<a href='tel:7156305689' className='tracking-wide  hover:font-bold transition duration-300'>
+					
+					<span>Call/Text:</span>
+					<span> (715) 630-5689</span>
 				</a>
 			</div>
 		</div>
