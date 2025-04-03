@@ -129,7 +129,7 @@ const ContactForm = () => {
 							onChange={handleChange}
 							className='form-checkbox'
 						/>
-						<span className='ml-2'>CRM & Automation Servicess</span>
+						<span className='ml-2'>CRM & Automation Services</span>
 					</label>
 				</div>
 			</div>
