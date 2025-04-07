@@ -125,7 +125,7 @@ const SnapshotFormRequest = () => {
 			<div className='pt-8 lg:pt-4 w-full mx-auto grid place-items-center'>
 				<button
 					type='submit'
-					className='w-full bg-primary text-xl uppercase text-light font-bold py-3 px-6 rounded-sm hover:bg-blue-700 transition duration-300'
+					className='w-full bg-primary text-xl uppercase text-light font-bold py-3 px-2 rounded-sm hover:bg-blue-700 transition duration-300'
 					disabled={isLoading}
 				>
 					{buttonText}
