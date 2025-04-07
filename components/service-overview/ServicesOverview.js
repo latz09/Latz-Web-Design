@@ -1,14 +1,12 @@
 'use client';
 
 import React from 'react';
-import {
-	FaPuzzlePiece,
-	FaBolt,
-	FaTools,
-	FaHandshake,
-	FaLaptop,
-} from 'react-icons/fa';
-import { Description, MainHeading, TopHeading } from '../utils/Typography';
+import {	FaPencilRuler, FaCogs } from 'react-icons/fa';
+import { FiTrendingUp } from 'react-icons/fi';
+import { HiOutlineCog6Tooth } from 'react-icons/hi2';
+import { FaRocket } from "react-icons/fa6";
+
+import { Description } from '../utils/Typography';
 import AnimateUp from '../utils/animations/AnimateUp';
 import { motion } from 'framer-motion';
 
@@ -19,18 +17,18 @@ const SERVICE_CARD_CLASSES =
 	'group  flex flex-col items-center gap-4 transition duration-500';
 
 const iconMap = {
-	FaLaptop: FaLaptop,
-	FaTools: FaTools,
-	FaPuzzlePiece: FaPuzzlePiece,
-	FaBolt: FaBolt,
-	FaHandshake: FaHandshake,
+	FaPencilRuler: FaPencilRuler,
+	FaCogs: FaCogs,
+	FaRocket: FaRocket,
+	FiTrendingUp: FiTrendingUp,
+	// Add more icons as needed
 };
 
 const ServicesOverview = ({ services }) => {
 	return (
 		<div className={SERVICES_WRAPPER_CLASSES}>
 			{services?.map((service, index) => {
-				const Icon = iconMap[service.icon] || FaLaptop;
+				const Icon = iconMap[service.icon] || FaRocket;
 
 				return (
 					<AnimateUp key={index}>
