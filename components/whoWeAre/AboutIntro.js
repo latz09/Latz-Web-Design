@@ -14,7 +14,7 @@ const AboutIntro = async () => {
 				{/* Text Section */}
 				<div className="text-content text-center lg:text-left space-y-2 lg:w-1/2 ">
 					{/* Main Heading */}
-					<MainHeading title={data.heading} theme="text-primary" />
+					<MainHeading title={data.heading} theme="text-dark" />
 
 					{/* Image for small screens */}
 					<div className="image-content  mx-auto lg:hidden pb-8 ">
@@ -42,7 +42,7 @@ const AboutIntro = async () => {
 
 					{/* CTA Link */}
 					<Link href="/who-we-are">
-						<span className="inline-block mt-8 px-6 py-3 text-light bg-primary hover:bg-dark transition duration-300 text-lg lg:text-2xl rounded-sm font-bold">
+						<span className="inline-block mt-8 px-6 py-3 text-light bg-dark hover:bg-primary transition duration-300 text-lg lg:text-2xl rounded-sm font-bold">
 							{data.ctaText}
 						</span>
 					</Link>
