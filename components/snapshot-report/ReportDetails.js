@@ -51,7 +51,7 @@ export const ReportDetails = ({ scrollNote, snapshotDetails }) => {
 							{IconComponent && (
 								
 									<div className='absolute inset-0 bottom-16 flex items-center justify-center z-0 '>
-										<IconComponent className='text-[200px] text-tertiary/15' />
+										<IconComponent className='text-[200px] text-tertiary/20' />
 									</div>
 								
 							)}
