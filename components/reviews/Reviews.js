@@ -141,7 +141,7 @@ const Reviews = ({ data }) => {
 								))}
 							</blockquote>
 
-							<div>
+							<div className="pt-8">
 								<p className='text-xl font-semibold text-light'>
 									{selectedReview.reviewerName}
 								</p>
