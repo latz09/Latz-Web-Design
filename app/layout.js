@@ -6,6 +6,7 @@ import { Manrope } from 'next/font/google';
 import Footer from '@/components/navigation/Footer';
 import ChatPointer from '@/components/utils/ChatPointer';
 import SnapshotModal from '@/components/snapshot-report/SnapshotModal';
+import FetchClientLogos from '@/components/RecentClients/FetchClientLogos';
 
 const manrope = Manrope({
 	weight: ['200', '300', '400', '500', '700', '800'],
@@ -53,6 +54,9 @@ const RootLayout = ({ children }) => {
 				<NavigationContainer />
 				<div className='max-w-7l mx-auto'>
 					<div>{children}</div>
+					<div className='bg-light'>
+						<FetchClientLogos />
+					</div>
 					<Footer />
 				</div>
 				{/* Meta Pixel Code */}

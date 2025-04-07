@@ -10,12 +10,16 @@ export const metadata = {
 const PricingAndBudgetPage = async () => {
 	return (
 		<PageContainer>
-			<div className='bg-light grid'>
+			<div className='bg-light'>
 				<ProcessAndPricingContainer />
-				<ReviewContainer />
+				<div className='bg-light'>
+					<ReviewContainer />
+				</div>
 			</div>
 		</PageContainer>
 	);
 };
 
 export default PricingAndBudgetPage;
+
+export const revalidate = 10;
