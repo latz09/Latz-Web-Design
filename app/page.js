@@ -5,10 +5,8 @@ import LandingHero from '@/components/heros/LandingHero';
 import SharedContent from '@/components/site-content/SharedContent';
 import { CurveDividerTop } from '@/components/utils/dividers/Dividers';
 
-
 export default async function Home() {
 	const [data] = await fetchData(query);
-	
 
 	return (
 		<main className='grid bg-light'>
@@ -18,8 +16,9 @@ export default async function Home() {
 				subHeading={data.subheadline}
 				topHeading={data.topHeadline}
 				links={data.links}
-			/><CurveDividerTop />
-		
+			/>
+			<CurveDividerTop />
+
 			<SharedContent />
 		</main>
 	);

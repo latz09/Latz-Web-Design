@@ -3,6 +3,7 @@ import { FETCH_TWIN_CITIES_PAGE_DATA as query } from '@/data/queries/landingPage
 
 import AreaLandingHero from '@/components/heros/AreaLandingHero';
 import SharedContent from '@/components/site-content/SharedContent';
+import { CurveDividerTop } from '@/components/utils/dividers/Dividers';
 
 export const metadata = {
 	title: {
@@ -24,6 +25,7 @@ export default async function WebDesignInSaintPaulMn() {
 				subHeading={data.subheadline}
 				topHeading={data.topHeadline}
 			/>
+			<CurveDividerTop />
 			<SharedContent />
 		</main>
 	);
