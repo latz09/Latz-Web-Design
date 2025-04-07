@@ -21,7 +21,9 @@ const AboutHero = ({ image, heading, subheading }) => {
 			<div className='absolute inset-0 overflow-y-auto z-20 flex flex-col items-center justify-end'>
 				{/* Add your scrollable content here */}
 				<div className='p-2 lg:p-4 max-w-4xl text-center lg:space-y-2'>
-					<MainHeading title={heading} theme='text-light' />
+					<div className="text-center uppercase">
+					<MainHeading title={'Meet Latz'} theme='text-light' />
+					<MainHeading title={'WEB DESIGN'} theme='text-light' /></div>
 					<TopHeading title={subheading} theme='text-light' />
 				
                     
