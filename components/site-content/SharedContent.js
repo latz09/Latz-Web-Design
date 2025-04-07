@@ -21,19 +21,18 @@ const SharedContent = () => {
 			<FetchClientLogos />
 
 			<ServicesOverviewContainer />
-			
+
 			<ShortenProcess />
-			<CurveDividerTop />
-			<ReviewContainer />
 			<CurveDividerBottom />
-			<ChatWidgetContainer />
+			<ReviewContainer />
 			<CurveDividerTop />
+			<ChatWidgetContainer />
+			<CurveDividerBottom />
 
 			<AboutIntro />
 			<div className='bg-'>
 				<AnimateUp>
 					<RecentClientsContainer includeViewMore={true} />
-					
 				</AnimateUp>
 			</div>
 

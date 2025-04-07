@@ -3,7 +3,7 @@ import { FETCH_WAUSUA_LANDING_PAGE_DATA as query } from '@/data/queries/landingP
 
 import AreaLandingHero from '@/components/heros/AreaLandingHero';
 import SharedContent from '@/components/site-content/SharedContent';
-import { CurveDividerTop } from '@/components/utils/dividers/Dividers';
+import { CurveDividerBottom } from '@/components/utils/dividers/Dividers';
 
 export const metadata = {
 	title: {
@@ -29,7 +29,7 @@ export default async function WausauWebDesign() {
 				subHeading={data.subheadline}
 				topHeading={data.topHeadline}
 			/>
-			<CurveDividerTop />
+			<CurveDividerBottom />
 			<SharedContent />
 		</main>
 	);

@@ -1,6 +1,7 @@
 import KeyBenefits from '../cms/cms-page/KeyBenefits';
 import AnimateUp from '../utils/animations/AnimateUp';
 import DelayAnimateUp from '../utils/animations/DelayAnimateUp';
+import {  CurveDividerBottom, CurveDividerTop } from '../utils/dividers/Dividers';
 import { Description, MainHeading } from '../utils/Typography';
 import SeoFeatures from './SeoFeatures';
 
@@ -18,14 +19,16 @@ const SeoServiceContainer = ({ section }) => {
 					
 				</div>
 			</div>
-			<DelayAnimateUp>
+			<CurveDividerTop color='dark' />
+			
 				<div className='bg-dark pb-12 pt-16 lg:pb-16 lg:pt-20 '>
 					<SeoFeatures
 						features={section.features}
 						heading={section.subheading}
 					/>
 				</div>
-			</DelayAnimateUp>
+					<CurveDividerBottom color='dark' />
+			
 		</div>
 	);
 };

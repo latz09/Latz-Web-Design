@@ -3,7 +3,7 @@ import { FETCH_LANDING_PAGE_DATA as query } from '@/data/queries/landingPages/FE
 import LandingHero from '@/components/heros/LandingHero';
 
 import SharedContent from '@/components/site-content/SharedContent';
-import { CurveDividerTop } from '@/components/utils/dividers/Dividers';
+import { CurveDividerBottom } from '@/components/utils/dividers/Dividers';
 
 export default async function Home() {
 	const [data] = await fetchData(query);
@@ -17,7 +17,7 @@ export default async function Home() {
 				topHeading={data.topHeadline}
 				links={data.links}
 			/>
-			<CurveDividerTop />
+			<CurveDividerBottom />
 
 			<SharedContent />
 		</main>

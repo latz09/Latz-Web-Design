@@ -13,6 +13,7 @@ import OverviewContainer, {
 import CmsIntro from '@/components/cms/cms-page/CmsIntro';
 import KeyBenefits from '@/components/cms/cms-page/KeyBenefits';
 import AnimateUp from '@/components/utils/animations/AnimateUp';
+import { CurveDividerBottom } from '@/components/utils/dividers/Dividers';
 
 
 export const metadata = {
@@ -40,6 +41,7 @@ const CustomCMSPage = async () => {
 							successStory={clientSuccessStory}
 						/>
 					</section>
+					<CurveDividerBottom color='dark' />
 					<div className=' mb-8'>
 						<OverviewContainer includeLink={false} />
 					</div>
@@ -94,6 +96,7 @@ const CustomCMSPage = async () => {
 							</section>
 						)}
 					</div>
+					<CurveDividerBottom color='dark' />
 				</div>
 			</div>
 		</PageContainer>

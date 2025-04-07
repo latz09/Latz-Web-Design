@@ -7,7 +7,7 @@ import RecentClientCard from './RecentClientCard';
 import RecentClientsPageIntro from './RecentClientsPageIntro';
 import {  TopHeading } from '../utils/Typography';
 import Link from 'next/link';
-import { CurveDividerTop } from '../utils/dividers/Dividers';
+
 
 const RecentClientsContainer = async ({
 	featuredOnly = true,
@@ -23,7 +23,7 @@ const RecentClientsContainer = async ({
 	return (
 		<div className='pb-12 lg:pb-24 bg-dar'>
 			{featuredOnly && <FeaturedClientsIntro />}
-			{!featuredOnly && <RecentClientsPageIntro />}
+			{!featuredOnly && <RecentClientsPageIntro />  }
 			
 
 			<div className='max-w-[90rem] mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-16 lg:gap-y-32 px-1 lg:px-4 py-12 place-items-center'>

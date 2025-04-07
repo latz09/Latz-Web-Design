@@ -3,7 +3,7 @@ import { FETCH_STEVENS_POINT_PAGE_DATA as query } from '@/data/queries/landingPa
 
 import AreaLandingHero from '@/components/heros/AreaLandingHero';
 import SharedContent from '@/components/site-content/SharedContent';
-import { CurveDividerTop } from '@/components/utils/dividers/Dividers';
+import { CurveDividerBottom } from '@/components/utils/dividers/Dividers';
 
 export const metadata = {
 	title: 'Stevens Point Web Design & Development | Latz Web Design',
@@ -28,7 +28,7 @@ export default async function StevensPointWebDesign() {
 				subHeading={data.subheadline}
 				topHeading={data.topHeadline}
 			/>
-			<CurveDividerTop />
+			<CurveDividerBottom />
 
 			<SharedContent />
 		</main>

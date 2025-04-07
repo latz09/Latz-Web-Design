@@ -30,7 +30,7 @@ const steps = [
 
 const ShortenProcess = () => {
 	return (
-		<div className="grid">
+		
 		
 		
 		<div className='bg-dark py-24 lg:py-32 text-light  '>
@@ -69,7 +69,7 @@ const ShortenProcess = () => {
 					</Link>
 				</div>
 			</section>
-		</div></div>
+		</div>
 	);
 };
 
