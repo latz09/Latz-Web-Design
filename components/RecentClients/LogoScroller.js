@@ -8,7 +8,7 @@ const ScrollerLogo = ({ data }) => {
 	const logos = [...data, ...data, ...data, ...data];
 
 	return (
-        <div className=" grid place-items-center pt-6 lg:pt-12 ">
+        <div className=" grid place-items-center pt-10 lg:pt-12 ">
 			<div className='relative w-full overflow-hidden  py-20 lg:py-24'>
 				{/* Absolute positioning takes the animated container out of the normal flow */}
 				<motion.div
