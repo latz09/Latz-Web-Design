@@ -39,7 +39,7 @@ const ShortenProcess = () => {
 								{/* Background Icon */}
 								<div
 									aria-hidden
-									className='absolute text-[4.5rem] lg:text-[7rem] text-tertiary/15 -top-8 lg:-top-12 left-1/2 -translate-x-1/2 z-0 pointer-events-none -sm'
+									className='absolute text-[4.5rem] lg:text-[7rem] text-tertiary/30 -top-8 lg:-top-12 left-1/2 -translate-x-1/2 z-0 pointer-events-none -sm'
 								>
 									{step.icon}
 								</div>
