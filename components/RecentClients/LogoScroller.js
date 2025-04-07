@@ -32,14 +32,14 @@ const ScrollerLogo = ({ data }) => {
 								alt={`${client.companyName} Logo`}
 								width={130}
 								height={130}
-								className='w-[100px] h-[100px] object-contain md:hidden'
+								className='w-[100px] h-[100px] object-contain md:hidden grayscale'
 							/>
 							<Image
 								src={client.logoUrl}
 								alt={`${client.companyName} Logo`}
 								width={130}
 								height={130}
-								className='w-[130px] h-[130px] object-contain hidden md:block'
+								className='w-[130px] h-[130px] object-contain hidden md:block grayscale'
 							/>
 						</div>
 					))}
