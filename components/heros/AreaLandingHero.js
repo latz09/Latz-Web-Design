@@ -85,7 +85,7 @@ const AreaLandingHero = ({ heading, subHeading, topHeading }) => {
 					animate={{ backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'] }}
 					transition={{ duration: 40, ease: 'easeInOut', repeat: Infinity }}
 				/>
-				<div className='absolute inset-0 z-0 bg-dark pointer-events-none'>
+				<div className='absolute inset-0 z-0 bg-gradient-to-b from-dark via-dark/90 to-dark pointer-events-none'>
 					<div className='absolute inset-0 opacity-30'>{blobs}</div>
 				</div>
 			</>

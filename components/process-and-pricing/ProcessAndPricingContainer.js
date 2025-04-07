@@ -15,4 +15,4 @@ const ProcessAndPricingContainer = async () => {
 
 export default ProcessAndPricingContainer;
 
-export const revalidate = 10;
+export const revalidate = 1
