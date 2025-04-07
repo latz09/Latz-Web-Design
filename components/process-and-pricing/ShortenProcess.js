@@ -4,6 +4,7 @@ import { MainHeading } from '../utils/Typography';
 import AnimateUp from '../utils/animations/AnimateUp';
 import Link from 'next/link';
 
+
 const steps = [
 	{
 		title: 'Consultation',
@@ -29,11 +30,15 @@ const steps = [
 
 const ShortenProcess = () => {
 	return (
+		<div className="grid">
+		
+		
 		<div className='bg-dark py-24 lg:py-32 text-light  '>
 			<section className='px-4 max-w-[90rem] mx-auto text-center'>
 				<h2 className='text-3xl lg:text-4xl font-bold mb-32 text-tertiary/70'>How It Works</h2>
 				<div className='grid gap-24 md:gap-32 md:grid-cols-2'>
 					{steps.map((step, index) => (
+						
 						<AnimateUp key={index}>
 							<div className='relative flex flex-col items-center text-center px-2'>
 								{/* Background Icon */}
@@ -64,7 +69,7 @@ const ShortenProcess = () => {
 					</Link>
 				</div>
 			</section>
-		</div>
+		</div></div>
 	);
 };
 

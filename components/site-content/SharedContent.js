@@ -8,6 +8,10 @@ import ReviewContainer from '../reviews/ReviewContainer';
 import ServicesOverviewContainer from '../service-overview/ServiceOverViewContainer';
 import SnapshotModal from '../snapshot-report/SnapshotModal';
 import AnimateUp from '../utils/animations/AnimateUp';
+import {
+	CurveDividerBottom,
+	CurveDividerTop,
+} from '../utils/dividers/Dividers';
 import AboutIntro from '../whoWeAre/AboutIntro';
 
 const SharedContent = () => {
@@ -15,22 +19,27 @@ const SharedContent = () => {
 		<div>
 			{/* <SnapshotModal /> */}
 			<FetchClientLogos />
-			<ServicesOverviewContainer />
 
+			<ServicesOverviewContainer />
+			
 			<ShortenProcess />
+			<CurveDividerTop />
 			<ReviewContainer />
+			<CurveDividerBottom />
 			<ChatWidgetContainer />
-			
+			<CurveDividerTop />
+
 			<AboutIntro />
-			<div className="bg-">
-			<AnimateUp>
-				<RecentClientsContainer includeViewMore={true} />
-			</AnimateUp></div>
-			
+			<div className='bg-'>
+				<AnimateUp>
+					<RecentClientsContainer includeViewMore={true} />
+					
+				</AnimateUp>
+			</div>
+
 			{/* <ProcessAndPricingContainer /> */}
-			
+
 			{/* <OverviewContainer includeLink={true} /> */}
-			
 		</div>
 	);
 };

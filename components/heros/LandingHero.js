@@ -5,6 +5,7 @@ import LandingBlob from '../utils/animations/LandingBlob';
 import ScrollIndicator from '../utils/animations/ScrollIndicator';
 import Link from 'next/link';
 import AnimateUp from '../utils/animations/AnimateUp';
+import { CurveDividerTop } from '../utils/dividers/Dividers';
 
 // Constants for repeated class names
 const CONTAINER_CLASSES =
@@ -77,6 +78,7 @@ const LandingHero = ({ heading, subHeading, topHeading, links = [] }) => {
         {/* Floating premium blobs */}
         <div className="absolute inset-0 z-0 bg-dark pointer-events-none">
           <div className="absolute inset-0 opacity-10">{blobs}</div>
+          
         </div>
       </>
 

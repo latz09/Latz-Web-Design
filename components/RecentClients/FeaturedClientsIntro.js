@@ -1,3 +1,4 @@
+import { CurveDividerTop } from '../utils/dividers/Dividers';
 import { MainHeading, TopHeading, Description } from '../utils/Typography';
 
 const FeaturedClientsIntro = () => {
@@ -15,6 +16,7 @@ const FeaturedClientsIntro = () => {
 					/>
 				</div>
 			</div>
+			
 		</div>
 	);
 };

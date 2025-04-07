@@ -4,6 +4,7 @@ import { FETCH_SERVICES_OVERVIEW as query } from '@/data/queries/services/FETCH_
 import { MainHeading, TopHeading } from '../utils/Typography';
 import ServicesOverview from './ServicesOverview';
 import AnimateUp from '../utils/animations/AnimateUp';
+import { CurveDividerTop } from '../utils/dividers/Dividers';
 
 const SERVICES_CONTAINER_CLASSES =
 	' pt-8 pb-24 lg:pb-32 px-4 lg:px-8 grid gap-8 mt-2 ';
@@ -20,7 +21,10 @@ const ServicesOverviewContainer = async () => {
 					<MainHeading title={heading} theme='text-dark uppercase' />
 					<TopHeading title={subheading} />
 				</div>
-				<div className=''>
+			
+			
+				<div className='space-y-12'>
+					
 					<ServicesOverview services={services} />
 				</div>
 			</section>
