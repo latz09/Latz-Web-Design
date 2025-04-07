@@ -8,17 +8,16 @@ import AnimateUp, { FadeIn } from '../utils/animations/AnimateUp';
 
 export const ReportDetails = ({ scrollNote, snapshotDetails }) => {
 	return (
-		<div className='space-y-12 bg-gradient-to-l from-dark via-dark/80 to-dark py-24 '>
+		<div className='space-y-12 lg:space-y-32 bg-dark py-24 lg:py-32'>
 			<MainHeading
 				title={`${scrollNote}:`}
-				theme={'text-center text-light px-2'}
+				theme={'text-center text-tertiary px-2'}
 			/>
 
-			<div className='max-w-7xl mx-auto grid place-items-center lg:grid-cols-2 gap-6 text-dark'>
+			<div className='max-w-[90rem] mx-auto grid place-items-center lg:grid-cols-2 gap-16 lg:gap-24 text-dark'>
 				{snapshotDetails.map((detail, index) => {
 					let IconComponent;
 
-					// Match the icon string to the corresponding imported icon
 					switch (detail.icon) {
 						case 'FaMapMarkedAlt':
 							IconComponent = FaMapMarkedAlt;
@@ -36,45 +35,46 @@ export const ReportDetails = ({ scrollNote, snapshotDetails }) => {
 							IconComponent = HiOutlineUserGroup;
 							break;
 						default:
-							IconComponent = null; // Fallback if no icon is provided
+							IconComponent = null;
 					}
 
 					return (
 						<AnimateUp
 							key={index}
-							className={`flex flex-col justify-between p-8 space-y-4 ${
+							className={`relative flex flex-col justify-between p-4 space-y-16 rounded-xl overflow-hidden bg-dark/80 ${
 								index === snapshotDetails.length - 1
 									? 'col-span-full w-full lg:w-1/2 mx-auto'
 									: ''
 							}`}
 						>
-							{/* Render Icon */}
+							{/* Background Icon */}
 							{IconComponent && (
-								<div className='flex justify-center mb-6'>
-									<FadeIn>
-										<div className='bg-tertiary p-4 rounded-full shadow-lg shadow-tertiary/40'>
-											<IconComponent className='text-5xl text-dark' />
-										</div>
-									</FadeIn>
-								</div>
+								
+									<div className='absolute inset-0 bottom-16 flex items-center justify-center z-0 opacity-10'>
+										<IconComponent className='text-[200px] text-tertiary' />
+									</div>
+								
 							)}
 
-							{/* Title */}
-							<MainHeading
-								title={detail.title}
-								theme='text-center text-light mb-2'
-							/>
+							{/* Foreground Content */}
+							<div className='relative z-10 space-y-4'>
+								<MainHeading
+									title={detail.title}
+									theme='text-center text-light mb-2'
+								/>
 
-							{/* Description */}
-							<Description
-								description={
-									<>
-										<span className='text-tertiary'>Why It Matters:</span>{' '}
-										<span className='text-light'>{detail.whyItMatters}</span>
-									</>
-								}
-								theme='text-center h-full'
-							/>
+								<Description
+									description={
+										<>
+											<span className='text-tertiary uppercase font-black'>Why It Matters:</span>{' '}
+											<span className='text-light'>
+												{detail.whyItMatters}
+											</span>
+										</>
+									}
+									theme='text-center h-full'
+								/>
+							</div>
 						</AnimateUp>
 					);
 				})}

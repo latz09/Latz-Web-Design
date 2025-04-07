@@ -71,7 +71,7 @@ const ContactForm = () => {
 	return (
 		<form
 			onSubmit={handleSubmit}
-			className='space-y-6 px-4 pb-10 lg:pb-12 pt-14 lg:pt-16 lg:px-8 bg-light rounded-b-xl  shadow shadow-dark/10'
+			className='space-y-6 px-2 pb-10 lg:pb-12 mt-4 lg:mt-16 lg:px-8 '
 		>
 			<div className='flex flex-col'>
 				<label htmlFor='name' className='form-label'>

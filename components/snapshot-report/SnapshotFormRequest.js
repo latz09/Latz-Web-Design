@@ -70,7 +70,7 @@ const SnapshotFormRequest = () => {
 			<div className='grid lg:flex gap-4'>
 				<div className='mb-4 lg:w-1/2'>
 					<label htmlFor='name' className='block font-medium mb-2 text-primary'>
-						<TopHeading title='Name' theme='text-primary' />
+						<TopHeading title='Name' theme='text-dark' />
 					</label>
 					<input
 						type='text'
@@ -78,7 +78,7 @@ const SnapshotFormRequest = () => {
 						name='name'
 						value={formData.name}
 						onChange={handleChange}
-						className='w-full border border-dark/30 rounded-lg px-4 py-2 focus:outline-none focus:ring-1 focus:ring-dark'
+						className='w-full border border-dark/30 rounded-sm px-4 py-2 focus:outline-none focus:ring-1 focus:ring-dark'
 						placeholder='Name'
 						required
 					/>
@@ -89,7 +89,7 @@ const SnapshotFormRequest = () => {
 						htmlFor='email'
 						className='block font-medium mb-2 text-primary'
 					>
-						<TopHeading title='Email' theme='text-primary' />
+						<TopHeading title='Email' theme='text-dark' />
 					</label>
 					<input
 						type='email'
@@ -97,7 +97,7 @@ const SnapshotFormRequest = () => {
 						name='email'
 						value={formData.email}
 						onChange={handleChange}
-						className='w-full border border-dark/30 rounded-lg px-4 py-2 focus:outline-none focus:ring-1 focus:ring-dark'
+						className='w-full border border-dark/30 rounded-sm px-4 py-2 focus:outline-none focus:ring-1 focus:ring-dark'
 						placeholder='Your email'
 						required
 					/>
@@ -109,7 +109,7 @@ const SnapshotFormRequest = () => {
 					htmlFor='website'
 					className='block font-medium mb-2 text-primary'
 				>
-					<TopHeading title='Website URL' theme='text-primary' />
+					<TopHeading title='Website URL' theme='text-dark text-center' />
 				</label>
 				<input
 					type='url'
@@ -117,19 +117,28 @@ const SnapshotFormRequest = () => {
 					name='website'
 					value={formData.website}
 					onChange={handleChange}
-					className='w-full border border-dark/30 rounded-lg px-4 py-2 focus:outline-none focus:ring-1 focus:ring-dark'
+					className='w-full border border-dark/30 rounded-sm px-4 py-2 focus:outline-none focus:ring-1 focus:ring-dark'
 					placeholder='https://your-awesome-business.com'
 					required
 				/>
 			</div>
-			<div className='pt-8 lg:pt-4 w-full mx-auto'>
+			<div className='pt-8 lg:pt-4 w-full mx-auto grid place-items-center'>
 				<button
 					type='submit'
-					className='w-full bg-tertiary font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition duration-300'
+					className='w-full bg-primary text-xl uppercase text-light font-bold py-3 px-6 rounded-sm hover:bg-blue-700 transition duration-300'
 					disabled={isLoading}
 				>
 					{buttonText}
 				</button>
+				<div className=' mt-4 grid place-items-center gap-2'>
+					<span className="text-lg">
+						No guesswork. No pressure. Just a free report with insights you can
+						actually use.
+					</span>
+					<span className='text-center  italic'>
+						This report is 100% free. No spam. No obligation.
+					</span>
+				</div>
 			</div>
 		</form>
 	);

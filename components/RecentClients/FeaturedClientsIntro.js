@@ -2,9 +2,9 @@ import { MainHeading, TopHeading, Description } from '../utils/Typography';
 
 const FeaturedClientsIntro = () => {
 	return (
-		<div className=' bg-gradient-to-b from-dark via-primary/40 to-dark pt-12 lg:pt-24 pb-6 lg:pb-12'>
+		<div className=' bg-dark  py-24 mb-16'>
 			<div className='grid place-items-center gap-4'>
-				<div className='space-y-2 text-center px-2 lg:px-0'>
+				<div className='space-y-4 text-center px-2 lg:px-0'>
 					<MainHeading
 						title='Work That Speaks for Itself'
 						theme='text-tertiary'

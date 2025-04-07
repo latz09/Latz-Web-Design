@@ -20,21 +20,21 @@ const RecentClientsContainer = async ({
 		: data.clients;
 
 	return (
-		<div className='pb-12 lg:pb-24 bg-dark'>
+		<div className='pb-12 lg:pb-24 bg-dar'>
 			{featuredOnly && <FeaturedClientsIntro />}
 			{!featuredOnly && <RecentClientsPageIntro />}
 
-			<div className='max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 lg:gap-y-24 px-1 lg:px-4 py-12'>
+			<div className='max-w-[90rem] mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-16 lg:gap-y-32 px-1 lg:px-4 py-12 place-items-center'>
 				{clientsToDisplay.map((client, index) => (
 					<RecentClientCard key={index} data={client} />
 				))}
 			</div>
 
 			{includeViewMore && (
-				<div className='text-center mt-8 p-4 border border-tertiary grid place-items-center w-4/5 lg:w-1/2 mx-auto rounded-sm hover:scale-95 transition duration-300 cursor-pointer'>
+				<div className='text-center mt-8 p-4 border border-dark grid place-items-center w-4/5 lg:w-1/3 mx-auto rounded-sm hover:scale-95 transition duration-300 cursor-pointer'>
 					<Link href='/our-work' passHref>
 						<span className='w-full h-full block'>
-							<TopHeading title='View More' theme='text-tertiary' />
+							<TopHeading title='View More' theme='text-dark uppercase' />
 						</span>
 					</Link>
 				</div>

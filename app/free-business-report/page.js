@@ -23,10 +23,10 @@ const FreeBusinessReport = async () => {
 						scrollNote={data.scrollNote}
 						snapshotDetails={data.snapshotDetails}
 					/>
-					<div className='py-16 lg:py-24 space-y-8 lg:space-y-16 border-b border-primary/20 w-5/6 lg:w-2/3 mx-auto'>
-						<MainHeading title={data.headline} theme='text-center text-dark' />
+					<div className='py-16 lg:py-32 space-y-8 lg:space-y-16 border-b border-primary/20 w-5/6 lg:w-2/3 mx-auto mb-12'>
+						<MainHeading title={data.headline} theme='text-center text-dark uppercase' />
 
-						<div className=' w-full max-w-2xl mx-auto border-b border-dark/20'>
+						<div className=' w-full max-w-2xl mx-auto  '>
 							<SnapshotFormRequest />
 						</div>
 					</div>

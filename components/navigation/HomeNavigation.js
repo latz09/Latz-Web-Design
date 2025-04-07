@@ -17,9 +17,9 @@ const HomeNavigation = ({ scrolled }) => {
 				<div className='flex gap-4 items-center cursor-pointer'>
 					<Link href='/contact-latz-web-design'>
 						<div
-							className={` rounded-full text-center font-semibold text-sm md:text-base ${
+							className={` rounded-full text-center font-bold text-sm md:text-base uppercase ${
 								scrolled
-									? 'bg-light text-dark/80 border border-primary/50 shadow-lg shadow-primary/20 px-8 py-2'
+									? 'bg-tertiary text-dark/80  shadow-lg shadow-primary/20 px-8 py-2'
 									: 'bg-tertiary text-dark px-4 lg:px-8 py-2'
 							}`}
 						>

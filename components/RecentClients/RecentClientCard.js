@@ -1,5 +1,7 @@
 import Image from 'next/image';
-import { FaLongArrowAltRight } from 'react-icons/fa';
+
+import { PiArrowRightThin } from "react-icons/pi";
+
 import AnimateUp from '../utils/animations/AnimateUp';
 
 const RecentClientCard = ({ data }) => {
@@ -13,35 +15,36 @@ const RecentClientCard = ({ data }) => {
 				rel='noopener noreferrer'
 				className='block group  overflow-hidden transition-transform duration-300 hover:scale-[1.02]'
 			>
-				{/* Image Section */}
-				<div className='relative w-full h-72   '>
-					<Image
-						src={websiteImageUrl}
-						alt={`${companyName} Website`}
-						fill
-						style={{ objectFit: 'cover', objectPosition: 'center' }}
-						className='transition-transform duration-500 group-hover:scale-105 shadow-lg'
-					/>
-				</div>
-
-				{/* Content Section */}
-				<div className='p-5 bg-dark text-light mt-4 rounded-sm '>
+				<div className='px-2 pb-6  text-dark mt-4 rounded-sm bg-light '>
 					{/* Company Name and Visit Link */}
 					<div className='flex items-center justify-between mb-2 '>
-						<h3 className='text-lg lg:text-xl font-bold text-tertiary group-hover:text-primary transition-colors duration-300'>
+						<h3 className='text-xl lg:text-3xl font-bold text-dark group-hover:text-primary transition-colors duration-300 uppercase'>
 							{companyName}
 						</h3>
-						<div className='flex items-center text-primary'>
+						<div className='flex items-center text-dark'>
 							<span className='font-semibold'>Visit Site</span>
-							<FaLongArrowAltRight className='ml-2 text-lg lg:text-2xl transform transition-transform duration-300 group-hover:translate-x-1' />
+							<PiArrowRightThin className='ml-2 text-lg lg:text-2xl transform transition-transform duration-300 group-hover:translate-x-1 text-primary' />
 						</div>
 					</div>
 
 					{/* Website Description */}
-					<p className='lg:text-xl text-light'>
+					<p className='lg:text-xl mt-8'>
 						{websiteDescription}
 					</p>
 				</div>
+				{/* Image Section */}
+				<div className='relative w-full h-[18rem] lg:h-[22rem]   '>
+					<Image
+						src={websiteImageUrl}
+						alt={`${companyName} Website`}
+						fill
+						// style={{ objectFit: 'cover', objectPosition: 'center' }}
+						className='transition-transform duration-500  shadow-lg'
+					/>
+				</div>
+
+				{/* Content Section */}
+				
 			</a>
 		</AnimateUp>
 	);

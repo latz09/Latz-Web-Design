@@ -22,9 +22,10 @@ const SharedContent = () => {
 			<ChatWidgetContainer />
 			
 			<AboutIntro />
+			<div className="bg-">
 			<AnimateUp>
 				<RecentClientsContainer includeViewMore={true} />
-			</AnimateUp>
+			</AnimateUp></div>
 			
 			{/* <ProcessAndPricingContainer /> */}
 			

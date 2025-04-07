@@ -135,7 +135,7 @@ const AreaLandingHero = ({ heading, subHeading, topHeading }) => {
 					<div className='w-full grid md:grid-cols-2 gap-4 lg:gap-8 mt-8 '>
 						<Link
 							href='/contact-latz-web-design'
-							className='w-full rounded-sm mx-auto bg-tertiary text-dark py-3 lg:py-3 grid place-items-center uppercase lg:text-2xl font-bold shadow-lg shadow-tertiary/30 hover:scale-95 transition duration-500'
+							className='w-full rounded-sm mx-auto bg-tertiary text-dark py-3 lg:py-3 grid place-items-center uppercase lg:text-2xl font-bold shadow-lg shadow-tertiary/30 hover:scale-95 transition duration-500 tracking-wider '
 						>
 							<motion.span whileHover='hover' variants={buttonHover}>
 								Get Started Now
@@ -144,10 +144,10 @@ const AreaLandingHero = ({ heading, subHeading, topHeading }) => {
 
 						<Link
 							href='/free-business-report'
-							className='w-full mx-auto border border-tertiary/20 text-tertiary rounded-sm py-3 lg:py-3 grid uppercase lg:text-2xl place-items-center shadow shadow-tertiary/20 hover:shadow-tertiary/50 hover:border-tertiary/50 transition duration-500'
+							className='w-full mx-auto border border-tertiary/20 text-tertiary rounded-sm py-3 lg:py-3 grid uppercase lg:text-2xl place-items-center shadow shadow-tertiary/20 hover:shadow-tertiary/50 hover:border-tertiary/50 transition duration-500 tracking-wider'
 						>
 							<motion.span whileHover='hover' variants={buttonHover}>
-								Claim Your Free Report!
+								Get Your Free Report!
 							</motion.span>
 						</Link>
 					</div>
