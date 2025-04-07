@@ -1,15 +1,15 @@
 'use client';
 
 import Image from 'next/image';
-import { FaChevronRight } from 'react-icons/fa';
 import { MdClose } from 'react-icons/md';
-
 import AnimateUp from '../utils/animations/AnimateUp';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Reviews = ({ data }) => {
 	const [selectedReview, setSelectedReview] = useState(null);
+	const [visibleCount, setVisibleCount] = useState(4);
+
 	useEffect(() => {
 		if (selectedReview) {
 			document.body.classList.add('no-scroll');
@@ -18,19 +18,22 @@ const Reviews = ({ data }) => {
 		}
 
 		return () => {
-			document.body.classList.remove('no-scroll'); // cleanup just in case
+			document.body.classList.remove('no-scroll');
 		};
 	}, [selectedReview]);
+
+	const visibleReviews = data.slice(0, visibleCount);
+	const hasMore = visibleCount < data.length;
 
 	return (
 		<>
 			<section className='max-w-7xl mx-auto px-4 py-16'>
 				<div className='grid lg:grid-cols-2 place-items-center gap-12'>
-					{data.map((review, index) => (
+					{visibleReviews.map((review, index) => (
 						<AnimateUp key={index}>
 							<article
 								onClick={() => setSelectedReview(review)}
-								className='cursor-pointer py-8  p-2 md:p-5 flex flex-col items-center gap-8'
+								className='cursor-pointer py-8 p-2 md:p-5 flex flex-col items-center gap-8'
 							>
 								{review.ownerImage && (
 									<div className='relative overflow-hidden flex-shrink-0 shadow-md rounded-lg'>
@@ -45,41 +48,53 @@ const Reviews = ({ data }) => {
 								)}
 
 								<div className='flex-1 text-center md:text-left space-y-4 group'>
-									<blockquote className='text-dark/80 text-xl lg:text-2xl leading-8 lg:leading-9 line-clamp-2 font-bold group-hover:scale-95 group-hover:opacity-80 transition duration-700'>
+									<blockquote className='text-dark/80 text-xl lg:text-2xl leading-8 lg:leading-9 line-clamp-2 font-bold md:group-hover:scale-95 md:group-hover:opacity-80 transition duration-700'>
 										“{review.reviewText}”
 									</blockquote>
 									<div className='text-center p-4 flex items-center justify-center gap-2'>
-										<span className=' font-semibold group-hover:text-primary scale-110 group-hover:translate-x-4 transiton duration-700'>
+										<span className=' font-semibold md:group-hover:text-primary scale-110 md:group-hover:translate-x-4 transiton duration-700'>
 											Read the Full Review
 										</span>
 									</div>
+									<div className="grid place-items-center gap-2 lg:gap-0 lg:flex lg:items-center lg:justify-between ">
+										<div>
+											<p className='text-lg font-semibold text-dark/80'>
+												{review.reviewerName}
+											</p>
+											<p className='mt-2 text-primary font-medium tracking-wide'>
+												{review.websiteName}
+											</p>
+											<p className='text-sm italic text-gray-500'>
+												{review.reviewerTitle}
+											</p>
+										</div>
 
-									<div>
-										<p className='text-lg font-semibold text-dark'>
-											{review.reviewerName}
-										</p>
-										<p className='mt-2 text-primary font-medium tracking-wide'>
-											{review.websiteName}
-										</p>
-										<p className='text-sm italic text-gray-500'>
-											{review.reviewerTitle}
-										</p>
-									</div>
-
-									<div className='pt-4 flex items-center justify-self-center lg:justify-self-end gap-4'>
-										<Image
-											src={review.logo}
-											alt={`${review.websiteName} Logo`}
-											width={100}
-											height={60}
-											className='object-contain grayscale contrast-200'
-										/>
+										<div className='pt-4 flex items-center justify-self-center lg:justify-self-end gap-4'>
+											<Image
+												src={review.logo}
+												alt={`${review.websiteName} Logo`}
+												width={100}
+												height={60}
+												className='object-contain grayscale contrast-200'
+											/>
+										</div>
 									</div>
 								</div>
 							</article>
 						</AnimateUp>
 					))}
 				</div>
+
+				{hasMore && (
+					<div className='text-center mt-10'>
+						<button
+							onClick={() => setVisibleCount((prev) => prev + 2)}
+							className='px-6 py-3 bg-dark text-light font-semibold uppercase rounded hover:scale-95 transition duration-300'
+						>
+							Read More Reviews
+						</button>
+					</div>
+				)}
 			</section>
 
 			{/* Modal */}
@@ -109,7 +124,7 @@ const Reviews = ({ data }) => {
 							</button>
 
 							{selectedReview.ownerImage && (
-								<div className=' grid place-items-center relative overflow-hidden flex-shrink-0 shadow-md'>
+								<div className='grid place-items-center relative overflow-hidden flex-shrink-0 shadow-md'>
 									<Image
 										src={selectedReview.ownerImage}
 										alt={`${selectedReview.reviewerName} Photo`}

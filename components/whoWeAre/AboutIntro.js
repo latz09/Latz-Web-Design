@@ -17,7 +17,7 @@ const AboutIntro = async () => {
 					<MainHeading title={data.heading} theme="text-primary" />
 
 					{/* Image for small screens */}
-					<div className="image-content  mx-auto lg:hidden pb-8">
+					<div className="image-content  mx-auto lg:hidden pb-8 ">
 						<Image
 							src={data.imageUrl}
 							alt="Who We Are"
