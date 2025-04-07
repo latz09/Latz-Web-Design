@@ -5,13 +5,15 @@ const FeaturedClientsIntro = () => {
 		<div className=' bg-gradient-to-b from-dark via-primary/40 to-dark pt-12 lg:pt-24 pb-6 lg:pb-12'>
 			<div className='grid place-items-center gap-4'>
 				<div className='space-y-2 text-center px-2 lg:px-0'>
-					<TopHeading title='Our Work' theme='text-light' />
 					<MainHeading
-						title="Custom Websites We've Built"
+						title='Work That Speaks for Itself'
 						theme='text-tertiary'
 					/>
+					<TopHeading
+						title={`A look at some of the custom websites we've crafted for businesses like yours.`}
+						theme='text-light'
+					/>
 				</div>
-			
 			</div>
 		</div>
 	);

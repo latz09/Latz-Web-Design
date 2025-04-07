@@ -3,7 +3,7 @@ import { FaLongArrowAltRight } from 'react-icons/fa';
 import AnimateUp from '../utils/animations/AnimateUp';
 
 const RecentClientCard = ({ data }) => {
-	const { websiteImageUrl, companyName, companyUrl, websiteDescription } = data;
+	const { websiteImage: websiteImageUrl, companyName, companyUrl, websiteDescription } = data;
 
 	return (
 		<AnimateUp>

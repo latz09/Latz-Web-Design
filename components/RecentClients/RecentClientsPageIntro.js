@@ -6,14 +6,20 @@ const RecentClientsPageIntro = () => {
 			<div className='grid place-items-center gap-4'>
 				<div className='space-y-2 text-center px-2 lg:px-0'>
 					<TopHeading title='Our Work' theme='text-light' />
-					<MainHeading
-						title='Where Creativity Meets Functionality'
-						theme='text-tertiary'
-					/>
+					<div className='md:hidden'>
+						<MainHeading title='Smart Design ' theme='text-tertiary' />
+						<MainHeading title='Real Results' theme='text-tertiary' />
+					</div>
+					<div className='hidden md:block'>
+						<MainHeading
+							title='Smart Design. Real Results '
+							theme='text-tertiary'
+						/>
+					</div>
 				</div>
 				<div className='w-full px-2 lg:w-1/2 mx-auto text-center '>
 					<Description
-						description='At Latz Web Design, we craft websites that seamlessly blend creativity with functionality, reflecting your brand and engaging your audience. Our client-focused approach ensures exceptional results tailored to your unique needs.'
+						description='Custom websites built to connect, convert, and stand out. Each project reflects a clear purpose, clean design, and a strategy that puts your business first.'
 						theme='text-light'
 					/>
 				</div>
