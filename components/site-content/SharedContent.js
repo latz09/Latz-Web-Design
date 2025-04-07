@@ -2,6 +2,7 @@ import ChatWidgetContainer from '../automations/ChatWidgetContainer';
 import OverviewContainer from '../cms/overview/OverviewContainer';
 import ProcessAndPricingContainer from '../process-and-pricing/ProcessAndPricingContainer';
 import ShortenProcess from '../process-and-pricing/ShortenProcess';
+import FetchClientLogos from '../RecentClients/FetchClientLogos';
 import RecentClientsContainer from '../RecentClients/RecentClientsContainer';
 import ReviewContainer from '../reviews/ReviewContainer';
 import ServicesOverviewContainer from '../service-overview/ServiceOverViewContainer';
@@ -13,6 +14,7 @@ const SharedContent = () => {
 	return (
 		<div>
 			{/* <SnapshotModal /> */}
+			<FetchClientLogos />
 			<ServicesOverviewContainer />
 
 			<ShortenProcess />

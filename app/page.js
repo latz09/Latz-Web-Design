@@ -25,32 +25,3 @@ export default async function Home() {
 }
 
 export const revalidate = 10;
-
-{
-	/* <LandingHero
-image={data.landingImage}
-heading={data.landingHeading}
-subHeading={data.landingSubHeading}
-topHeading={data.topHeading}
-/>
-<div className='grid gap-24 w-full'>
-<OurFullCircle /> 
-<CoreServices />
-<CreativeWebDesign data={data.creativeWebDesign} />
-<AnimateUp>
-	<RecentClientsContainer />
-</AnimateUp>
- <ReviewContainer />
-<CRMBlurb />
-<div className=' pt-12'>
-	 <ProcessAndPricingContainer /> 
-</div>
-<div>
-	 <OverviewContainer includeLink={true} /> 
-</div>
- <FeaturedArticle
-	featuredArticle={data.featuredArticle}
-	synopsis={data.articleSynopsis}
-/> 
-</div> */
-}
