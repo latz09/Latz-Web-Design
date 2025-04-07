@@ -30,31 +30,27 @@ const Reviews = ({ data }) => {
 						<AnimateUp key={index}>
 							<article
 								onClick={() => setSelectedReview(review)}
-								className='cursor-pointer py-8  rounded-sm shadow shadow-dark/30 hover:shadow-lg transition-transform hover:scale-[1.01] duration-500 p-2 md:p-5 flex flex-col items-center gap-8'
+								className='cursor-pointer py-8  p-2 md:p-5 flex flex-col items-center gap-8'
 							>
 								{review.ownerImage && (
-									<div className='relative overflow-hidden flex-shrink-0 shadow-md'>
+									<div className='relative overflow-hidden flex-shrink-0 shadow-md rounded-lg'>
 										<Image
 											src={review.ownerImage}
 											alt={`${review.reviewerName} Photo`}
 											width={160}
 											height={160}
-											className='object-cover'
+											className='object-cover rounded-lg'
 										/>
 									</div>
 								)}
 
-								<div className='flex-1 text-center md:text-left space-y-4'>
-									<blockquote className='text-dark/80 text-xl lg:text-2xl leading-8 lg:leading-9 line-clamp-2 font-bold'>
+								<div className='flex-1 text-center md:text-left space-y-4 group'>
+									<blockquote className='text-dark/80 text-xl lg:text-2xl leading-8 lg:leading-9 line-clamp-2 font-bold group-hover:scale-95 group-hover:opacity-80 transition duration-700'>
 										“{review.reviewText}”
 									</blockquote>
 									<div className='text-center p-4 flex items-center justify-center gap-2'>
-										<span className=" font-semibold">Read the Full Review</span>
-										<span>
-											<FaChevronRight
-												className='inline-block  text-primary'
-												size={16}
-											/>
+										<span className=' font-semibold group-hover:text-primary scale-110 group-hover:translate-x-4 transiton duration-700'>
+											Read the Full Review
 										</span>
 									</div>
 
@@ -103,7 +99,7 @@ const Reviews = ({ data }) => {
 							exit={{ y: 50, opacity: 0 }}
 							transition={{ duration: 0.4, type: 'spring' }}
 							onClick={(e) => e.stopPropagation()}
-							className='max-h-[90vh] overflow-y-auto scrollbar-hide w-full max-w-3xl bg-dark text-light rounded-lg shadow-xl p-6 md:p-10 text-center md:text-left space-y-6 relative'
+							className='max-h-[90vh] overflow-y-auto scrollbar-hide w-full max-w-3xl bg-dark text-light rounded-lg shadow-xl p-4 md:p-10 text-center md:text-left space-y-6 relative'
 						>
 							<button
 								onClick={() => setSelectedReview(null)}
@@ -124,8 +120,10 @@ const Reviews = ({ data }) => {
 								</div>
 							)}
 
-							<blockquote className='text-light text-xl leading-9'>
-								“{selectedReview.reviewText}”
+							<blockquote className='text-light text-xl leading-9 space-y-4'>
+								{selectedReview.reviewText.map((paragraph, index) => (
+									<p key={index}>{paragraph}</p>
+								))}
 							</blockquote>
 
 							<div>
