@@ -15,7 +15,7 @@ const AboutHero = ({ image, heading, subheading }) => {
 			/>
 
 			{/* Dark overlay */}
-			<div className='absolute inset-0 bg-gradient-to-b from-dark/0 via-dark/20 to-dark/40 z-10'></div>
+			<div className='absolute inset-0 bg-gradient-to-b from-dark/40 via-dark/20 to-dark/40 z-10'></div>
 
 			{/* Scrollable Content */}
 			<div className='absolute inset-0 overflow-y-auto z-20 flex flex-col items-center justify-end'>
