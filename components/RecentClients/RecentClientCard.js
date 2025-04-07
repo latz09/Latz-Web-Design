@@ -33,7 +33,7 @@ const RecentClientCard = ({ data }) => {
 					</p>
 				</div>
 				{/* Image Section */}
-				<div className='relative w-full h-[18rem] lg:h-[22rem]   '>
+				<div className='relative w-full h-[16.5rem] lg:h-[21rem]   '>
 					<Image
 						src={websiteImageUrl}
 						alt={`${companyName} Website`}
