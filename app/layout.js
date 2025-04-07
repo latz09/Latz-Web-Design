@@ -2,14 +2,14 @@ import NavigationContainer from '@/components/navigation/NavigationContainer';
 import { Analytics } from '@vercel/analytics/react';
 import Script from 'next/script';
 import './globals.css';
-import { Roboto } from 'next/font/google';
+import { Manrope } from 'next/font/google';
 import Footer from '@/components/navigation/Footer';
 import ChatPointer from '@/components/utils/ChatPointer';
 import SnapshotModal from '@/components/snapshot-report/SnapshotModal';
 
-const roboto = Roboto({
-	weight: ['100', '300', '400', '500', '700', '900'],
-	style: ['normal', 'italic'],
+const manrope = Manrope({
+	weight: ['200', '300', '400', '500', '700', '800'],
+	style: ['normal'],
 	subsets: ['latin'],
 	display: 'swap',
 });
@@ -39,7 +39,7 @@ export const metadata = {
 const RootLayout = ({ children }) => {
 	return (
 		<html lang='en'>
-			<body className={`${roboto.className}  text-dark `}>
+			<body className={`${manrope.className}  text-dark `}>
 				{/* Vendasta Chat Widget Script */}
 
 				<Script
