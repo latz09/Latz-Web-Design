@@ -25,6 +25,7 @@ const SharedContent = () => {
 			<AnimateUp>
 				<RecentClientsContainer includeViewMore={true} />
 			</AnimateUp>
+			<FetchClientLogos />
 			{/* <ProcessAndPricingContainer /> */}
 			
 			{/* <OverviewContainer includeLink={true} /> */}
