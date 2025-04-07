@@ -130,12 +130,12 @@ const SnapshotFormRequest = () => {
 				>
 					{buttonText}
 				</button>
-				<div className=' mt-4 grid place-items-center gap-2'>
+				<div className=' mt-4 grid place-items-center text-center  gap-2'>
 					<span className="text-lg">
 						No guesswork. No pressure. Just a free report with insights you can
 						actually use.
 					</span>
-					<span className='text-center  italic'>
+					<span className=' italic'>
 						This report is 100% free. No spam. No obligation.
 					</span>
 				</div>

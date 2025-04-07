@@ -2,7 +2,7 @@ import { MainHeading, TopHeading, Description } from '../utils/Typography';
 
 const FeaturedClientsIntro = () => {
 	return (
-		<div className=' bg-dark  py-24 mb-16'>
+		<div className=' bg-dark  py-24 mb-8 lg:mb-16'>
 			<div className='grid place-items-center gap-4'>
 				<div className='space-y-4 text-center px-2 lg:px-0'>
 					<MainHeading
