@@ -1,5 +1,6 @@
 import ChatWidgetContainer from '../automations/ChatWidgetContainer';
 import OverviewContainer from '../cms/overview/OverviewContainer';
+import NotMonthlyFees from '../home-page/NoMonthlyFees';
 import ProcessAndPricingContainer from '../process-and-pricing/ProcessAndPricingContainer';
 import ShortenProcess from '../process-and-pricing/ShortenProcess';
 import FetchClientLogos from '../RecentClients/FetchClientLogos';
@@ -21,7 +22,7 @@ const SharedContent = () => {
 			<FetchClientLogos />
 
 			<ServicesOverviewContainer />
-
+			<NotMonthlyFees />
 			<ShortenProcess />
 			<CurveDividerBottom />
 			<ReviewContainer />

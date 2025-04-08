@@ -1,3 +1,4 @@
+import NotMonthlyFees from '@/components/home-page/NoMonthlyFees';
 import ProcessAndPricingContainer from '@/components/process-and-pricing/ProcessAndPricingContainer';
 import ReviewContainer from '@/components/reviews/ReviewContainer';
 import PageContainer from '@/components/utils/animations/PageContainer';
@@ -12,6 +13,7 @@ const PricingAndBudgetPage = async () => {
 		<PageContainer>
 			<div className='bg-light'>
 				<ProcessAndPricingContainer />
+				<NotMonthlyFees />
 				<div className='bg-light'>
 					<ReviewContainer />
 				</div>

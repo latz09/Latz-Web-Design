@@ -1,6 +1,6 @@
 import { fetchData } from '@/lib/sanity/sanityFetch';
 import { FETCH_REVIEWS_DATA_QUERY as query } from '@/data/queries/reviews/FETCH_REVIEWS_DATA_QUERY';
-
+import reviewImage from '@/public/svg/undraw_no-data_ig65.svg';
 import Reviews from './Reviews';
 import ReviewsIntro from './ReviewsIntro';
 import AnimateUp from '../utils/animations/AnimateUp';
@@ -12,6 +12,7 @@ const ReviewContainer = async () => {
 		<div className='grid gap-16 py-24 lg:py-32 '>
 			<ReviewsIntro />
 			<AnimateUp>
+				{/* Image background */}
 				<Reviews data={data.reviewList} />
 			</AnimateUp>
 		</div>

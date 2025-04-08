@@ -6,6 +6,7 @@ import AnimateUp from '../utils/animations/AnimateUp';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+
 const Reviews = ({ data }) => {
 	const [selectedReview, setSelectedReview] = useState(null);
 	const [visibleCount, setVisibleCount] = useState(4);
@@ -48,7 +49,7 @@ const Reviews = ({ data }) => {
 								)}
 
 								<div className='flex-1 text-center md:text-left space-y-4 group'>
-									<blockquote className='text-dark/80 text-xl lg:text-2xl leading-8 lg:leading-9 line-clamp-2 font-bold md:group-hover:scale-95 md:group-hover:opacity-80 transition duration-700'>
+									<blockquote className='text-dark/80 text-xl lg:text-2xl leading-8 lg:leading-9 line-clamp-2 font-bold md:group-hover:scale-95 md:group-hover:opacity-80 transition duration-700 italic'>
 										“{review.reviewText}”
 									</blockquote>
 									<div className='text-center p-4 flex items-center justify-center gap-2'>
@@ -114,7 +115,7 @@ const Reviews = ({ data }) => {
 							exit={{ y: 50, opacity: 0 }}
 							transition={{ duration: 0.4, type: 'spring' }}
 							onClick={(e) => e.stopPropagation()}
-							className='max-h-[90vh] overflow-y-auto scrollbar-hide w-full max-w-3xl bg-dark text-light rounded-lg shadow-xl p-4 md:p-10 text-center md:text-left space-y-6 relative'
+							className='max-h-[90vh] overflow-y-auto scrollbar-hide w-full max-w-3xl bg-gradient-to-l from-dark via-dark/95 to-dark text-light rounded-lg shadow-xl p-4 md:p-10 text-center md:text-left space-y-6 relative'
 						>
 							<button
 								onClick={() => setSelectedReview(null)}
