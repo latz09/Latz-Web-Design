@@ -5,7 +5,7 @@ const FeaturedClientsIntro = () => {
 	return (
 		<div className="">
 			<CurveDividerTop />
-			<div className='  mb-8 lg:mb-16 bg-dark  pt-12 pb-24'>
+			<div className='  mb-8 lg:mb-16 bg-dark  pt-24 lg:pt-12 pb-24'>
 				<div className='grid place-items-center gap-4'>
 					<div className='space-y-4 text-center px-2 lg:px-0'>
 						<MainHeading
