@@ -17,7 +17,7 @@ const WhoWeAre = async () => {
 				<CurveDividerBottom color='light'/>
 
 				<AboutContent data={data.paragraphs} />
-				<CurveDividerTop color='primary'/>
+				<CurveDividerTop color='light'/>
 				<AboutCta image={data.finalImageUrl} cta={data.cta} />
 			</div>
 		</PageContainer>
