@@ -1,6 +1,3 @@
-import KeyBenefits from '../cms/cms-page/KeyBenefits';
-import AnimateUp from '../utils/animations/AnimateUp';
-import DelayAnimateUp from '../utils/animations/DelayAnimateUp';
 import {  CurveDividerBottom, CurveDividerTop } from '../utils/dividers/Dividers';
 import { Description, MainHeading } from '../utils/Typography';
 import SeoFeatures from './SeoFeatures';

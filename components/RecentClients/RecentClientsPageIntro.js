@@ -13,7 +13,7 @@ const RecentClientsPageIntro = () => {
 						<div className='md:flex gap-2 items-center justify-center'>
 							<MainHeading title='Smart Design.' theme='text-light' />
 							<FadeIn>
-								<MainHeading title='Real Results' theme='text-light' />
+								<MainHeading title='Real Results.' theme='text-light' />
 							</FadeIn>
 						</div>
 					</div>
