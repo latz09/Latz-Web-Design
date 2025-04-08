@@ -14,7 +14,7 @@ const WhoWeAre = async () => {
 		<PageContainer>
 			<div className='bg-dark'>
 				<AboutHero image={data.landingImageUrl} heading={data.mainHeading} subheading={data.subHeading} />
-				<CurveDividerBottom color='primary'/>
+				<CurveDividerBottom color='light'/>
 
 				<AboutContent data={data.paragraphs} />
 				<CurveDividerTop color='primary'/>
