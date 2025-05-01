@@ -2,6 +2,7 @@ export const OWN_YOUR_STOREFRONT_QUERY = `
   *[_type == "ownYourStorefront"][0]{
     headline,
     subheadline,
+    "heroImageUrl": heroImage.asset->url,
     paintPointHeading,
     painPointQuestions[] {
       questions
@@ -15,6 +16,7 @@ export const OWN_YOUR_STOREFRONT_QUERY = `
       icon
     },
     whoItsFor,
+    "whoItsForImageUrl": whoItsForImage.asset->url,
     shopifyDrawbacks[] {
       problem,
       icon
@@ -24,10 +26,12 @@ export const OWN_YOUR_STOREFRONT_QUERY = `
       stepDescription,
       icon
     },
+    "howItWorksImageUrl": howItWorksImage.asset->url,
     cta {
       ctaHeading,
       ctaText,
-      ctaDescription
+      ctaDescription,
+      "ctaImageUrl": ctaImage.asset->url
     }
   }
 `;
