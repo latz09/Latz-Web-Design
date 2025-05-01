@@ -32,7 +32,7 @@ const HeroSection = ({ headline, subheadline, image }) => (
 		</div>
 
 		{/* Optional: Overlay for contrast */}
-		<div className="absolute inset-0 bg-gradient-to-b from-dark via-dark/80 to-dark/70 z-0" />
+		<div className="absolute inset-0 bg-dark/70 from-dark via-dark/80 to-dark/70 z-0" />
 	</div>
 );
 

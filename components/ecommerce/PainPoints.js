@@ -21,7 +21,7 @@ const PainPoints = ({ heading, questions, answers }) => (
 					{questions?.map((q, i) => (
 						<li key={i} className='flex items-center gap-3'>
 							<FaQuestion className='shrink-0 text-2xl  text-primary ' />
-							<p className='text-2xl text-dark/80 font-bold leading-snug'>
+							<p className='text-xl lg:text-2xl text-dark/80 font-bold leading-snug'>
 								{q.questions}
 							</p>
 						</li>
