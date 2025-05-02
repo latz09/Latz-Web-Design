@@ -35,3 +35,14 @@ export const OWN_YOUR_STOREFRONT_QUERY = `
     }
   }
 `;
+
+
+export const MOCKUPS_QUERY = `
+  *[_type == "ownYourStorefront"][0]{
+    mockups[] {
+      "imageUrl": image.asset->url,
+      sectionKey,
+      alt
+    }
+  }
+`;

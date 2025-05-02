@@ -1,7 +1,7 @@
 import { MainHeading, TopHeading } from '../utils/Typography';
 
 const CallToAction = ({ heading, text, description }) => (
-	<section className='text-center bg-gray-100 rounded-xl  px-2 grid gap-8 lg:gap-16 pt-24 pb-40'>
+	<section className='text-center bg-gray-100 rounded-xl  px-2 grid gap-8 lg:gap-16 pt-24 '>
 		<div>
 			<MainHeading
 				title={`It's Your Store.`}
