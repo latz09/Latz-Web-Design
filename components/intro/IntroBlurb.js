@@ -13,7 +13,7 @@ const IntroBlurb = ({ data }) => {
 	return (
 		<div className={SERVICES_CONTAINER_CLASSES}>
 			<h2 className='text-4xl tracking-wide lg:text-6xl font-black '>
-				{preventWidow('Your Website Should Work Harder Than You Do')}
+				{preventWidow('You Deserve a Website That Pulls Its Weight')}
 			</h2>
 
 			<Description description='Most small business owners are stuck with sites they can’t update, don’t trust to convert, or are paying monthly just to keep online. You deserve a site that works for your business — not the other way around.' />
