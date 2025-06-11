@@ -11,7 +11,7 @@ import { CurveDividerTop } from '../utils/dividers/Dividers';
 const CONTAINER_CLASSES =
   'relative py-24 lg:py-36 mt-20 lg:mt-28 overflow-hidden bg-dark from-dark via-dark/95 to-dark text-light grid place-items-center';
 const INNER_CONTAINER_CLASSES =
-  'relative z-10 grid place-items-center max-w-7xl px-2 text-center lg:text-start';
+  'relative z-10 grid place-items-center max-w-7xl px-2 text-center ';
 const HEADING_CLASSES = 'grid gap-4 space-y-4';
 const TOP_HEADING_CLASSES =
   'text-lg lg:text-2xl font-light uppercase tracking-widest text-tertiary font-heading';

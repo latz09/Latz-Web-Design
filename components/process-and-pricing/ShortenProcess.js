@@ -9,63 +9,67 @@ const steps = [
 	{
 		title: 'Consultation',
 		icon: <FaPhoneAlt className=' ' />,
-		description: 'We chat about your goals and vision.',
+		description: 'We talk through your goals',
 	},
 	{
 		title: 'Proposal',
 		icon: <FaFileAlt className=' ' />,
-		description: 'You get a clear plan with pricing and deliverables.',
+		description: 'You get a simple, clear quote',
 	},
 	{
 		title: 'Live Development',
 		icon: <HiOutlineDesktopComputer className=' ' />,
-		description: 'See your site come to life and give feedback as we go.',
+		description: 'Watch your site come to life and give feedback',
 	},
 	{
 		title: 'Launch',
 		icon: <FaRocket className=' ' />,
-		description: 'We go live! Your custom website is ready to work for you.',
+		description: 'Your website is live, fast, and ready to convert',
 	},
 ];
 
 const ShortenProcess = () => {
 	return (
-		
-		
-		
-		<div className='bg-dark py-24 lg:py-32 text-light  '>
+		<div className='bg-dark py-24 lg:py-32 text-light'>
 			<section className='px-4 max-w-[90rem] mx-auto text-center'>
-				<h2 className='text-3xl lg:text-4xl font-bold mb-32 text-tertiary/70'>How It Works</h2>
-				<div className='grid gap-24 md:gap-32 md:grid-cols-2'>
-					{steps.map((step, index) => (
-						
-						<AnimateUp key={index}>
-							<div className='relative flex flex-col items-center text-center px-2'>
-								{/* Background Icon */}
-								<div
-									aria-hidden
-									className='absolute text-[4.5rem] lg:text-[7rem] text-tertiary/30 -top-8 lg:-top-12 left-1/2 -translate-x-1/2 z-0 pointer-events-none -sm'
-								>
-									{step.icon}
-								</div>
+				
+				<MainHeading
+					title='How It Works'
+					theme='text-light mb-32'
+				/>
 
-								{/* Foreground Content */}
-								<div className='relative z-10 flex flex-col items-center'>
-									<p className='text-3xl lg:text-4xl font-bold uppercase'>
-										{step.title}
-									</p>
-									<p className='text-xl lg:text-2xl'>{step.description}</p>
+				<div className='relative'>
+					{/* Vertical connecting line */}
+					<div className='hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-light/30 -translate-x-1/2 z-0' />
+
+					<div className='flex flex-col gap-32 relative z-10'>
+						{steps.map((step, index) => (
+							<AnimateUp key={index}>
+								<div className='relative flex flex-col items-center text-center px-4'>
+									{/* Icon */}
+									<div className='text-5xl lg:text-8xl text-light mb-4'>
+										{step.icon}
+									</div>
+
+									{/* Line from icon to content */}
+									<div className='h-8 w-1 bg-tertiary mb-6' />
+
+									{/* Title & Description */}
+									<div className='max-w-xl'>
+										<p className='text-3xl lg:text-4xl text-primary font-bold uppercase mb-2'>
+											{step.title}
+										</p>
+										<p className='text-xl lg:text-2xl'>{step.description}</p>
+									</div>
 								</div>
-							</div>
-						</AnimateUp>
-					))}
+							</AnimateUp>
+						))}
+					</div>
 				</div>
+
 				<div className='grid place-items-center mt-32'>
-					<Link
-						href={'/pricing-and-budget'}
-						className='p-4 border text-tertiary rounded-sm'
-					>
-						<h2 className='text-2xl lg:text-3xl  '>View Detailed Process</h2>
+					<Link href='/pricing-and-budget' className='p-4 border text-tertiary rounded-sm'>
+						<h2 className='text-2xl lg:text-3xl'>View Detailed Process</h2>
 					</Link>
 				</div>
 			</section>
@@ -74,3 +78,4 @@ const ShortenProcess = () => {
 };
 
 export default ShortenProcess;
+

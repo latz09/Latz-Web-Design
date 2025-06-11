@@ -7,7 +7,7 @@ import AnimateUp from '../utils/animations/AnimateUp';
 import { CurveDividerTop } from '../utils/dividers/Dividers';
 
 const SERVICES_CONTAINER_CLASSES =
-	' pt-8 pb-24 lg:pb-32 px-4 lg:px-8 grid gap-8 mt-2 ';
+	' pt-8 pb-24 lg:pb-32 px-4 lg:px-8 grid gap-8 mt-16 lg:mt-24 ';
 
 const ServicesOverviewContainer = async () => {
 	// Fetch data
@@ -33,3 +33,5 @@ const ServicesOverviewContainer = async () => {
 };
 
 export default ServicesOverviewContainer;
+
+export const revalidate = 10; // Revalidate every 10 seconds

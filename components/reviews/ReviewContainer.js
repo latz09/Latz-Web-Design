@@ -4,6 +4,7 @@ import reviewImage from '@/public/svg/undraw_no-data_ig65.svg';
 import Reviews from './Reviews';
 import ReviewsIntro from './ReviewsIntro';
 import AnimateUp from '../utils/animations/AnimateUp';
+import FetchClientLogos from '../RecentClients/FetchClientLogos';
 
 const ReviewContainer = async () => {
 	const [data] = await fetchData(query);
@@ -15,6 +16,7 @@ const ReviewContainer = async () => {
 				{/* Image background */}
 				<Reviews data={data.reviewList} />
 			</AnimateUp>
+			<FetchClientLogos />
 		</div>
 	);
 };

@@ -54,9 +54,9 @@ const RootLayout = ({ children }) => {
 				<NavigationContainer />
 				<div className='max-w-7l mx-auto'>
 					<div>{children}</div>
-					<div className='bg-light'>
+					{/* <div className='bg-light'>
 						<FetchClientLogos />
-					</div>
+					</div> */}
 					<Footer />
 				</div>
 				{/* Meta Pixel Code */}

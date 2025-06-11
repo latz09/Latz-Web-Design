@@ -12,7 +12,7 @@ const AboutIntro = async () => {
 		<section className="about-intro py-24 lg:py-32 bg-light">
 			<div className="max-w-7xl mx-auto flex flex-col items-center gap-12 lg:gap-16 lg:flex-row">
 				{/* Text Section */}
-				<div className="text-content text-center lg:text-left space-y-2 lg:w-1/2 ">
+				<div className="text-content text-center lg:text-left space-y-2 lg:w-1/2 px-4 ">
 					{/* Main Heading */}
 					<MainHeading title={data.heading} theme="text-dark" />
 
@@ -42,14 +42,14 @@ const AboutIntro = async () => {
 
 					{/* CTA Link */}
 					<Link href="/who-we-are">
-						<span className="inline-block mt-8 px-6 py-3 text-light bg-dark hover:bg-primary transition duration-300 text-lg lg:text-2xl rounded-sm font-bold">
+						<span className="inline-block mt-8 px-6 py-3 text-light bg-primary hover:bg-dark transition duration-300 text-lg lg:text-2xl rounded-sm font-bold">
 							{data.ctaText}
 						</span>
 					</Link>
 				</div>
 
 				{/* Image Section for large screens */}
-				<div className="image-content     mx-auto hidden lg:block lg:w-1/2">
+				<div className="image-content     mx-auto hidden lg:block lg:w-1/3">
 					<Image
 						src={data.imageUrl}
 						alt="Who We Are"
@@ -59,6 +59,7 @@ const AboutIntro = async () => {
 						height={500}
 						priority
 					/>
+					{/* <div>dfklj</div> */}
 				</div>
 			</div>
 		</section>
@@ -66,3 +67,5 @@ const AboutIntro = async () => {
 };
 
 export default AboutIntro;
+
+export const revalidate = 10

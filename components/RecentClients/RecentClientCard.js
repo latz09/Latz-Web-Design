@@ -15,13 +15,13 @@ const RecentClientCard = ({ data }) => {
 				rel='noopener noreferrer'
 				className='block group  overflow-hidden transition-transform duration-300 hover:scale-[1.02]'
 			>
-				<div className='px-2 pb-6  text-dark mt-4 rounded-sm bg-light '>
+				<div className='px-2 pb-6  text-dark mt-4  '>
 					{/* Company Name and Visit Link */}
 					<div className='flex items-center justify-between mb-2 '>
-						<h3 className='text-xl lg:text-3xl font-bold text-dark group-hover:text-primary transition-colors duration-300 uppercase'>
+						<h3 className='text-xl lg:text-3xl font-bold  group-hover:text-primary transition-colors duration-300 uppercase'>
 							{companyName}
 						</h3>
-						<div className='flex items-center text-dark'>
+						<div className='flex items-center '>
 							<span className='font-semibold'>Visit Site</span>
 							<PiArrowRightThin className='ml-2 text-lg lg:text-2xl transform transition-transform duration-300 group-hover:translate-x-1 text-primary' />
 						</div>

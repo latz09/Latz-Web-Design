@@ -17,8 +17,8 @@ const NotMonthlyFees = () => {
 			{/* Foreground Text */}
 			<div className='relative z-10 space-y-4 text-center'>
 				<div className='space-y-2'>
-					<MainHeading title='NO MONTHLY FEES.' theme='text-center' />
-					<MainHeading title='EVER.' theme='text-center' />
+					<MainHeading title='YOU OWN IT' theme='text-center' />
+					<MainHeading title='FOREVER.' theme='text-center' />
 				</div>
 				<Description description='Some web companies keep charging you every month just to keep your site online. Not here. We build it, you own it — no subscriptions, no surprise fees, no ongoing costs. Just a one-time investment in your business.' theme='font-bold'/>
 			</div>

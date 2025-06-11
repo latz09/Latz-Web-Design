@@ -11,10 +11,10 @@ import AnimateUp from '../utils/animations/AnimateUp';
 import { motion } from 'framer-motion';
 
 const SERVICES_WRAPPER_CLASSES =
-	'max-w-7xl py-12 mx-auto grid gap-x-8 gap-y-16 lg:gap-x-16 lg:gap-y-24 lg:grid-cols-2  place-items-center text-center ';
+	'max-w-6xl py-12 mx-auto grid gap-x-8 gap-y-16 lg:gap-x-24 lg:gap-y-24 lg:grid-cols-2  place-items-center text-center ';
 
 const SERVICE_CARD_CLASSES =
-	'group  flex flex-col items-center gap-4 transition duration-500';
+	'group  flex flex-col items-center gap-4 transition duration-1000';
 
 const iconMap = {
 	FaPencilRuler: FaPencilRuler,
@@ -34,8 +34,10 @@ const ServicesOverview = ({ services }) => {
 					<AnimateUp key={index}>
 						<div className={`${SERVICE_CARD_CLASSES} relative `}>
 							{/* Background Icon (ghosted) */}
+							<div className='absolute w-32 h-32 rounded-full bg-gradient-to-br from-primary/10 to-dark/5 -top-12 left-1/2 -translate-x-1/2 blur-xl group-hover:blur-none group-hover:bg-none z-0' />
+
 							<Icon
-								className='absolute text-[7rem] text-primary/15 -top-8 left-1/2 -translate-x-1/2 z-0   pointer-events-none'
+								className='absolute text-[7rem] text-primary/20 -top-10 left-1/2 -translate-x-1/2 z-0 blur-sm group-hover:blur-none opacity-50 pointer-events-none '
 								aria-hidden
 							/>
 
@@ -46,7 +48,7 @@ const ServicesOverview = ({ services }) => {
 									whileInView={{ scale: 1 }}
 									transition={{ duration: 1 }}
 								>
-									<h2 className='text-2xl lg:text-3xl font-bold uppercase group-hover:text-dark/80 transition duration-500'>
+									<h2 className='text-xl lg:text-2xl font-bold uppercase tracking-wide text-dark '>
 										{service.title}
 									</h2>
 								</motion.div>

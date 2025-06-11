@@ -17,7 +17,7 @@ const INNER_CONTAINER_CLASSES =
 	'relative z-10 flex flex-col justify-center items-center h-full max-w-7xl px-2 mx-auto text-center';
 const HEADING_CLASSES = 'grid gap-4 lg:space-y-2';
 const TOP_HEADING_CLASSES =
-	'text-lg lg:text-2xl font-light uppercase tracking-widest text-tertiary';
+	'text-lg lg:text-2xl font-bold uppercase tracking-widest text-tertiary ';
 const MAIN_HEADING_CLASSES =
 	'uppercase text-4xl sm:text-5xl lg:text-7xl font-bold tracking-wider font-heading';
 const SUB_HEADING_CLASSES = 'text-lg lg:text-2xl text-light text-center';
@@ -132,10 +132,10 @@ const AreaLandingHero = ({ heading, subHeading, topHeading }) => {
 					transition={{ duration: 1.4 }}
 					className='w-full'
 				>
-					<div className='w-full grid md:grid-cols-2 gap-4 lg:gap-8 mt-8 '>
+					<div className='w-full grid md:grid-cols-2 gap-4 lg:gap-8 mt-12 '>
 						<Link
 							href='/contact-latz-web-design'
-							className='w-full rounded-sm mx-auto bg-tertiary text-dark py-3 lg:py-3 grid place-items-center uppercase lg:text-2xl font-bold shadow-lg shadow-tertiary/30 hover:scale-95 transition duration-500 tracking-wider '
+							className='w-full rounded-sm mx-auto bg-light text-dark py-3 lg:py-3 grid place-items-center uppercase lg:text-2xl font-bold shadow-lg shadow-tertiary/30 hover:scale-95 transition duration-500 tracking-wider '
 						>
 							<motion.span whileHover='hover' variants={buttonHover}>
 								Get Started Now
@@ -144,10 +144,10 @@ const AreaLandingHero = ({ heading, subHeading, topHeading }) => {
 
 						<Link
 							href='/free-business-report'
-							className='w-full mx-auto border border-tertiary/20 text-tertiary rounded-sm py-3 lg:py-3 grid uppercase lg:text-2xl place-items-center shadow shadow-tertiary/20 hover:shadow-tertiary/50 hover:border-tertiary/50 transition duration-500 tracking-wider'
+							className='w-full mx-auto border border-tertiary/70 text-tertiary rounded-sm py-3 lg:py-3 grid uppercase lg:text-2xl place-items-center shadow shadow-tertiary/20 hover:shadow-tertiary/50 hover:border-tertiary/50 transition duration-500 tracking-wider'
 						>
 							<motion.span whileHover='hover' variants={buttonHover}>
-								Get Your Free Report!
+								Free Planning Guide
 							</motion.span>
 						</Link>
 					</div>

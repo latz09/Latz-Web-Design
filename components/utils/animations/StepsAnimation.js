@@ -43,7 +43,7 @@ const StepsAnimation = ({ children }) => {
         <motion.div
           ref={(el) => (stepRefs.current[index] = el)}
           key={index}
-          className="flex items-center mb-12 text-light"
+          className="flex items-center mb-24 lg:mb-32 text-light"
           initial={{ opacity: 0.6 }}
           animate={{ opacity: centeredIndex === index ? 1 : 0.4 }}
           transition={{ duration: 0.5 }}

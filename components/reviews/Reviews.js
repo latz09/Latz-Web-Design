@@ -29,20 +29,20 @@ const Reviews = ({ data }) => {
 	return (
 		<>
 			<section className='max-w-7xl mx-auto px-4 py-16'>
-				<div className='grid lg:grid-cols-2 place-items-center gap-12'>
+				<div className='grid  place-items-center gap-16 lg:gap-24'>
 					{visibleReviews.map((review, index) => (
 						<AnimateUp key={index}>
 							<article
 								onClick={() => setSelectedReview(review)}
-								className='cursor-pointer py-8 p-2 md:p-5 flex flex-col items-center gap-8'
+								className='cursor-pointer py-8 p-2 md:p-5 flex flex-col lg:flex-row  items-center gap-12 '
 							>
 								{review.ownerImage && (
 									<div className='relative overflow-hidden flex-shrink-0 shadow-md rounded-lg'>
 										<Image
 											src={review.ownerImage}
 											alt={`${review.reviewerName} Photo`}
-											width={160}
-											height={160}
+											width={250}
+											height={250}
 											className='object-cover rounded-lg'
 										/>
 									</div>
@@ -52,8 +52,8 @@ const Reviews = ({ data }) => {
 									<blockquote className='text-dark/80 text-xl lg:text-2xl leading-8 lg:leading-9 line-clamp-2 font-bold md:group-hover:scale-95 md:group-hover:opacity-80 transition duration-700 italic'>
 										“{review.reviewText}”
 									</blockquote>
-									<div className='text-center p-4 flex items-center justify-center gap-2'>
-										<span className=' font-semibold md:group-hover:text-primary scale-110 md:group-hover:translate-x-4 transiton duration-700'>
+									<div className='text-center p-4 fex items-center justify-center gap-2 bg-dark grid place-items-center'>
+										<span className='text-light font-semibold md:group-hover:text-primary scale-110 md:group-hover:translate-x-4 transiton duration-700'>
 											Read the Full Review
 										</span>
 									</div>
@@ -129,8 +129,8 @@ const Reviews = ({ data }) => {
 									<Image
 										src={selectedReview.ownerImage}
 										alt={`${selectedReview.reviewerName} Photo`}
-										width={160}
-										height={160}
+										width={250}
+										height={250}
 										className='object-cover rounded-2xl'
 									/>
 								</div>
