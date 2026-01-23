@@ -1,18 +1,21 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 
 const ContactForm = () => {
 	const [formData, setFormData] = useState({
 		name: '',
 		email: '',
-		serviceTypes: [], // Updated to be an array to hold multiple selections
+		serviceTypes: [],
 		description: '',
 	});
 
 	const [isLoading, setIsLoading] = useState(false);
 	const [buttonText, setButtonText] = useState('Send Request');
+
+	// Anti-spam: Track when form was loaded
+	const formLoadTime = useRef(Date.now());
 
 	const router = useRouter();
 
@@ -20,7 +23,6 @@ const ContactForm = () => {
 		const { name, value, type, checked } = e.target;
 
 		if (type === 'checkbox') {
-			// Add or remove the service type based on whether it is checked
 			const updatedServices = checked
 				? [...formData.serviceTypes, value]
 				: formData.serviceTypes.filter((service) => service !== value);
@@ -36,10 +38,19 @@ const ContactForm = () => {
 		setIsLoading(true);
 		setButtonText('Sending...');
 
+		// Get honeypot value
+		const honeypotValue = e.target.website?.value || '';
+
 		try {
 			const response = await fetch('/api/submitContactForm', {
 				method: 'POST',
-				body: JSON.stringify(formData),
+				body: JSON.stringify({
+					...formData,
+					// Anti-spam fields
+					website: honeypotValue,
+					formLoadedAt: formLoadTime.current,
+					submittedAt: Date.now(),
+				}),
 				headers: {
 					'Content-Type': 'application/json',
 				},
@@ -73,6 +84,22 @@ const ContactForm = () => {
 			onSubmit={handleSubmit}
 			className='space-y-6 px-2 pb-10 lg:pb-12 mt-4 lg:mt-16 lg:px-8 '
 		>
+			{/* Honeypot field - hidden from real users, bots will fill it */}
+			<div
+				className='absolute opacity-0 pointer-events-none'
+				style={{ position: 'absolute', left: '-9999px' }}
+				aria-hidden='true'
+			>
+				<label htmlFor='website'>Website</label>
+				<input
+					type='text'
+					name='website'
+					id='website'
+					tabIndex={-1}
+					autoComplete='off'
+				/>
+			</div>
+
 			<div className='flex flex-col'>
 				<label htmlFor='name' className='form-label'>
 					Your Name

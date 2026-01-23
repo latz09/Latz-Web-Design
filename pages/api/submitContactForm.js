@@ -1,6 +1,9 @@
 import { sanityClient } from '@/lib/sanity/sanityConnection';
 import transporter from '@/lib/nodemailer/transporter';
 
+// Minimum time (in ms) a human would take to fill out the form
+const MIN_FORM_TIME_MS = 3000; // 3 seconds
+
 export default async function handler(req, res) {
 	if (req.method !== 'POST') {
 		res.setHeader('Allow', ['POST']);
@@ -9,14 +12,64 @@ export default async function handler(req, res) {
 	}
 
 	try {
-		const { name, email, serviceTypes, description } = req.body;
+		const {
+			name,
+			email,
+			serviceTypes,
+			description,
+			// Anti-spam fields
+			website,
+			formLoadedAt,
+			submittedAt,
+		} = req.body;
+
+		// ============================================
+		// ANTI-SPAM CHECKS
+		// ============================================
+
+		// Check 1: Honeypot field - if filled, it's a bot
+		if (website && website.trim() !== '') {
+			console.log('Spam blocked: Honeypot field filled');
+			return res.status(200).json({ success: true });
+		}
+
+		// Check 2: Time-based validation - form submitted too fast
+		if (formLoadedAt && submittedAt) {
+			const timeSpent = submittedAt - formLoadedAt;
+			if (timeSpent < MIN_FORM_TIME_MS) {
+				console.log(`Spam blocked: Form submitted too fast (${timeSpent}ms)`);
+				return res.status(200).json({ success: true });
+			}
+		}
+
+		// Check 3: Basic pattern detection for gibberish
+		const hasGibberishPattern = (str) => {
+			if (!str) return false;
+			const consonantRatio =
+				(str.match(/[bcdfghjklmnpqrstvwxyz]/gi) || []).length / str.length;
+			const hasNoSpaces = str.length > 15 && !str.includes(' ');
+
+			return (
+				(consonantRatio > 0.7 && str.length > 10) ||
+				(hasNoSpaces && str.length > 20)
+			);
+		};
+
+		if (hasGibberishPattern(name) || hasGibberishPattern(description)) {
+			console.log('Spam blocked: Gibberish pattern detected');
+			return res.status(200).json({ success: true });
+		}
+
+		// ============================================
+		// LEGITIMATE SUBMISSION - Process normally
+		// ============================================
 
 		// Store in Sanity
 		const result = await sanityClient.create({
 			_type: 'contactForm',
 			name,
 			email,
-			serviceTypes, // Storing serviceTypes array in Sanity
+			serviceTypes,
 			description,
 			sentAt: new Date().toISOString(),
 		});
@@ -63,9 +116,3 @@ export default async function handler(req, res) {
 		res.status(500).json({ success: false, message: error.message });
 	}
 }
-
-{
-	/* <li><strong>Phone Number:</strong> <a href="tel:${phoneNumber}">${phoneNumber}</a></li> */
-}
-
-// Phone Number: ${phoneNumber}
