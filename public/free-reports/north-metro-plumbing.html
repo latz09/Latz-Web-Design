@@ -1,0 +1,1851 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="robots" content="noindex, nofollow" />
+		<title>Website Audit — North Metro Plumbing Inc.</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Manrope:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			:root {
+				--dark: #00090a;
+				--dark-mid: #051215;
+				--dark-card: #0a1a1d;
+				--light: #f2fcfe;
+				--primary: #18a1ad;
+				--primary-dim: rgba(24, 161, 173, 0.14);
+				--primary-faint: rgba(24, 161, 173, 0.06);
+				--white: #ffffff;
+				--ink: #0d1f22;
+				--muted: #5a7275;
+				--border: #d6e8eb;
+				--surface: #f4fafb;
+				--issue: #c0381a;
+				--issue-bg: #fdf2ef;
+				--issue-txt: #7a2210;
+				--flag: #9a5c08;
+				--flag-bg: #fef7ed;
+				--flag-txt: #6b3d05;
+				--ok: #1e7a50;
+				--ok-bg: #edf7f2;
+				--ok-txt: #145035;
+				--radius: 6px;
+				--sw: 264px;
+			}
+			*,
+			*::before,
+			*::after {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+			html {
+				scroll-behavior: smooth;
+			}
+			body {
+				font-family: 'Manrope', sans-serif;
+				font-size: 16px;
+				line-height: 1.7;
+				color: var(--ink);
+				background: var(--light);
+				display: flex;
+				min-height: 100vh;
+			}
+
+			.sidebar {
+				width: var(--sw);
+				background: var(--light);
+				position: fixed;
+				top: 0;
+				left: 0;
+				height: 100vh;
+				overflow-y: auto;
+				z-index: 100;
+				display: flex;
+				flex-direction: column;
+				transition: transform 0.3s;
+				border-right: 1px solid var(--border);
+			}
+			.sidebar::-webkit-scrollbar {
+				width: 3px;
+			}
+			.sidebar::-webkit-scrollbar-thumb {
+				background: rgba(0, 9, 10, 0.15);
+				border-radius: 3px;
+			}
+			.sb-brand {
+				padding: 20px 20px 16px;
+				border-bottom: 1px solid var(--border);
+			}
+			.sb-logo {
+				height: 36px;
+				width: auto;
+				max-width: 160px;
+				display: block;
+				margin-bottom: 8px;
+				object-fit: contain;
+				object-position: left;
+			}
+			.sb-sub {
+				font-size: 9px;
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 0.15em;
+				color: rgba(0, 9, 10, 0.35);
+			}
+			.sb-client {
+				padding: 12px 20px;
+				border-bottom: 1px solid var(--border);
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
+			.sb-client-logo {
+				height: 26px;
+				width: auto;
+				max-width: 86px;
+				object-fit: contain;
+				object-position: left;
+				filter: brightness(0);
+				opacity: 0.7;
+			}
+			.sb-client-name {
+				font-size: 10.5px;
+				color: rgba(0, 9, 10, 0.45);
+				line-height: 1.35;
+			}
+			.sb-section {
+				padding: 10px 0 3px;
+			}
+			.sb-section-label {
+				font-size: 9px;
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 0.15em;
+				color: rgba(0, 9, 10, 0.3);
+				padding: 0 20px;
+				margin-bottom: 2px;
+			}
+			.sb-link {
+				display: block;
+				padding: 6px 20px;
+				font-size: 12.5px;
+				color: rgba(0, 9, 10, 0.55);
+				text-decoration: none;
+				transition: all 0.15s;
+				border-left: 2px solid transparent;
+				line-height: 1.4;
+			}
+			.sb-link:hover {
+				color: var(--dark);
+				background: rgba(0, 9, 10, 0.04);
+				border-left-color: rgba(24, 161, 173, 0.4);
+			}
+			.sb-link.active {
+				color: var(--dark);
+				background: rgba(24, 161, 173, 0.1);
+				border-left-color: var(--primary);
+				font-weight: 600;
+			}
+			.sb-footer {
+				margin-top: auto;
+				padding: 14px 20px;
+				border-top: 1px solid var(--border);
+				font-size: 10px;
+				color: rgba(0, 9, 10, 0.35);
+				line-height: 1.6;
+			}
+			.sb-footer a {
+				color: rgba(0, 9, 10, 0.45);
+				text-decoration: none;
+			}
+			.sb-footer a:hover {
+				color: var(--primary);
+			}
+
+			.main {
+				margin-left: var(--sw);
+				flex: 1;
+				min-width: 0;
+			}
+
+			.page-header {
+				background: var(--dark);
+				padding: 48px 58px 40px;
+				position: relative;
+				overflow: hidden;
+			}
+			.page-header::before {
+				content: '';
+				position: absolute;
+				top: -90px;
+				right: -90px;
+				width: 400px;
+				height: 400px;
+				background: radial-gradient(
+					circle,
+					rgba(24, 161, 173, 0.07) 0%,
+					transparent 65%
+				);
+				pointer-events: none;
+			}
+			.page-header::after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				height: 1px;
+				background: linear-gradient(
+					90deg,
+					transparent,
+					rgba(24, 161, 173, 0.28),
+					transparent
+				);
+			}
+			.hdr-top {
+				display: flex;
+				align-items: flex-start;
+				justify-content: space-between;
+				margin-bottom: 24px;
+				position: relative;
+				z-index: 1;
+			}
+			.hdr-client-logo {
+				height: 44px;
+				width: auto;
+				max-width: 150px;
+				object-fit: contain;
+				object-position: left;
+			}
+			.hdr-by {
+				text-align: right;
+				font-size: 11px;
+				color: #fff;
+				line-height: 1.65;
+			}
+			.hdr-by strong {
+				display: block;
+				color: #fff;
+				font-weight: 600;
+				margin-bottom: 1px;
+			}
+			.hdr-eyebrow {
+				font-size: 10px;
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 0.16em;
+				color: var(--primary);
+				margin-bottom: 8px;
+				position: relative;
+				z-index: 1;
+			}
+			.hdr-title {
+				font-family: 'Cormorant Garamond', serif;
+				font-size: 44px;
+				font-weight: 700;
+				color: #fff;
+				line-height: 1.08;
+				margin-bottom: 10px;
+				letter-spacing: -0.01em;
+				position: relative;
+				z-index: 1;
+			}
+			.hdr-title em {
+				color: #fff;
+				font-style: italic;
+			}
+			.hdr-sub {
+				font-size: 13.5px;
+				color: #fff;
+				max-width: 440px;
+				line-height: 1.65;
+				font-weight: 300;
+				position: relative;
+				z-index: 1;
+			}
+			.print-btn {
+				position: absolute;
+				top: 22px;
+				right: 58px;
+				background: transparent;
+				border: 1px solid rgba(255, 255, 255, 0.13);
+				color: rgba(255, 255, 255, 0.4);
+				font-family: 'DM Sans', sans-serif;
+				font-size: 11.5px;
+				font-weight: 500;
+				padding: 6px 12px;
+				border-radius: 4px;
+				cursor: pointer;
+				letter-spacing: 0.04em;
+				transition: all 0.15s;
+				display: flex;
+				align-items: center;
+				gap: 5px;
+				z-index: 2;
+			}
+			.print-btn:hover {
+				background: rgba(255, 255, 255, 0.05);
+				border-color: rgba(255, 255, 255, 0.3);
+				color: #fff;
+			}
+
+			.strip {
+				background: var(--white);
+				border-bottom: 1px solid var(--border);
+				padding: 16px 58px;
+				display: flex;
+				gap: 24px;
+				align-items: center;
+			}
+			.st-stat {
+				display: flex;
+				align-items: center;
+				gap: 9px;
+			}
+			.st-num {
+				font-family: 'Cormorant Garamond', serif;
+				font-size: 32px;
+				line-height: 1;
+				font-weight: 700;
+			}
+			.st-num.r {
+				color: var(--issue);
+			}
+			.st-num.a {
+				color: var(--flag);
+			}
+			.st-num.g {
+				color: var(--ok);
+			}
+			.st-lbl {
+				font-size: 11px;
+				color: var(--muted);
+				line-height: 1.35;
+			}
+			.st-lbl strong {
+				display: block;
+				font-size: 12px;
+				color: var(--ink);
+				font-weight: 500;
+			}
+			.st-div {
+				width: 1px;
+				height: 30px;
+				background: var(--border);
+			}
+			.st-note {
+				margin-left: auto;
+				font-size: 11.5px;
+				color: var(--muted);
+				max-width: 280px;
+				text-align: right;
+				line-height: 1.5;
+				font-style: italic;
+			}
+
+			.content {
+				padding: 44px 58px 76px;
+				max-width: 860px;
+			}
+
+			.doc-section {
+				margin-bottom: 56px;
+				scroll-margin-top: 22px;
+			}
+			.badge {
+				display: inline-flex;
+				align-items: center;
+				background: var(--dark);
+				color: rgba(255, 255, 255, 0.9);
+				font-size: 9px;
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 0.12em;
+				padding: 4px 11px;
+				border-radius: 20px;
+				margin-bottom: 12px;
+				border: 1px solid rgba(255, 255, 255, 0.12);
+			}
+			.sec-heading {
+				font-family: 'Cormorant Garamond', serif;
+				font-size: 30px;
+				font-weight: 700;
+				color: #0d1f22;
+				line-height: 1.15;
+				margin-bottom: 5px;
+				padding-bottom: 12px;
+				border-bottom: 1.5px solid rgba(24, 161, 173, 0.4);
+			}
+			.sec-intro {
+				font-size: 13.5px;
+				color: var(--muted);
+				margin-bottom: 22px;
+				max-width: 600px;
+				line-height: 1.7;
+				font-style: italic;
+			}
+
+			.subsection {
+				margin-bottom: 32px;
+				scroll-margin-top: 22px;
+			}
+			.sub-heading {
+				font-size: 15px;
+				font-weight: 600;
+				color: var(--dark);
+				margin-bottom: 10px;
+				display: flex;
+				align-items: center;
+				gap: 8px;
+			}
+			.sub-heading::before {
+				content: '';
+				display: inline-block;
+				width: 2px;
+				height: 15px;
+				background: var(--primary);
+				border-radius: 2px;
+				flex-shrink: 0;
+			}
+
+			.doc-p {
+				font-size: 14px;
+				line-height: 1.75;
+				color: var(--ink);
+				margin-bottom: 12px;
+				max-width: 660px;
+			}
+
+			.ft {
+				width: 100%;
+				border-collapse: collapse;
+				margin-bottom: 9px;
+				border-radius: var(--radius);
+				overflow: hidden;
+				border: 1px solid var(--border);
+			}
+			.ft tr:not(:last-child) {
+				border-bottom: 1px solid var(--border);
+			}
+			.ft-status {
+				padding: 11px 12px;
+				font-size: 10.5px;
+				font-weight: 600;
+				vertical-align: top;
+				width: 100px;
+				text-align: center;
+				letter-spacing: 0.03em;
+				line-height: 1.3;
+			}
+			.ft-status.issue {
+				background: var(--issue-bg);
+				color: var(--issue-txt);
+			}
+			.ft-status.flag {
+				background: var(--flag-bg);
+				color: var(--flag-txt);
+			}
+			.ft-status.ok {
+				background: var(--ok-bg);
+				color: var(--ok-txt);
+			}
+			.ft-body {
+				padding: 11px 15px;
+				font-size: 13px;
+				color: var(--ink);
+				vertical-align: top;
+				background: var(--white);
+				line-height: 1.6;
+				border-left: 1px solid var(--border);
+			}
+			.ft-body strong {
+				font-weight: 600;
+				display: block;
+				margin-bottom: 2px;
+				font-size: 13.5px;
+			}
+			.ft-body p {
+				font-size: 12.5px;
+				color: var(--muted);
+				margin: 0;
+				line-height: 1.6;
+			}
+
+			.metric-row {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 9px;
+				margin-bottom: 14px;
+			}
+			.mc {
+				background: var(--white);
+				border: 1px solid var(--border);
+				border-radius: 8px;
+				padding: 13px 15px;
+			}
+			.mc-lbl {
+				font-size: 9.5px;
+				text-transform: uppercase;
+				letter-spacing: 0.08em;
+				color: var(--muted);
+				margin-bottom: 5px;
+				font-weight: 500;
+			}
+			.mc-val {
+				font-family: 'Cormorant Garamond', serif;
+				font-size: 26px;
+				font-weight: 700;
+				color: var(--dark);
+				line-height: 1;
+				margin-bottom: 2px;
+			}
+			.mc-val.r {
+				color: var(--issue);
+			}
+			.mc-val.a {
+				color: var(--flag);
+			}
+			.mc-val.g {
+				color: var(--ok);
+			}
+			.mc-sub {
+				font-size: 10.5px;
+				color: var(--muted);
+			}
+
+			.speed-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 9px;
+				margin-bottom: 12px;
+			}
+			.sc {
+				background: var(--white);
+				border: 1px solid var(--border);
+				border-radius: 8px;
+				padding: 13px 15px;
+			}
+			.sc-lbl {
+				font-size: 9.5px;
+				text-transform: uppercase;
+				letter-spacing: 0.08em;
+				color: var(--muted);
+				margin-bottom: 7px;
+				font-weight: 500;
+			}
+			.sc-val {
+				font-family: 'Cormorant Garamond', serif;
+				font-size: 36px;
+				font-weight: 700;
+				line-height: 1;
+				margin-bottom: 1px;
+			}
+			.sc-val.bad {
+				color: var(--issue);
+			}
+			.sc-val.mid {
+				color: var(--flag);
+			}
+			.sc-val.good {
+				color: var(--ok);
+			}
+			.sc-unit {
+				font-size: 12px;
+				color: var(--muted);
+				margin-bottom: 7px;
+			}
+			.sc-bar {
+				height: 4px;
+				background: var(--light);
+				border-radius: 2px;
+				overflow: hidden;
+			}
+			.sc-fill {
+				height: 100%;
+				border-radius: 2px;
+			}
+			.sc-fill.bad {
+				background: var(--issue);
+			}
+			.sc-fill.mid {
+				background: var(--flag);
+			}
+			.sc-fill.good {
+				background: var(--ok);
+			}
+
+			.callout {
+				border-radius: var(--radius);
+				padding: 11px 15px;
+				margin: 13px 0;
+				font-size: 13px;
+				line-height: 1.65;
+				border-left: 3px solid;
+			}
+			.callout-issue {
+				background: var(--issue-bg);
+				border-color: var(--issue);
+				color: var(--issue-txt);
+			}
+			.callout-flag {
+				background: var(--flag-bg);
+				border-color: var(--flag);
+				color: var(--flag-txt);
+			}
+			.callout-insight {
+				background: var(--primary-faint);
+				border-color: var(--primary);
+				color: #0b3236;
+			}
+			.callout strong {
+				font-weight: 600;
+			}
+
+			.comp-table {
+				width: 100%;
+				border-collapse: collapse;
+				margin: 13px 0;
+				border: 1px solid var(--border);
+				border-radius: var(--radius);
+				overflow: hidden;
+				font-size: 12.5px;
+			}
+			.comp-table th {
+				background: var(--surface);
+				padding: 7px 13px;
+				text-align: left;
+				font-size: 9.5px;
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 0.07em;
+				color: var(--muted);
+				border-bottom: 1px solid var(--border);
+			}
+			.comp-table td {
+				padding: 9px 13px;
+				background: var(--white);
+				border-bottom: 1px solid var(--light);
+				vertical-align: middle;
+			}
+			.comp-table tr:last-child td {
+				border-bottom: none;
+			}
+			.comp-table tr.you td {
+				background: var(--issue-bg);
+				font-weight: 500;
+			}
+			.you-tag {
+				display: inline-block;
+				font-size: 8.5px;
+				font-weight: 700;
+				padding: 2px 7px;
+				border-radius: 20px;
+				background: var(--issue-bg);
+				color: var(--issue);
+				margin-left: 5px;
+				letter-spacing: 0.04em;
+				text-transform: uppercase;
+				border: 1px solid rgba(192, 56, 26, 0.18);
+			}
+
+			.build-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 10px;
+				margin: 18px 0;
+			}
+			.bc {
+				background: var(--white);
+				border: 1px solid var(--border);
+				border-radius: 9px;
+				padding: 18px 18px;
+				position: relative;
+				overflow: hidden;
+			}
+			.bc::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 2px;
+				background: var(--primary);
+				opacity: 0.35;
+			}
+			.bc-icon {
+				font-size: 18px;
+				margin-bottom: 7px;
+				display: block;
+			}
+			.bc-title {
+				font-size: 13.5px;
+				font-weight: 600;
+				color: var(--dark);
+				margin-bottom: 5px;
+			}
+			.bc-body {
+				font-size: 12.5px;
+				color: var(--muted);
+				line-height: 1.6;
+			}
+
+			.tech-note {
+				background: var(--dark);
+				border-radius: 9px;
+				padding: 18px 22px;
+				margin: 14px 0;
+				display: flex;
+				align-items: flex-start;
+				gap: 14px;
+				border: 1px solid rgba(24, 161, 173, 0.1);
+			}
+			.tn-icon {
+				font-size: 20px;
+				flex-shrink: 0;
+				margin-top: 1px;
+			}
+			.tn-text {
+				font-size: 12.5px;
+				color: rgba(255, 255, 255, 0.82);
+				line-height: 1.65;
+			}
+			.tn-text strong {
+				color: #fff;
+				font-weight: 600;
+				display: block;
+				margin-bottom: 3px;
+				font-size: 13.5px;
+			}
+
+			.assessment {
+				background: var(--dark);
+				border-radius: 9px;
+				padding: 28px 32px;
+				border: 1px solid rgba(24, 161, 173, 0.08);
+			}
+			.as-eyebrow {
+				font-size: 9px;
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 0.14em;
+				color: var(--primary);
+				margin-bottom: 9px;
+			}
+			.as-headline {
+				font-family: 'Cormorant Garamond', serif;
+				font-size: 24px;
+				font-weight: 700;
+				color: #fff;
+				margin-bottom: 16px;
+				line-height: 1.25;
+			}
+			.as-body {
+				font-size: 13px;
+				color: rgba(255, 255, 255, 0.82);
+				line-height: 1.8;
+			}
+			.as-body p + p {
+				margin-top: 12px;
+			}
+			.as-highlight {
+				margin-top: 18px;
+				border-left: 2px solid var(--primary);
+				padding: 11px 15px;
+				background: rgba(24, 161, 173, 0.07);
+				border-radius: 0 5px 5px 0;
+				font-size: 13px;
+				color: #fff;
+				font-style: italic;
+				line-height: 1.65;
+			}
+
+			.cta-card {
+				background: var(--white);
+				border: 1px solid var(--border);
+				border-radius: 9px;
+				padding: 24px 28px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 28px;
+			}
+			.cta-left h3 {
+				font-family: 'Cormorant Garamond', serif;
+				font-size: 20px;
+				font-weight: 700;
+				margin-bottom: 6px;
+			}
+			.cta-left p {
+				font-size: 12.5px;
+				color: var(--muted);
+				max-width: 340px;
+				line-height: 1.6;
+			}
+			.cta-right {
+				flex-shrink: 0;
+				text-align: right;
+			}
+			.cta-latz-logo {
+				height: 32px;
+				width: auto;
+				margin-bottom: 7px;
+				display: block;
+				margin-left: auto;
+			}
+			.cta-contact {
+				display: block;
+				font-size: 13.5px;
+				font-weight: 500;
+				color: var(--primary);
+				text-decoration: none;
+				margin-bottom: 2px;
+			}
+			.cta-contact:hover {
+				opacity: 0.8;
+			}
+			.cta-detail {
+				font-size: 10.5px;
+				color: var(--muted);
+				margin-top: 5px;
+			}
+
+			.divider {
+				border: none;
+				border-top: 1px solid var(--border);
+				margin: 40px 0;
+			}
+			strong {
+				font-weight: 600;
+			}
+			a {
+				color: var(--primary);
+				font-weight: 500;
+			}
+
+			.mob-toggle {
+				display: none;
+				position: fixed;
+				bottom: 66px;
+				right: 18px;
+				z-index: 200;
+				background: var(--primary);
+				color: #fff;
+				border: none;
+				width: 42px;
+				height: 42px;
+				border-radius: 50%;
+				font-size: 17px;
+				cursor: pointer;
+				box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+				align-items: center;
+				justify-content: center;
+			}
+			.sb-overlay {
+				display: none;
+				position: fixed;
+				inset: 0;
+				background: rgba(0, 0, 0, 0.5);
+				z-index: 99;
+			}
+
+			@media (max-width: 900px) {
+				.sidebar {
+					transform: translateX(-100%);
+				}
+				.sidebar.open {
+					transform: translateX(0);
+				}
+				.main {
+					margin-left: 0;
+				}
+				.mob-toggle {
+					display: flex;
+				}
+				.sb-overlay.visible {
+					display: block;
+				}
+				.page-header {
+					padding: 28px 20px 36px;
+				}
+				.strip {
+					padding: 13px 20px;
+					flex-wrap: wrap;
+					gap: 12px;
+				}
+				.st-note {
+					display: none;
+				}
+				.content {
+					padding: 24px 20px 56px;
+				}
+				.hdr-title {
+					font-size: 28px;
+				}
+				.build-grid {
+					grid-template-columns: 1fr;
+				}
+				.metric-row {
+					grid-template-columns: 1fr 1fr;
+				}
+				.speed-grid {
+					grid-template-columns: 1fr;
+				}
+				.cta-card {
+					flex-direction: column;
+				}
+				.cta-right {
+					text-align: left;
+				}
+				.cta-latz-logo {
+					margin-left: 0;
+				}
+				.print-btn {
+					display: none;
+				}
+			}
+			@media (max-width: 480px) {
+				.metric-row {
+					grid-template-columns: 1fr;
+				}
+				.hdr-title {
+					font-size: 22px;
+				}
+				.hdr-top {
+					flex-direction: column;
+					gap: 12px;
+				}
+				.hdr-by {
+					text-align: left;
+				}
+			}
+			@media print {
+				.sidebar,
+				.sb-overlay,
+				.mob-toggle,
+				.print-btn {
+					display: none !important;
+				}
+				.main {
+					margin-left: 0 !important;
+				}
+				body {
+					background: white !important;
+					display: block !important;
+				}
+				@page {
+					margin: 0.6in 0.72in;
+				}
+				.page-header {
+					background: var(--dark) !important;
+					padding: 20px 0 18px !important;
+					-webkit-print-color-adjust: exact;
+					print-color-adjust: exact;
+				}
+				.strip {
+					background: white !important;
+					border: 1px solid var(--border) !important;
+				}
+				.content {
+					padding: 18px 0 !important;
+					max-width: 100% !important;
+				}
+				.subsection,
+				.callout,
+				.mc,
+				.bc,
+				.tech-note,
+				.assessment,
+				.cta-card {
+					page-break-inside: avoid;
+					break-inside: avoid;
+				}
+				.sec-heading,
+				.sub-heading {
+					page-break-after: avoid;
+					break-after: avoid;
+				}
+				.assessment,
+				.tech-note,
+				.badge,
+				.ft-status,
+				.sc-fill {
+					-webkit-print-color-adjust: exact;
+					print-color-adjust: exact;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="sidebar" id="sidebar">
+			<div class="sb-brand">
+				<img
+					src="/free-reports/latz-web-design.svg"
+					alt="Latz Web Design"
+					class="sb-logo"
+					onerror="this.style.display = 'none'"
+				/>
+				<div class="sb-sub">Website Audit Report</div>
+			</div>
+			<div class="sb-client">
+				<img
+					src="https://nmetroplumbing.com/wp-content/uploads/2021/10/North_Metro_logo-300x229.png"
+					alt="North Metro Plumbing"
+					class="sb-client-logo"
+					onerror="this.style.display = 'none'"
+				/>
+				<div class="sb-client-name">North Metro<br />Plumbing Inc.</div>
+			</div>
+			<div class="sb-section">
+				<div class="sb-section-label">Overview</div>
+				<a href="#summary" class="sb-link">Summary</a>
+			</div>
+			<div class="sb-section">
+				<div class="sb-section-label">Findings</div>
+				<a href="#first-impression" class="sb-link">First Impression</a>
+				<a href="#speed" class="sb-link">Speed & Technical</a>
+				<a href="#trust" class="sb-link">Trust Signals</a>
+				<a href="#lead-capture" class="sb-link">Lead Capture</a>
+				<a href="#search" class="sb-link">Search Visibility</a>
+			</div>
+			<div class="sb-section">
+				<div class="sb-section-label">The Solution</div>
+				<a href="#what-i-build" class="sb-link">What I'd Build</a>
+				<a href="#my-take" class="sb-link">My Take</a>
+				<a href="#next-steps" class="sb-link">Next Steps</a>
+			</div>
+			<div class="sb-footer">
+				Prepared by
+				<a href="https://latzwebdesign.com" target="_blank">Latz Web Design</a
+				><br />
+				No fluff. Just results.
+			</div>
+		</nav>
+
+		<div class="sb-overlay" id="overlay"></div>
+
+		<div class="main">
+			<header class="page-header">
+				<button class="print-btn" onclick="window.print()">
+					<svg
+						width="11"
+						height="11"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					>
+						<polyline points="6 9 6 2 18 2 18 9" />
+						<path
+							d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"
+						/>
+						<rect x="6" y="14" width="12" height="8" />
+					</svg>
+					Print / Save PDF
+				</button>
+				<div class="hdr-top">
+					<img
+						src="https://nmetroplumbing.com/wp-content/uploads/2021/10/North_Metro_logo-300x229.png"
+						alt="North Metro Plumbing Inc."
+						class="hdr-client-logo"
+						onerror="this.style.display = 'none'"
+					/>
+					<div class="hdr-by">
+						<strong>Prepared by Jordan Latz</strong>Latz Web Design
+						&nbsp;·&nbsp; March 2026<br />latzwebdesign.com
+					</div>
+				</div>
+				<div class="hdr-eyebrow">Website Audit Report</div>
+				<div class="hdr-title">
+					Your site is live.<br /><em>But is it working?</em>
+				</div>
+				<div class="hdr-sub">
+					A hands-on look at nmetroplumbing.com — what it's doing, what it's
+					not, and what a site built to convert actually looks like.
+				</div>
+			</header>
+
+			<div class="strip">
+				<div class="st-stat">
+					<div class="st-num r">9</div>
+					<div class="st-lbl"><strong>Issues Found</strong>need attention</div>
+				</div>
+				<div class="st-div"></div>
+				<div class="st-stat">
+					<div class="st-num a">5</div>
+					<div class="st-lbl"><strong>Worth Noting</strong>opportunities</div>
+				</div>
+				<div class="st-div"></div>
+				<div class="st-stat">
+					<div class="st-num g">3</div>
+					<div class="st-lbl">
+						<strong>Working Well</strong>solid foundation
+					</div>
+				</div>
+				<div class="st-note">
+					Reviewed the live site on mobile, ran Google PageSpeed Insights, and
+					manually checked local search — March 2026.
+				</div>
+			</div>
+
+			<div class="content">
+				<!-- SUMMARY -->
+				<div class="doc-section" id="summary">
+					<div class="badge">Overview</div>
+					<h2 class="sec-heading">Here's the situation.</h2>
+					<p class="sec-intro">
+						I looked at your site the way a potential customer would — on a
+						phone, cold, no prior knowledge of the business.
+					</p>
+					<p class="doc-p">
+						North Metro Plumbing has a real business with real customers and a
+						site that's been up long enough to have some history.
+						Mobile-friendly, decent on desktop — those are genuine wins.
+					</p>
+					<p class="doc-p">
+						But the honest picture: you're ranking 28th on Google Maps for
+						"Plumber + Ham Lake." Organic search traffic is estimated at one
+						visitor per month. Listings across the web are inconsistent — some
+						show a different company's name entirely at your address. And while
+						the site is functional, it's not built to convert the people who do
+						find it.
+					</p>
+					<p class="doc-p">
+						None of this is unfixable. The path forward is specific, not vague.
+					</p>
+				</div>
+
+				<hr class="divider" />
+
+				<!-- 01 -->
+				<div class="doc-section" id="first-impression">
+					<div class="badge">01 — First Impression</div>
+					<h2 class="sec-heading">What visitors see first.</h2>
+					<p class="sec-intro">
+						Opened nmetroplumbing.com on my phone with no context — this is the
+						experience most potential customers have.
+					</p>
+					<table class="ft">
+						<tr>
+							<td class="ft-status ok">Working Well</td>
+							<td class="ft-body">
+								<strong>Phone number is visible on the homepage</strong>
+								<p>The most important baseline — you've got it.</p>
+							</td>
+						</tr>
+						<tr>
+							<td class="ft-status ok">Working Well</td>
+							<td class="ft-body">
+								<strong>Site is mobile-friendly</strong>
+								<p>Layout works on mobile without breaking or overflowing.</p>
+							</td>
+						</tr>
+						<tr>
+							<td class="ft-status ok">Working Well</td>
+							<td class="ft-body">
+								<strong>SSL certificate active (HTTPS)</strong>
+								<p>Google's baseline requirement — covered.</p>
+							</td>
+						</tr>
+						<tr>
+							<td class="ft-status issue">Fix This</td>
+							<td class="ft-body">
+								<strong>No clear value statement above the fold</strong>
+								<p>
+									Within 3 seconds it's not clear why someone should call you
+									over the 27 businesses ranking above you. The site announces
+									you exist — it doesn't sell you.
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td class="ft-status flag">Worth Noting</td>
+							<td class="ft-body">
+								<strong>Phone number is clickable — but easy to miss</strong>
+								<p>
+									The number does dial on tap, which is good. But right now it's
+									small underlined text that blends into the page. It should be
+									a prominent, can't-miss button — something like a bold "Call
+									Now" bar near the top of every page. The functionality is
+									there; the visibility isn't.
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td class="ft-status flag">Worth Noting</td>
+							<td class="ft-body">
+								<strong>No social links on the homepage</strong>
+								<p>
+									Your Facebook page exists (83 likes) but isn't linked from
+									your site. Both Benjamin Franklin Plumbing and Roto-Rooter
+									have this.
+								</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<hr class="divider" />
+
+				<!-- 02 -->
+				<div class="doc-section" id="speed">
+					<div class="badge">02 — Speed & Technical</div>
+					<h2 class="sec-heading">How fast does it load?</h2>
+					<p class="sec-intro">
+						Speed is a conversion issue. Slow sites lose visitors before they
+						ever see your services.
+					</p>
+					<div class="speed-grid">
+						<div class="sc">
+							<div class="sc-lbl">Mobile Load Time</div>
+							<div class="sc-val mid">4.0s</div>
+							<div class="sc-unit">borderline slow — danger zone</div>
+							<div class="sc-bar">
+								<div class="sc-fill mid" style="width: 58%"></div>
+							</div>
+						</div>
+						<div class="sc">
+							<div class="sc-lbl">Desktop Load Time</div>
+							<div class="sc-val good">1.6s</div>
+							<div class="sc-unit">fast — this is good</div>
+							<div class="sc-bar">
+								<div class="sc-fill good" style="width: 90%"></div>
+							</div>
+						</div>
+					</div>
+					<table class="ft">
+						<tr>
+							<td class="ft-status issue">Fix This</td>
+							<td class="ft-body">
+								<strong>Largest content element (LCP) is 4.2s on mobile</strong>
+								<p>
+									Google flags anything over 2.5s as "slow" and uses it as a
+									search ranking signal. Your main content takes 4.2s to appear
+									on mobile — this is actively hurting your ranking.
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td class="ft-status flag">Worth Noting</td>
+							<td class="ft-body">
+								<strong>Page size is 2,157KB — images aren't optimized</strong>
+								<p>
+									Uncompressed images are a major contributor to the slow mobile
+									time. Optimization alone would cut 30–40% off load time.
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td class="ft-status ok">Working Well</td>
+							<td class="ft-body">
+								<strong
+									>Interactivity (70ms) and visual stability are both
+									excellent</strong
+								>
+								<p>
+									Fast tap response, no layout shifts. Two of three Core Web
+									Vitals are green.
+								</p>
+							</td>
+						</tr>
+					</table>
+					<div class="callout callout-insight">
+						<strong
+							>This is a hosting problem, not just a content problem.</strong
+						>
+						Your site is on WordPress hosted on GoDaddy shared hosting — you're
+						sharing server resources with hundreds of other sites. A site on
+						modern edge infrastructure (the same network used by Netflix,
+						Shopify, and high-traffic platforms) would load in under a second on
+						any device, anywhere — automatically served from the nearest server
+						to your visitor.
+					</div>
+				</div>
+
+				<hr class="divider" />
+
+				<!-- 03 -->
+				<div class="doc-section" id="trust">
+					<div class="badge">03 — Trust Signals</div>
+					<h2 class="sec-heading">Why should someone trust you?</h2>
+					<p class="sec-intro">
+						People hiring a plumber are letting a stranger into their home. They
+						need reasons to trust you before picking up the phone.
+					</p>
+					<div class="subsection">
+						<h3 class="sub-heading">Reviews</h3>
+						<div class="metric-row">
+							<div class="mc">
+								<div class="mc-lbl">Total Reviews</div>
+								<div class="mc-val a">5</div>
+								<div class="mc-sub">Yelp (4) + Indeed (1)</div>
+							</div>
+							<div class="mc">
+								<div class="mc-lbl">Average Rating</div>
+								<div class="mc-val g">4.8★</div>
+								<div class="mc-sub">above industry avg 4.66★</div>
+							</div>
+							<div class="mc">
+								<div class="mc-lbl">New / Month</div>
+								<div class="mc-val r">0</div>
+								<div class="mc-sub">leaders avg 5.33/mo</div>
+							</div>
+						</div>
+						<table class="ft">
+							<tr>
+								<td class="ft-status ok">Working Well</td>
+								<td class="ft-body">
+									<strong>4.8★ average — above industry</strong>
+									<p>
+										Customers who've reviewed you are happy. The problem isn't
+										quality — it's volume. That's a fixable problem, not a
+										fundamental one.
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="ft-status issue">Fix This</td>
+								<td class="ft-body">
+									<strong>5 total reviews, 0 new in recent months</strong>
+									<p>
+										The #1 result for "plumber Ham Lake" has 113 reviews. #2 has
+										417. A 4.8-star business with 5 reviews loses the click to a
+										4.3-star business with 49. Volume creates credibility — and
+										the #1 result is a winnable target.
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="ft-status issue">Fix This</td>
+								<td class="ft-body">
+									<strong>No reviews on your website</strong>
+									<p>
+										They live on Yelp and Indeed but not your own site.
+										Embedding 3–4 reviews on the homepage is one of the
+										highest-impact trust signals available and costs nothing to
+										add.
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="ft-status issue">Fix This</td>
+								<td class="ft-body">
+									<strong
+										>No licenses, insurance, or certifications visible</strong
+									>
+									<p>
+										Are you licensed and insured in Minnesota? Not visible
+										anywhere on the site. For home services, this is a
+										significant trust gap — customers look for it before
+										calling, especially on larger jobs.
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="ft-status flag">Worth Noting</td>
+								<td class="ft-body">
+									<strong>Facebook hasn't posted in months</strong>
+									<p>
+										A dormant page signals inactivity. Even 1–2 posts a month
+										showing completed jobs changes the perception. Right now it
+										may be doing more harm than good.
+									</p>
+								</td>
+							</tr>
+						</table>
+						<div
+							style="
+								background: var(--white);
+								border: 1px solid var(--border);
+								border-radius: 10px;
+								padding: 24px 28px;
+								margin-top: 16px;
+								border-left: 3px solid var(--primary);
+							"
+						>
+							<div
+								style="
+									font-size: 9px;
+									font-weight: 700;
+									text-transform: uppercase;
+									letter-spacing: 0.14em;
+									color: var(--primary);
+									margin-bottom: 8px;
+									font-family: 'Manrope', sans-serif;
+								"
+							>
+								Something worth mentioning
+							</div>
+							<div
+								style="
+									font-size: 16px;
+									font-weight: 700;
+									color: var(--dark);
+									margin-bottom: 10px;
+									line-height: 1.3;
+									font-family: 'Manrope', sans-serif;
+								"
+							>
+								Getting more reviews is a process problem — and I can build the
+								process.
+							</div>
+							<div
+								style="
+									font-size: 13px;
+									color: var(--ink);
+									line-height: 1.75;
+									font-family: 'Manrope', sans-serif;
+								"
+							>
+								Right after a job wraps, your customer gets a short personalized
+								text with a direct link to your Google review page. Tap, done.
+								That ask goes out while they're still relieved the problem is
+								solved — that's the window that matters, and most businesses
+								miss it entirely.<br /><br />
+								I can build a lightweight tool for this. Your crew opens it on
+								their phone, enters the customer's name, picks what was worked
+								on — sink, water heater, drain, whatever — and sends a
+								personalized request in about 30 seconds. No monthly fee to
+								Birdeye or Podium. Flat build cost, you own it. We can talk
+								about it alongside the site.
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<hr class="divider" />
+
+				<!-- 04 -->
+				<div class="doc-section" id="lead-capture">
+					<div class="badge">04 — Lead Capture</div>
+					<h2 class="sec-heading">Is the site converting visitors?</h2>
+					<p class="sec-intro">
+						Getting someone to the site is half the job. The other half is
+						turning that visit into a call.
+					</p>
+					<table class="ft">
+						<tr>
+							<td class="ft-status flag">Worth Noting</td>
+							<td class="ft-body">
+								<strong
+									>Phone number is clickable — but not prominent enough</strong
+								>
+								<p>
+									It dials on tap, which is the right foundation. But small
+									underlined text isn't a call to action. A bold sticky "Call
+									Now" button visible at all times on mobile would convert
+									significantly more visitors than a phone number buried in the
+									header.
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td class="ft-status flag">Worth Noting</td>
+							<td class="ft-body">
+								<strong>No emergency availability mentioned</strong>
+								<p>
+									Do you take after-hours calls? If so, say so prominently.
+									That's what converts a panicked homeowner at 11pm — not a
+									services list.
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td class="ft-status flag">Worth Noting</td>
+							<td class="ft-body">
+								<strong>Service area isn't stated clearly</strong>
+								<p>
+									Ham Lake, Andover, Anoka, Blaine — if you serve these areas,
+									say so on the homepage. Someone from a neighboring city needs
+									to see their city mentioned to feel confident you'll come out.
+								</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<hr class="divider" />
+
+				<!-- 05 -->
+				<div class="doc-section" id="search">
+					<div class="badge">05 — Search Visibility</div>
+					<h2 class="sec-heading">Can people find you?</h2>
+					<p class="sec-intro">
+						When someone in Ham Lake searches for a plumber, where do you show
+						up?
+					</p>
+
+					<div class="callout callout-issue">
+						<strong
+							>You're ranking 28th on Google Maps for "Plumber + Ham
+							Lake."</strong
+						>
+						27 other businesses get seen before you. The top three have 113,
+						417, and 49 reviews. You have 5.
+					</div>
+
+					<table class="comp-table">
+						<thead>
+							<tr>
+								<th>Rank</th>
+								<th>Business</th>
+								<th>Reviews</th>
+								<th>Rating</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Hometown Plumbing Inc.</td>
+								<td>113</td>
+								<td>4.7★</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Aqua Wizards Plumbing</td>
+								<td>417</td>
+								<td>4.8★</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>True Blue Plumbing, LLC</td>
+								<td>49</td>
+								<td>4.3★</td>
+							</tr>
+							<tr class="you">
+								<td>28</td>
+								<td>North Metro Plumbing<span class="you-tag">You</span></td>
+								<td>5</td>
+								<td>4.8★</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<p class="doc-p">
+						Your 4.8★ rating is better than the businesses ranking above you.
+						The #1 result has 113 reviews — that's a winnable number. With a
+						consistent review strategy, closing that gap over 12 months is
+						realistic.
+					</p>
+
+					<div class="subsection">
+						<h3 class="sub-heading">Organic Search Traffic</h3>
+						<div class="metric-row">
+							<div class="mc">
+								<div class="mc-lbl">Est. Monthly Visitors</div>
+								<div class="mc-val r">1</div>
+								<div class="mc-sub">from organic search</div>
+							</div>
+							<div class="mc">
+								<div class="mc-lbl">Organic Keywords</div>
+								<div class="mc-val a">37</div>
+								<div class="mc-sub">mostly brand name only</div>
+							</div>
+							<div class="mc">
+								<div class="mc-lbl">Traffic Value / Month</div>
+								<div class="mc-val r">$69</div>
+								<div class="mc-sub">BF Plumbing earns $41,214/mo</div>
+							</div>
+						</div>
+						<table class="ft">
+							<tr>
+								<td class="ft-status issue">Fix This</td>
+								<td class="ft-body">
+									<strong
+										>Only ranking for your own name — and a competitor's</strong
+									>
+									<p>
+										Your two organic rankings are "north metro plumbing" and
+										"baker bros plumbing." You're not showing up for any service
+										keywords. "Plumber Ham Lake" or "water heater repair near
+										me" returns zero results for your site.
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="ft-status issue">Fix This</td>
+								<td class="ft-body">
+									<strong
+										>Multiple directories show "Baker Brothers LLC" at your
+										address</strong
+									>
+									<p>
+										On Nextdoor, CitySquares, and Hotfrog, your phone and
+										address are associated with a competitor's name. Google
+										cross-references this data — it's suppressing your local
+										ranking and sending some customers to the wrong business.
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="ft-status issue">Fix This</td>
+								<td class="ft-body">
+									<strong>Page titles aren't optimized for local search</strong>
+									<p>
+										Should read "Plumber in Ham Lake, MN — North Metro Plumbing
+										Inc." What they currently say tells Google almost nothing
+										about who you serve or where.
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="ft-status flag">Worth Noting</td>
+								<td class="ft-body">
+									<strong
+										>Google Business Profile is claimed — right
+										foundation</strong
+									>
+									<p>
+										You're on the map, profile is claimed. The issues above are
+										about making that listing work harder. The foundation is
+										there.
+									</p>
+								</td>
+							</tr>
+						</table>
+						<div class="callout callout-insight">
+							<strong>The "Baker Brothers" problem needs to be fixed.</strong>
+							Data aggregators that feed hundreds of directories simultaneously
+							have associated your address with a competitor's name — likely a
+							historical error that propagated. Until corrected, it works
+							against your local ranking every single day.
+						</div>
+					</div>
+				</div>
+
+				<hr class="divider" />
+
+				<!-- WHAT I BUILD -->
+				<div class="doc-section" id="what-i-build">
+					<div class="badge">The Solution</div>
+					<h2 class="sec-heading">What I'd build for you.</h2>
+					<p class="sec-intro">
+						Not a template. Not a WordPress theme on a shared server. Here's
+						what a site built specifically to solve these problems looks like.
+					</p>
+
+					<div class="build-grid">
+						<div class="bc">
+							<span class="bc-icon">⚡</span>
+							<div class="bc-title">Enterprise-grade speed</div>
+							<div class="bc-body">
+								Every site I build runs on Next.js deployed on Vercel's global
+								edge network — the same infrastructure used by Netflix,
+								McDonald's, Hulu, and Ticketmaster. Your pages are pre-built and
+								served from the nearest server to your visitor worldwide. Under
+								one second, every time, on any device. No shared hosting. No
+								bottlenecks.
+							</div>
+						</div>
+						<div class="bc">
+							<span class="bc-icon">🔍</span>
+							<div class="bc-title">Local SEO built into the structure</div>
+							<div class="bc-body">
+								SEO isn't bolted on after the fact — it's built into every page
+								from day one. Proper title tags, meta descriptions, local schema
+								markup, service area pages for the cities you serve, and a site
+								structure that gives Google every signal it needs to rank you.
+								This is what moves the needle from 28th to the first page.
+							</div>
+						</div>
+						<div class="bc">
+							<span class="bc-icon">✏️</span>
+							<div class="bc-title">A CMS you'll actually use</div>
+							<div class="bc-body">
+								Every site comes with a custom-built CMS — clean, no clutter, no
+								learning curve. Update services, add photos, post seasonal
+								specials yourself. No developer needed for everyday content. And
+								when you do need something bigger, you reach me directly — not a
+								ticket queue, not an overseas help desk.
+							</div>
+						</div>
+						<div class="bc">
+							<span class="bc-icon">📱</span>
+							<div class="bc-title">Mobile-first, built to convert</div>
+							<div class="bc-body">
+								Designed phone-first — click-to-call everywhere, service area
+								front and center, trust signals visible without scrolling, a
+								contact form that doesn't make people hunt for it. Every page
+								has one job: turn a visitor into a call or an inquiry. Not just
+								look good in a screenshot.
+							</div>
+						</div>
+						<div class="bc">
+							<span class="bc-icon">🔒</span>
+							<div class="bc-title">You own it. Forever.</div>
+							<div class="bc-body">
+								No monthly fees. No platform subscription that disappears if you
+								stop paying. No template license. You own the code, the design,
+								and the content outright. Most agencies make their money on
+								ongoing dependency — that's not how I work. One price, yours
+								forever.
+							</div>
+						</div>
+						<div class="bc">
+							<span class="bc-icon">💬</span>
+							<div class="bc-title">Direct line to me, always</div>
+							<div class="bc-body">
+								When something needs attention, you text or email me. Not a
+								support portal, not a chatbot, not a 3-day response window. I
+								work with a small number of clients at a time specifically so I
+								can stay available to them. That's the whole model.
+							</div>
+						</div>
+					</div>
+
+					<div class="tech-note">
+						<span class="tn-icon">🏗️</span>
+						<div class="tn-text">
+							<strong>On the technology — without the jargon</strong>
+							The infrastructure your site would run on is the same global edge
+							network that powers some of the most visited sites in the world.
+							Not because you need that scale, but because building on the right
+							foundation costs the same as building on the wrong one — and the
+							difference shows up in every page load, every ranking signal,
+							every customer who finds you instead of a competitor.
+						</div>
+					</div>
+				</div>
+
+				<hr class="divider" />
+
+				<!-- MY TAKE -->
+				<div class="doc-section" id="my-take">
+					<div class="badge">Assessment</div>
+					<h2 class="sec-heading">My take.</h2>
+					<div class="assessment">
+						<div class="as-eyebrow">Honest Assessment</div>
+						<div class="as-headline">
+							The website isn't your biggest problem.<br />Invisibility is.
+						</div>
+						<div class="as-body">
+							<p>
+								Your site works. It loads, it's mobile-friendly, it has your
+								phone number. Those aren't nothing. But right now it's
+								functioning as a digital business card — it proves you exist, it
+								doesn't generate business.
+							</p>
+							<p>
+								The bigger issue is that almost nobody is finding you. One
+								organic visitor per month. Ranked 28th locally. Listing data
+								that actively shows a competitor's name at your address. That's
+								traffic that should be yours going elsewhere every day.
+							</p>
+							<p>
+								The good news: the #1 competitor in Ham Lake has 113 reviews.
+								Your rating is already better than most of the businesses
+								ranking above you. This is a solvable, specific set of problems.
+								A site built with proper local SEO structure, real speed, and a
+								review strategy built into your workflow would move you up that
+								ranking faster than you'd expect.
+							</p>
+							<div class="as-highlight">
+								No templates. No monthly fees. No mystery. You own the site
+								outright — and when you need something, you talk to me directly.
+								That's how every project I do works.
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- NEXT STEPS -->
+				<div class="doc-section" id="next-steps">
+					<h2 class="sec-heading">Next steps.</h2>
+					<p class="doc-p">
+						Everything in this report has a fix — and most of them get solved by
+						building the site right in the first place. Local SEO baked into the
+						structure. A prominent call-to-action that's impossible to miss.
+						Speed that doesn't cost you half your visitors before they read a
+						word. Trust signals built into every page. And if you want to
+						actually start moving that review count — I can build the tool for
+						that too, right alongside the site. That's not a list of add-ons.
+						That's just what it looks like when everything is built to do a job.
+					</p>
+					<div class="cta-card">
+						<div class="cta-left">
+							<h3>Let's build something that works.</h3>
+							<p>
+								Custom, fast, mobile-first — designed around getting North Metro
+								Plumbing more calls. No templates, no monthly fees, no handoff
+								to a stranger. You own it outright and I'm available when you
+								need me.
+							</p>
+						</div>
+						<div class="cta-right">
+							<img
+								src="/free-reports/latz-web-design.svg"
+								alt="Latz Web Design"
+								class="cta-latz-logo"
+								onerror="this.style.display = 'none'"
+							/>
+							<a class="cta-contact" href="mailto:jordan@latzwebdesign.com"
+								>jordan@latzwebdesign.com</a
+							>
+							<a class="cta-contact" href="tel:7156305689">(715) 630-5689</a>
+							<div class="cta-detail">
+								latzwebdesign.com 
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button class="mob-toggle" id="mobToggle" aria-label="Toggle menu">
+			&#9776;
+		</button>
+
+		<script
+			data-cfasync="false"
+			src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+		></script>
+		<script>
+			var sb = document.getElementById('sidebar'),
+				ov = document.getElementById('overlay'),
+				tog = document.getElementById('mobToggle');
+			tog.addEventListener('click', function () {
+				sb.classList.toggle('open');
+				ov.classList.toggle('visible');
+				tog.textContent = sb.classList.contains('open') ? '✕' : '☰';
+			});
+			ov.addEventListener('click', function () {
+				sb.classList.remove('open');
+				ov.classList.remove('visible');
+				tog.textContent = '☰';
+			});
+			var secs = document.querySelectorAll('[id]'),
+				lnks = document.querySelectorAll('.sb-link');
+			secs.forEach(function (s) {
+				new IntersectionObserver(
+					function (entries) {
+						entries.forEach(function (e) {
+							if (e.isIntersecting) {
+								lnks.forEach(function (l) {
+									l.classList.toggle(
+										'active',
+										l.getAttribute('href') === '#' + s.id,
+									);
+								});
+							}
+						});
+					},
+					{ rootMargin: '-20% 0px -70% 0px' },
+				).observe(s);
+			});
+			lnks.forEach(function (l) {
+				l.addEventListener('click', function () {
+					sb.classList.remove('open');
+					ov.classList.remove('visible');
+					tog.textContent = '☰';
+				});
+			});
+		</script>
+	</body>
+</html>
