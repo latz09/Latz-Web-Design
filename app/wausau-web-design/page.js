@@ -7,7 +7,7 @@ import { CurveDividerBottom } from '@/components/utils/dividers/Dividers';
 
 export const metadata = {
 	title: {
-		default: 'Wausau Web Design and Website Development - 2025',
+		default: 'Wausau Web Design and Website Development - 2026',
 		template: `%s | Latz Web Design`,
 	},
 	description: `Empower your Wausau business with custom web design that drives growth and success. Our results-driven approach ensures your website attracts and converts visitors into customers. Discover personalized web solutions tailored for Central Wisconsin businesses. Get a free estimate today!`,

@@ -7,7 +7,7 @@ import { CurveDividerBottom, CurveDividerTop } from '@/components/utils/dividers
 
 export const metadata = {
 	title: {
-		default: 'St. Paul Web Design and Website Development - 2025',
+		default: 'St. Paul Web Design and Website Development - 2026',
 		template: `%s | Latz Web Design`,
 	},
 	description: `Your business deserves a website that truly delivers! Experience the difference with personalized web design focused on turning clicks into customers. Discover the power of SEO-integrated, results-driven web design. Ready to outshine the competition? Get a free estimate today!`,

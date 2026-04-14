@@ -6,7 +6,7 @@ import { CurveDividerBottom } from '@/components/utils/dividers/Dividers';
 
 export const metadata = {
 	title: {
-		default: 'Plover Web Design and Website Development - 2025',
+		default: 'Plover Web Design and Website Development - 2026',
 		template: `%s | Latz Web Design`,
 	},
 	description: `Boost your Plover business with custom web design tailored for growth and success. Our personalized, results-focused websites help you stand out in Central Wisconsin. Take your online presence to the next level. Get a free estimate today!`,

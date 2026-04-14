@@ -6,13 +6,13 @@ import SharedContent from '@/components/site-content/SharedContent';
 import { CurveDividerBottom } from '@/components/utils/dividers/Dividers';
 
 export const metadata = {
-    title: 'Stevens Point Web Design & Development | Latz Web Design',
-    description: `Looking for web design in Stevens Point? Latz Web Design crafts modern, mobile-friendly sites with on-page SEO to help your business stand out in Central Wisconsin.`,
+    title: 'Madison Web Design & Development | Latz Web Design',
+    description: `Looking for web design in Madison? Latz Web Design crafts modern, mobile-friendly sites with on-page SEO to help your business stand out in Madison and across South Central Wisconsin.`,
     keywords: [
         'Madison web design',
-        'Central Wisconsin web development',
-        'Wausau Wisconsin web design',
-        'SEO web design Wisconsin',
+        'Madison Wisconsin web development',
+        'South Central Wisconsin web design',
+        'SEO web design Madison WI',
         'Madison custom websites',
     ],
 };
