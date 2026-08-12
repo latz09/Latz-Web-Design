@@ -8,9 +8,9 @@ const ScrollerLogo = ({ data }) => {
 	const logos = [...data, ...data, ...data, ...data];
 
 	return (
-		<div className=' grid place-items-center pt-10 lg:pt-12 '>
-			<h2 className='text-center text-lg tracking-wide uppercase text-dark/60 mb-6'>
-				Companies Who Chose Us
+		<div className=' grid place-items-center pt-4 lg:pt-8 '>
+			<h2 className='lg:text-lg  uppercase text-dark/60 mb-4 lg:mb-6'>
+				{`Businesses We've Built For.`}
 			</h2>
 			<div className='relative w-full overflow-hidden  py-20 lg:py-24'>
 				{/* Absolute positioning takes the animated container out of the normal flow */}

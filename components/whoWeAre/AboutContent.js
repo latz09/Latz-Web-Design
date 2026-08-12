@@ -15,6 +15,7 @@ import {
 	FaLightbulb,
 	FaHandshake,
 } from 'react-icons/fa';
+import Link from 'next/link';
 
 const IconMap = {
 	fatree: FaTree,
@@ -30,9 +31,9 @@ const AboutContent = ({ data }) => {
 	const lastItem = data[data.length - 1];
 
 	return (
-		<div className='py-16 lg:py-24'>
+		<div className='py-16 lg:py-24 px-4'>
 			{/* Grid for all items except the last */}
-			<div className='grid gap-16 max-w-5xl mx-auto text-center lg:text-start '>
+			<div className='grid gap-16 max-w-5xl mx-auto  lg:text-start '>
 				{allButLast.map((section, index) => {
 					const IconComponent = IconMap[section.icon?.toLowerCase()] || null;
 
@@ -47,7 +48,7 @@ const AboutContent = ({ data }) => {
 									)} */}
 									<MainHeading
 										title={section.heading}
-										theme='text-light  tracking-wide text-center'
+										theme='text-light  tracking-wide '
 									/>
 								</div>
 
@@ -66,12 +67,10 @@ const AboutContent = ({ data }) => {
 			{/* The last item, rendered separately */}
 			{lastItem && (
 				<AnimateUp>
-					<div className='mt-12 lg:mt-16 space-y-4 lg:space-y-8 text-center lg:text-start max-w-5xl mx-auto t '>
-				
-
+					<div className='mt-12 lg:mt-16 space-y-4 lg:space-y-8  lg:text-start max-w-5xl mx-auto t '>
 						<MainHeading
 							title={lastItem.heading}
-							theme='text-tertiary text-center tracking-wide '
+							theme='text-tertiary   '
 						/>
 						<FadeIn>
 							<Description
@@ -82,6 +81,13 @@ const AboutContent = ({ data }) => {
 					</div>
 				</AnimateUp>
 			)}
+			<div className='grid place-items-center mt-12'>
+				<Link href='/contact-latz-web-design'>
+					<div className='px-8 py-2 lg:py-4 max-w-4xl   grid place-items-center rounded-sm bg-primary/95 lg:hover:bg-dark lg:hover:scale-95 transition duration-500 '>
+						<TopHeading title={`Let's get started`} theme='text-light' />
+					</div>
+				</Link>
+			</div>
 		</div>
 	);
 };

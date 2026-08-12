@@ -20,7 +20,7 @@ const NotMonthlyFees = () => {
 					<MainHeading title='YOU OWN IT' theme='text-center' />
 					<MainHeading title='FOREVER.' theme='text-center' />
 				</div>
-				<Description description='Some web companies keep charging you every month just to keep your site online. Not here. We build it, you own it — no subscriptions, no surprise fees, no ongoing costs. Just a one-time investment in your business.' theme='font-bold'/>
+				<Description description={`Most web companies want you locked into a monthly bill just to keep your own site online. We don't work that way. Pay once, own it outright — no subscriptions, no renewals, no surprise invoices down the road.`} theme='font-bold'/>
 			</div>
 		</div>
 	);

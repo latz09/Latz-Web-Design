@@ -18,7 +18,7 @@ const WhoWeAre = async () => {
 
 				<AboutContent data={data.paragraphs} />
 				
-				<AboutCta image={data.finalImageUrl} cta={data.cta} />
+				{/* <AboutCta image={data.finalImageUrl} cta={data.cta} /> */}
 			</div>
 		</PageContainer>
 	);

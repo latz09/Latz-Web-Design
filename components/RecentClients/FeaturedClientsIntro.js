@@ -3,17 +3,17 @@ import { MainHeading, TopHeading, Description } from '../utils/Typography';
 
 const FeaturedClientsIntro = () => {
 	return (
-		<div className="py-24">
+		<div className="py-12 ">
 			
-			<div className='  mb-8 lg:mb-16  pt-24 lg:pt-12 '>
-				<div className='grid place-items-center gap-4'>
-					<div className='space-y-4 text-center px-2 lg:px-0'>
+			<div className='px-4 lg:px-8 lg:w-3/4 lg:mx-auto '>
+				<div className='grid place-items-cente gap-4'>
+					<div className='space-y-4 text-centr px-2 lg:px-0'>
 						<MainHeading
 							title='Work That Speaks for Itself'
 							theme='text-dark'
 						/>
 						<TopHeading
-							title={`A look at some of the custom websites we've crafted for businesses like yours.`}
+							title={`A look at some of the custom websites we've built for businesses like yours.`}
 							theme='text-dark'
 						/>
 					</div>

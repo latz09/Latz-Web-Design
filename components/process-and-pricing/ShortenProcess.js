@@ -9,22 +9,22 @@ const steps = [
 	{
 		title: 'Consultation',
 		icon: <FaPhoneAlt className=' ' />,
-		description: 'We talk through your goals',
+		description: 'We talk through your goals — no sales pitch, just a conversation.',
 	},
 	{
 		title: 'Proposal',
 		icon: <FaFileAlt className=' ' />,
-		description: 'You get a simple, clear quote',
+		description: 'A clear quote. No surprises, no hidden fees.',
 	},
 	{
 		title: 'Live Development',
 		icon: <HiOutlineDesktopComputer className=' ' />,
-		description: 'Watch your site come to life and give feedback',
+		description: 'Watch your site get built in real time and give feedback as we go.',
 	},
 	{
 		title: 'Launch',
 		icon: <FaRocket className=' ' />,
-		description: 'Your website is live, fast, and ready to convert',
+		description: 'Your site goes live — fast, and built to convert from day one.',
 	},
 ];
 

@@ -30,12 +30,24 @@ const SharedContent = () => {
 		<div>
 			{/* <SnapshotModal /> */}
 			<IntroBlurb />
-
-			<AboutIntro />
-
+			<FetchClientLogos />
+<AnimateUp>
+				<RecentClientsContainer includeViewMore={true} />
+			</AnimateUp>
 			<ShortenProcess />
+
 			<CurveDividerBottom />
 			<ReviewContainer />
+	
+			{/* <CurveDividerTop /> */}
+			{/* <ChatWidgetContainer /> */}
+			{/* <CurveDividerBottom /> */}
+
+			
+			<AboutIntro />
+			<ServicesOverviewContainer />
+			<NotMonthlyFees />
+
 			<div className='bg-dark py-20 lg:py-24 '>
 				<div className={SERVICES_CONTAINER_CLASSES}>
 					<h2 className='text-4xl tracking-wide lg:text-6xl font-black '>
@@ -43,7 +55,7 @@ const SharedContent = () => {
 					</h2>
 
 					<Description
-						description={`You're losing leads and paying monthly for a site that doesn't convert. It's time for a change.`}
+						description={`Stop losing leads to a site that doesn't convert — and stop paying monthly for it. It's time for a change.`}
 					/>
 
 					<div className='w-5/6 lg:w-1/2 mx-auto'>
@@ -56,37 +68,7 @@ const SharedContent = () => {
 					</div>
 				</div>
 			</div>
-			{/* <CurveDividerTop /> */}
-			{/* <ChatWidgetContainer /> */}
-			{/* <CurveDividerBottom /> */}
 
-			<AnimateUp>
-				<RecentClientsContainer includeViewMore={true} />
-			</AnimateUp>
-
-			<ServicesOverviewContainer />
-			<NotMonthlyFees />
-			<div className='bg-primary py-20 lg:py-24 mt-24 shadow-xl shadow-primary/20'>
-				<div className={SERVICES_CONTAINER_CLASSES}>
-					<h2 className='text-4xl tracking-wide text-dark lg:text-6xl font-black '>
-						{preventWidow('Invest Once. Benefit for Years.')}
-					</h2>
-
-					<Description
-					
-						description={`No subscriptions. No ongoing fees. Just a custom site that works — and belongs to you.`}
-					/>
-
-					<div className='w-5/6 lg:w-1/2 mx-auto'>
-						<Link
-							href='/contact-latz-web-design'
-							className='w-full rounded-sm mx-auto bg-dark text-light py-3 lg:py-3 grid place-items-center uppercase lg:text-2xl font-bold shadow-lg shadow-light/30 hover:scale-95 transition duration-500 tracking-wider '
-						>
-							<span>Get Started Now</span>
-						</Link>
-					</div>
-				</div>
-			</div>
 			{/* <ProcessAndPricingContainer /> */}
 
 			{/* <OverviewContainer includeLink={true} /> */}

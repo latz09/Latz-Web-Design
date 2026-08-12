@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { FaPencilRuler, FaCogs } from 'react-icons/fa';
+import { FaPencilRuler, FaCogs, FaSearch  } from 'react-icons/fa';
 import { FiTrendingUp } from 'react-icons/fi';
 import { HiOutlineCog6Tooth } from 'react-icons/hi2';
 import { FaRocket } from 'react-icons/fa6';
@@ -11,7 +11,7 @@ import AnimateUp from '../utils/animations/AnimateUp';
 import { motion } from 'framer-motion';
 
 const SERVICES_WRAPPER_CLASSES =
-	'max-w-6xl py-12 mx-auto grid gap-x-8 gap-y-16 lg:gap-x-24 lg:gap-y-24 lg:grid-cols-2  place-items-center text-center ';
+	'max-w-7xl py-12 mx-auto grid gap-x-8 gap-y-16 lg:gap-x-24 lg:gap-y-24 lg:grid-cols-2  place-items-center text-center ';
 
 const SERVICE_CARD_CLASSES =
 	'group  flex flex-col items-center gap-4 transition duration-1000';
@@ -21,6 +21,7 @@ const iconMap = {
 	FaCogs: FaCogs,
 	FaRocket: FaRocket,
 	FiTrendingUp: FiTrendingUp,
+	FaSearch: FaSearch,
 	// Add more icons as needed
 };
 
