@@ -25,8 +25,8 @@ export const FadeIn = ({ children, className, ...rest }) => {
 		<>
 			<motion.div
 				className={className}
-				initial={{ opacity: 0, scale: .8 }}
-				whileInView={{  opacity: 1, scale: 1 }}
+				initial={{ opacity: 0 }}
+				whileInView={{  opacity: 1 }}
 				transition={{ duration: 0.9, delay: 0.3 }}
 				viewport={{ once: true }}
 				{...rest}
