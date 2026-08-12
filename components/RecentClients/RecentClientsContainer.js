@@ -21,7 +21,7 @@ const RecentClientsContainer = async ({
 		: data.clients;
 
 	return (
-		<div className='py-12 lg:py-32 bg-dar bg-primary/5'>
+		<div className='p bg-dar bg-primary/5'>
 			{featuredOnly && <FeaturedClientsIntro />}
 			{!featuredOnly && <RecentClientsPageIntro />  }
 			

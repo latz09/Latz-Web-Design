@@ -5,7 +5,7 @@ import { MainHeading, TopHeading, Description } from '../utils/Typography';
 
 const RecentClientsPageIntro = () => {
 	return (
-		<div className='mb-4 lg:mb-8 '>
+		<div className=' '>
 			<div className=' pt-8 lg:pt-16 pb-12 bg-dark'>
 				<div className='grid place-items-center gap-4 '>
 					<div className='space-y-2 px-2 lg:px-0  max-w-7xl mx-auto'>
